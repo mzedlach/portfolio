@@ -1,0 +1,463 @@
+/* ------------------------------------- */
+/* BASIC SETUP */
+/* ------------------------------------- */
+
+/*
+FONTS:
+
+COLOURS:
+White hover button: #D5DEE7
+Dark hover button: #9EACBF
+Dark: #1B1F25 
+*/
+
+
+* {  /*Removes all default values*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+html {  /*Sets defaults for page*/
+    background-color:#fff;
+    color:#555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300px;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; 
+/*    Will allow fonts to render in a perfect way*/
+}
+
+/* ------------------------------------- */
+/* REUSABLE COMPONENTS  */
+/* ------------------------------------- */
+
+.row {
+    max-width: 1140px;
+/*    This is the only value to have an absolute value in pixels. All others will be in percentages. */
+    margin: 0 auto;
+/*    To center rows*/
+}
+
+section {
+    padding: 80px 0px;
+}
+
+
+
+
+
+.flex-Hcenter-Vcenter {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.wrap {
+    align-content: wrap;
+}
+
+
+
+
+
+
+
+/* ---------- HEADINGS ----------*/
+h1,
+h2,
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #000000;
+    font-size: 400%;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+}
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+h2:after {
+    display: block;
+    height:2px;
+    background-color: black;
+    content: " ";
+    width:100px;    
+    margin: 0 auto;
+    margin-top: 30px;
+}
+h3 {
+    font-size: 130%;
+    margin-bottom: 20px
+}
+
+/* ---------- PARAGRAPHS ----------*/
+
+
+/* ---------- ICONS ----------*/
+
+.icon-big {
+    font-size: ; 
+    display: block;
+    color: ; 
+    margin: ; 
+}
+
+.icon-small {
+    font-size: ;
+    display: ; 
+    color: ; 
+}
+
+/* ---------- BUTTONS ----------*/
+.btn:link, 
+.btn:visited,
+input[type="submit"]{
+    display:inline-block;
+    padding: 10px 30px; 
+    font-weight: 300px;
+    text-decoration:none;
+    border-radius:200px;
+    transition: background-color 0.4s, border 0.4s, color 0.4s;
+}
+.btn-full:link, 
+.btn-full:visited,
+input[type="submit"]{
+    background-color: #9EACBF;
+    border: 1px solid #9EACBF;
+    color: #fff;
+    margin: 5px;
+}
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #9EACBF;
+    color: #9EACBF;
+}
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    background-color:#1B1F25; 
+}
+.btn-full:hover, 
+.btn-full:active {
+    border: 1px solid #1B1F25;
+}
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #1B1F25;
+    color: #fff;
+}
+
+/* ------------------------------------- */
+/* HEADER */
+/* ------------------------------------- */
+
+header {
+    background-image: url(img/jesus-kiteque-224069.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.hero-text-box {
+    position:absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    list-style: none;
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    margin-left: 40px;
+}
+
+.nav-links:link,
+.nav-links:visited {
+    padding: 8px 0px; 
+    color: #000; 
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+.nav-links:hover,
+.nav-links:active {
+    border-bottom: 2px solid #1B1F25;
+}
+
+/* ------------------------------------- */
+/* ABOUT ME */
+/* ------------------------------------- */
+
+.section-aboutme {
+    margin-top:30px;
+}
+.about-row {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top:30px;
+}
+.about-image {
+    width:100%;
+    border-radius: 20%;
+}
+.about-description {
+    line-height: 160%;
+    text-align: justify;
+}
+.section-skills {
+    margin-top:30px;
+}
+.skill-links {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:30px
+}
+.skill-btn {
+    font-size:200%;
+}
+.coding-experience {
+    margin-top: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.experience-logos {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.imageLogo {
+    max-height: 120px;
+    padding: 0px 10px;
+}
+
+
+
+
+
+
+
+/*
+
+.btn:link, 
+.btn:visited,
+input[type=submit]{
+    display:inline-block;
+    padding: 10px 30px; 
+    font-weight: 300px;
+    text-decoration:none;
+    border-radius:200px;
+    transition: background-color 0.4s, border 0.4s, color 0.4s;
+}
+.btn-full:link, 
+.btn-full:visited,
+input[type=submit]{
+    background-color: #9EACBF;
+    border: 1px solid #9EACBF;
+    color: #fff;
+    margin-right: 20px;
+}
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color:#1B1F25; 
+}
+.btn-full:hover, 
+.btn-full:active {
+    border: 1px solid #1B1F25;
+}
+
+*/
+
+
+
+
+
+
+
+/* ------------------------------------- */
+/* PROJECTS */
+/* ------------------------------------- */
+
+.section-projects {
+    margin-top: 30px;
+    background-color: #D5DEE7;
+}
+
+.project-four {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap:nowrap;
+}
+.project-two{
+    display:none;
+}
+
+.indiv-project {
+    height:240px;
+    width:240px;    
+/*    padding:5px;*/
+    margin:3px;
+    background:#555;
+    color:#9EACBF;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+/*    text-align: center;*/
+/*    line-height:150px;*/
+/*    overflow:hidden;*/
+    border-radius:10%;
+    transition:     opacity 0.5s, color 0.5s, font-size 0.5s;
+}
+.indiv-project:hover {
+    opacity: 0.6;
+    color:#fff;
+    font-size:120%;
+}
+
+/* ------------------------------------- */
+/* CONTACT */
+/* ------------------------------------- */
+
+.contact-form .row {
+    display: flex;
+    justify-content: center;
+    width:70%;
+}
+.contact-form {
+/*    width: 60%;*/
+/*    margin-left:20%*/
+}
+.contact-form .col {
+    display: flex;
+    align-items:center;
+}
+input[type=text],
+input[type=email],
+textarea {
+    width:100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #9EACBF;
+}
+textarea {
+    height:100px;
+}
+
+/* ------------------------------------- */
+/* FOOTER */
+/* ------------------------------------- */
+
+footer {
+    background-color:#1B1F25;
+    padding: 50px ;
+}
+
+.footer-links {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    display:flex;
+    justify-content: flex-start;
+}
+.footer-nav-links,
+.footer-social-links {
+    margin:0px 10px;
+}
+.footer-social {
+    display:flex;
+    justify-content:flex-end;
+    font-size:120%
+}
+
+.footer-nav-links:link,
+.footer-nav-links:visited,
+.footer-social-links:link,
+.footer-social-links:visited{
+    text-decoration:none;
+    border: 0;
+    color: #8994a3;
+    transition: color 0.2s;
+}
+
+.footer-nav-links:hover,
+.footer-nav-links:active {
+    color: #d2d4d8;
+}
+
+.footer-social-links .fa-linkedin,
+.footer-social-links .fa-free-code-camp,
+.footer-social-links .fa-codepen,
+.footer-social-links .fa-github,
+.footer-social-links .fa-twitter {
+    transition: color 0.2s;
+}
+
+.footer-social-links .fa-linkedin:hover {
+    color: #007bb5;
+}
+.footer-social-links .fa-free-code-camp:hover {
+    color: #006400;
+}
+.footer-social-links .fa-codepen:hover {
+    color: #d2d4d8;
+}
+.footer-social-links .fa-github:hover {
+    color: #4078c0;
+}
+.footer-social-links .fa-twitter:hover {
+    color: #1da1f2;
+}
+
+
+
+footer p {
+    color: #8994a3;
+    text-align: center;
+    font-size: 80%;
+}
+
+
+
+
+*:focus {outline:none;}
+/*Removes blue ouline around input areas*/
+
+
+
+
+
+
+
