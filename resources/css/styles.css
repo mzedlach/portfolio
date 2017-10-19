@@ -179,12 +179,22 @@ header {
     height: 100px;
     width: auto;
     float: left;
-    margin-top: 20px;
+    margin-top: 10px;
 }
+.logo-grey {
+    display:none; 
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0px;
+}
+
+
+/*Main navigation*/
 
 .main-nav {
     list-style: none;
-    margin-top: 55px;
+    margin-top: 40px; 
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
@@ -208,6 +218,28 @@ header {
 .nav-links:active {
     border-bottom: 2px solid #1B1F25;
 }
+
+/*Sticky Navigation*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    background-color: rgba(27, 31, 37, 0.98);
+    box-shadow: 0 5px 5px #1B1F25;
+    z-index: 9999;
+}
+.sticky .main-nav { margin-top: 15px; }
+
+.sticky .nav-links:link,
+.sticky .nav-links:visited {
+    padding: 8px 0px; 
+    color: #8994a3; 
+}
+.sticky .logo { display:none;}
+.sticky .logo-grey { display: block; }
+
 
 /* ------------------------------------- */
 /* ABOUT ME */
@@ -454,10 +486,4 @@ footer p {
 
 *:focus {outline:none;}
 /*Removes blue ouline around input areas*/
-
-
-
-
-
-
 

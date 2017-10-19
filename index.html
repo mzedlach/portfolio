@@ -24,10 +24,11 @@
             <nav>
                 <div class="row">
                     <img src="resources/img/logo.png" alt="Maria Lach" class="logo">
+                    <img src="resources/img/logo-grey.png" alt="Maria Lach" class="logo-grey">
                     <div class="main-nav">
-                        <a href="#aboutme" class="nav-links">About</a>
-                        <a href="#projects" class="nav-links">Projects</a>
-                        <a href="#contactform" class="nav-links">Contact</a>
+                        <a href="#" class="nav-links js-scroll-to-aboutme">About</a>
+                        <a href="#" class="nav-links js-scroll-to-projects">Projects</a>
+                        <a href="#" class="nav-links js-scroll-to-contact">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -41,7 +42,7 @@
             </div>
         </header>
         
-        <section class="section-aboutme" id="aboutme">
+        <section class="section-aboutme js-aboutme" id="aboutme">
             <div class="row">
                 <h2>About Me</h2>
             </div>
@@ -239,9 +240,9 @@
         <footer>
             <div class="footer-links">
                 <div class="footer-nav">
-                    <a href="#" class="footer-nav-links">About</a>
-                    <a href="#" class="footer-nav-links">Projects</a>
-                    <a href="#" class="footer-nav-links">Contact</a>
+                    <a href="#" class="footer-nav-links js-scroll-to-aboutme">About</a>
+                    <a href="#" class="footer-nav-links js-scroll-to-projects">Projects</a>
+                    <a href="#" class="footer-nav-links js-scroll-to-contact">Contact</a>
                 </div>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/in/maria-lach" class="footer-social-links"><i class="fa fa-linkedin"></i></a>
@@ -258,6 +259,8 @@
         </footer>
     
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="vendors/js/jquery.waypoints.min.js"></script>
+        <script src="resources/js/scripts.js"></script>
         
     </body>
 </html>
