@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    
+
+//    Page Fade In
+    $('body').removeClass('fade-out');
     
 //    Sticky Navigation
     $('.js-aboutme').waypoint(function(direction) {
@@ -21,6 +23,8 @@ $(document).ready(function() {
     $('.js-scroll-to-contact').click(function () {
         $('html, body').animate({scrollTop: $('#contactform').offset().top}, 500);
     });
+
+    
     
 });
 
