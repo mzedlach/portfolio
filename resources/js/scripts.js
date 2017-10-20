@@ -24,7 +24,43 @@ $(document).ready(function() {
         $('html, body').animate({scrollTop: $('#contactform').offset().top}, 500);
     });
 
+//    Scrolling Animations
+    $('.js-wp-1').waypoint(function(direction) {
+        $('.js-wp-1').addClass('animated fadeInUp');
+    }, {
+        offset: '70%'
+    });
+
     
+//    PROJETS
+    $('.js-wp-InLeft').waypoint(function(direction) {
+        $('.js-wp-InLeft').addClass('animated fadeInLeft');
+    }, {
+        offset: '60%'
+    });
+    $('.js-wp-InRight').waypoint(function(direction) {
+        $('.js-wp-InRight').addClass('animated fadeInRight');
+    }, {
+        offset: '60%'
+    });
+    $('.js-wp-InUp').waypoint(function(direction) {
+        $('.js-wp-InUp').addClass('animated fadeInUp');
+    }, {
+        offset: '70%'
+    });
+    $('.js-wp-InDown').waypoint(function(direction) {
+        $('.js-wp-InDown').addClass('animated fadeInDown');
+    }, {
+        offset: '60%'
+    });
+    
+    
+    
+    $('.js-wp-zoom').waypoint(function(direction) {
+        $('.js-wp-zoom').addClass('animated zoomIn');
+    }, {
+        offset: '60%'
+    });
     
 });
 

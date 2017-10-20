@@ -133,42 +133,8 @@
     .footer-social {
         justify-content: center;
         margin: 10px 0px;
-    }
-    
+    }  
 }
-
-
-
-
-
-
-
-
-
-/*
-    .indiv-project {
-        height:150px;
-        width:150px;    
-        padding:5px; - comment out 
-        margin:3px; - comment out
-    }
-*/
-
-
-/*
-
-
-    .contact-form .row {
-        display: flex;
-        justify-content: center;
-        width:80%;
-    }
-
-
-*/
-
-
-
 
 /*Small phones: from 0-480 px */
 @media only screen and (max-width: 480px) {

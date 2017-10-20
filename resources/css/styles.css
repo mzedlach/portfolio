@@ -503,14 +503,20 @@ body.fade-out {
     transition: none;
 }
 
-/*
+/*Waypoint animation for content*/
 .js-wp-1 {
     opacity: 0;
 }
+
 .js-wp-1 .animated {
     opacity: 1;
 }
-*/
 
+.project-four .indiv-project {
+    opacity: 0;
+}
+.indiv-project .animated {
+    opacity:1;
+}
 
 
