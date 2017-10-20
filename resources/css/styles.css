@@ -219,6 +219,19 @@ header {
     border-bottom: 2px solid #1B1F25;
 }
 
+/*Mobile Navigation */
+.mobile-nav-icon {
+    display:flex;
+    justify-content:flex-end;
+    cursor:pointer;
+    display:none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #1B1F25;
+}
+
 /*Sticky Navigation*/
 
 .sticky {

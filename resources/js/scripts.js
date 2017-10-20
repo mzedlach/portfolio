@@ -62,5 +62,21 @@ $(document).ready(function() {
         offset: '60%'
     });
     
+//    Mobile Navigation - Open/Close Nav
+    $('.js-nav-icon').click(function() {
+        var nav = $('.nav-links');
+        var icon = $('.js-nav-icon i');
+        
+        nav.slideToggle(200);
+        if (icon.hasClass('fa-navicon')) {
+            icon.addClass('fa-close');
+            icon.removeClass('fa-navicon');
+        } else {
+            icon.addClass('fa-navicon');
+            icon.removeClass('fa-close');
+        };
+        
+    });
+    
 });
 

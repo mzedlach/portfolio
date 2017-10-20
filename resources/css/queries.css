@@ -95,31 +95,69 @@
     .row, 
     .hero-text-box { padding: 0 2%; }
     
-/*    .col {width:100%;}*/
-/*    I think I have to change this col. width*/
-    
     h1 { font-size: 180%; }
     h2 { font-size: 150%; }
     
-    .main-nav {display:none;}
-/*    .about-image { width:80%; }*/
-
     
-.skill-links .skill-btn {
-    font-size:150%;
-    padding: 10px 20px;
-}
+/*    Navigation - Mobile  */
 
-    .imageLogo {
-    max-height: 80px;
-}
 
+    .main-nav {
+        margin-top: 0px;
+        display:flex;
+        flex-direction: column;
+        width:90%;
+    }
+    .nav-links {
+        display:none;
+    }
+    
+    nav .row {
+        display:flex;
+        align-items: center
+    }
+    .mobile-nav-icon {
+        display:flex;
+        align-self: center;
+        font-size: 80%;
+    }
+    .nav-links:link,
+    .nav-links:visited {
+        padding: 4px 0px; 
+        font-size: 100%;
+        border: none;
+    }
+    .logo {
+        height: 100px;
+/*        Chang ehte heigh?*/
+        margin-top: 0px;
+    }
+    
+
+/*    Sticky Navigation*/
+    .sticky .main-nav { margin-top: 8px; }
+    
+    .sticky .nav-links:link,
+    .sticky .nav-links:visited { padding: 3px 0px; }
+    
+    .sticky .mobile-nav-icon i {color:#8994a3 }
+    
+/*    About*/
+    .skill-links .skill-btn {
+        font-size:150%;
+        padding: 10px 20px;
+    }
+    .imageLogo { max-height: 80px; }
+
+/*    Projects*/
     .indiv-project {
         height:200px;
         width:200px;   
         font-size:120%;
     }
     
+    
+/*Footer*/
     
     footer {
         padding: 30px ;
