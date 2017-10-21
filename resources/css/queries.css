@@ -8,11 +8,6 @@
 }
 
 
-
-
-
-
-
 /*Small tablets to big tablets: From 768-1023px;*/
 @media only screen and (max-width: 1023px) {
     body {font-size: 18px;}  
@@ -21,70 +16,39 @@
         margin-top: 10px;
         flex-wrap:wrap;
     }
-
-    .skill-links {
-        margin-top:20px
-    }
-    .coding-experience {
-        margin-top: 20px;
-    }
+    
+/*About*/
+    .skill-links { margin-top:20px }
+    .coding-experience { margin-top: 20px; }
     .section-aboutme .col {
         width:80%;
         display:flex;
         justify-content: center;
     }
-    
     .about-image {
         width:50%;
         height:50%
     }
-
-    
-    
-    
-    
-    
-    .project-four {
-        display:none;
+    .skill-links .skill-btn { font-size:150%; }
+    .imageLogo {
+        max-height: 100px;
+        padding: 0px 10px;
     }
+
+/*Projects*/
+    .project-four { display:none; }
     .project-two{
         display:flex;
         justify-content: center;
         flex-wrap:wrap;
     }
-    .indiv-project {
-        font-size:130%;
-    }
+    .indiv-project { font-size:130%; }
     .contact-form .row {
         display: flex;
         justify-content: center;
         width:80%;
     }
 } 
-
-
-
-
-
-.skill-links .skill-btn {
-    font-size:150%;
-}
-.imageLogo {
-    max-height: 100px;
-    padding: 0px 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*Small phones to small tablets: from 481-767 px */
@@ -99,9 +63,7 @@
     h2 { font-size: 150%; }
     
     
-/*    Navigation - Mobile  */
-
-
+/*Navigation - Mobile  */
     .main-nav {
         margin-top: 0px;
         display:flex;
@@ -128,13 +90,11 @@
         border: none;
     }
     .logo {
-        height: 100px;
-/*        Chang ehte heigh?*/
+        height: 80px;
         margin-top: 0px;
     }
     
-
-/*    Sticky Navigation*/
+/*Sticky Navigation*/
     .sticky .main-nav { margin-top: 8px; }
     
     .sticky .nav-links:link,
@@ -142,32 +102,24 @@
     
     .sticky .mobile-nav-icon i {color:#8994a3 }
     
-/*    About*/
+/*About*/
     .skill-links .skill-btn {
         font-size:150%;
         padding: 10px 20px;
     }
     .imageLogo { max-height: 80px; }
 
-/*    Projects*/
+/*Projects*/
     .indiv-project {
         height:200px;
         width:200px;   
         font-size:120%;
     }
-    
-    
-/*Footer*/
-    
-    footer {
-        padding: 30px ;
-    }
-    .footer-links {
-        display:block;
-    }
-    .footer-nav {
-        justify-content: center;
-    }
+
+    /*Footer*/
+    footer { padding: 30px ; }
+    .footer-links { display:block; }
+    .footer-nav { justify-content: center; }
     .footer-social {
         justify-content: center;
         margin: 10px 0px;
@@ -177,23 +129,22 @@
 /*Small phones: from 0-480 px */
 @media only screen and (max-width: 480px) {
     
-    section {
-        padding: 25px 0px;
-    }
+    section { padding: 25px 0px; }
+
+/*About*/
     .skill-links .skill-btn {
         font-size:130%;
         padding: 5px 10px;
     }
+    .imageLogo { max-height: 70px; }
 
-    .imageLogo {
-        max-height: 70px;
-    }
-    
+/*Projects*/
     .indiv-project {
         height:180px;
         width:180px;    
     }
-    
+
+/*Contact Form*/
     .contact-form .row {
         display: flex;
         justify-content: center;
@@ -204,7 +155,6 @@
         margin-top:10px;
         margin-bottom: 2px;
     }
-
     .submit-button {
         display:flex;
         justify-content: center;

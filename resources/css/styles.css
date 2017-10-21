@@ -6,9 +6,9 @@
 FONTS:
 
 COLOURS:
-White hover button: #D5DEE7
-Dark hover button: #9EACBF
-Dark: #1B1F25 
+Light: #D5DEE7
+Dark: #9EACBF
+Darkest: #1B1F25 
 */
 
 
@@ -42,25 +42,6 @@ html {  /*Sets defaults for page*/
 section {
     padding: 80px 0px;
 }
-
-
-
-
-
-.flex-Hcenter-Vcenter {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.wrap {
-    align-content: wrap;
-}
-
-
-
-
-
-
 
 /* ---------- HEADINGS ----------*/
 h1,
@@ -98,11 +79,7 @@ h3 {
     margin-bottom: 20px
 }
 
-/* ---------- PARAGRAPHS ----------*/
-
-
 /* ---------- ICONS ----------*/
-
 .icon-big {
     font-size: ; 
     display: block;
@@ -191,7 +168,6 @@ header {
 
 
 /*Main navigation*/
-
 .main-nav {
     list-style: none;
     margin-top: 40px; 
@@ -233,7 +209,6 @@ header {
 }
 
 /*Sticky Navigation*/
-
 .sticky {
     position: fixed;
     top: 0;
@@ -303,51 +278,6 @@ header {
     padding: 0px 10px;
 }
 
-
-
-
-
-
-
-/*
-
-.btn:link, 
-.btn:visited,
-input[type=submit]{
-    display:inline-block;
-    padding: 10px 30px; 
-    font-weight: 300px;
-    text-decoration:none;
-    border-radius:200px;
-    transition: background-color 0.4s, border 0.4s, color 0.4s;
-}
-.btn-full:link, 
-.btn-full:visited,
-input[type=submit]{
-    background-color: #9EACBF;
-    border: 1px solid #9EACBF;
-    color: #fff;
-    margin-right: 20px;
-}
-.btn:hover,
-.btn:active,
-input[type=submit]:hover,
-input[type=submit]:active {
-    background-color:#1B1F25; 
-}
-.btn-full:hover, 
-.btn-full:active {
-    border: 1px solid #1B1F25;
-}
-
-*/
-
-
-
-
-
-
-
 /* ------------------------------------- */
 /* PROJECTS */
 /* ------------------------------------- */
@@ -356,7 +286,6 @@ input[type=submit]:active {
     margin-top: 30px;
     background-color: #D5DEE7;
 }
-
 .project-four {
     display:flex;
     justify-content: space-around;
@@ -365,7 +294,6 @@ input[type=submit]:active {
 .project-two{
     display:none;
 }
-
 .indiv-project {
     height:240px;
     width:240px;    
@@ -377,9 +305,6 @@ input[type=submit]:active {
     text-align: center;
     justify-content: center;
     align-items: center;
-/*    text-align: center;*/
-/*    line-height:150px;*/
-/*    overflow:hidden;*/
     border-radius:10%;
     transition:     opacity 0.5s, color 0.5s, font-size 0.5s;
 }
@@ -397,10 +322,6 @@ input[type=submit]:active {
     display: flex;
     justify-content: center;
     width:70%;
-}
-.contact-form {
-/*    width: 60%;*/
-/*    margin-left:20%*/
 }
 .contact-form .col {
     display: flex;
@@ -446,7 +367,6 @@ footer {
     justify-content:flex-end;
     font-size:120%
 }
-
 .footer-nav-links:link,
 .footer-nav-links:visited,
 .footer-social-links:link,
@@ -456,12 +376,10 @@ footer {
     color: #8994a3;
     transition: color 0.2s;
 }
-
 .footer-nav-links:hover,
 .footer-nav-links:active {
     color: #d2d4d8;
 }
-
 .footer-social-links .fa-linkedin,
 .footer-social-links .fa-free-code-camp,
 .footer-social-links .fa-codepen,
@@ -469,7 +387,6 @@ footer {
 .footer-social-links .fa-twitter {
     transition: color 0.2s;
 }
-
 .footer-social-links .fa-linkedin:hover {
     color: #007bb5;
 }
@@ -485,22 +402,14 @@ footer {
 .footer-social-links .fa-twitter:hover {
     color: #1da1f2;
 }
-
-
-
 footer p {
     color: #8994a3;
     text-align: center;
     font-size: 80%;
 }
 
-
-
-
 *:focus {outline:none;}
 /*Removes blue ouline around input areas*/
-
-
 
 /* ------------------------------------- */
 /* ANIMATIONS */
@@ -511,11 +420,10 @@ body {
     opacity: 1;
     transition: 1s opacity;
 }
-body.fade-out {
+body .fade-out {
     opacity: 0;
     transition: none;
 }
-
 /*Waypoint animation for content*/
 .js-wp-1 {
     opacity: 0;
