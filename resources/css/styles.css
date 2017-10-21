@@ -138,7 +138,7 @@ input[type="submit"]:active {
 /* ------------------------------------- */
 
 header {
-    background-image: url(img/jesus-kiteque-224069.jpg);
+    background-image: url(img/jesus-kiteque-224069-min.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -420,7 +420,7 @@ body {
     opacity: 1;
     transition: 1s opacity;
 }
-body .fade-out {
+body.fade-out {
     opacity: 0;
     transition: none;
 }
