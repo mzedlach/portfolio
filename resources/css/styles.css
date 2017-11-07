@@ -342,6 +342,22 @@ textarea {
 /* ------------------------------------- */
 /* FOOTER */
 /* ------------------------------------- */
+.form-messages {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #222 ;
+}
+.success {
+    background-color: rgba(151, 234, 180, 0.79); }
+.error { background-color: rgba(242, 159, 159, 0.85); }
+
+/* ------------------------------------- */
+/* FOOTER */
+/* ------------------------------------- */
 
 footer {
     background-color:#1B1F25;

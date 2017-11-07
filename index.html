@@ -2,22 +2,18 @@
 
 <html lang="en">
     <head>
-        
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="I am a software developer driven by the desire for knowledge and satisfaction of challenges. Come and have a glimpse of my current projects and past experience.">
 <!--        Tells mobile phones that they should not zoom out of the page-->
         
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
-        
         <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
-        <script src="vendors/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-		<script src="vendors/js/raphael.min.js" type="text/javascript"></script>
-		<script src="resources/js/init.js" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400" rel="stylesheet">
-        
         <title>Maria Lach</title>
     
 <!--        Favicon Info-->
@@ -29,7 +25,6 @@
         <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
         <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
-        
         
     </head>
     <body>
@@ -81,9 +76,9 @@
                     <h3>Coding Experience with</h3>
                 </div>
                 <div class="row experience-logos js-wp-1">
-                    <img class="imageLogo" src="vendors/img/html5logo2.png">
-                    <img class="imageLogo" src="vendors/img/css3logo.png">
-                    <img class="imageLogo" src="vendors/img/javascriptlogo.png">
+                    <img class="imageLogo" src="vendors/img/html5logo2.png" alt="HTML5 logo">
+                    <img class="imageLogo" src="vendors/img/css3logo.png" alt="CSS3 logo">
+                    <img class="imageLogo" src="vendors/img/javascriptlogo.png" alt="Javascript logo">
                 </div>
             </section>
 
@@ -125,11 +120,15 @@
             </section>
 
             <section class="section-form" id="contactform">
-                <div class="row">
+                <div class="row" id="form">
                     <h2>Get in touch</h2>
                 </div>
                 <div class="row">
-                    <form method="post" action="#" class="contact-form">
+                    <form method="post" action="https://formspree.io/mariazlach@gmail.com" class="contact-form">
+                        <div class="row">
+                            
+                            
+                        </div>
                         <div class="row">
                             <div class="col span-1-of-3">
                                 <label for="name">Name</label>
@@ -143,7 +142,7 @@
                                 <label for="email">Email</label>
                             </div>
                             <div class="col span-2-of-3">
-                                <input type="email" name="email" id="email" placeholder="Your email" required>
+                                <input type="email" name="_replyto" id="email" placeholder="Your email" required>
                             </div>
                         </div>
                         <div class="row">
@@ -158,8 +157,16 @@
                             <div class="col span-1-of-3">
                                 <label>&nbsp;</label>
                             </div>
+                            <div class="col span-2-of-3">
+                                <div class="g-recaptcha" data-sitekey="6LcfmDcUAAAAAOVsv84uugtx9imV-2KSTvoo4AZH"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col span-1-of-3">
+                                <label>&nbsp;</label>
+                            </div>
                             <div class="col span-2-of-3 submit-button">
-                                <input type="submit" value="Submit">
+                                <input type="submit" value="Send">
                             </div>
                         </div>
                     </form>
@@ -190,6 +197,8 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="vendors/js/jquery.waypoints.min.js"></script>
             <script src="resources/js/scripts.js"></script>
+            <!--        reCAPTCHA-->
+            <script src='https://www.google.com/recaptcha/api.js'></script>
         
     </body>
 </html>
