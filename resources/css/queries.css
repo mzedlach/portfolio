@@ -13,6 +13,7 @@
     section {padding: 60px 0px;}
     .about-row {
         margin-top: 10px;
+        -ms-flex-wrap:wrap;
         flex-wrap:wrap;
     }
     
@@ -21,7 +22,11 @@
     .coding-experience { margin-top: 20px; }
     .section-aboutme .col {
         width:80%;
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     .about-image {
@@ -37,14 +42,23 @@
 /*Projects*/
     .project-four { display:none; }
     .project-two{
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-wrap:wrap;
         flex-wrap:wrap;
     }
     .indiv-project { font-size:130%; }
     
     .contact-form .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         width:80%;
     }
@@ -65,7 +79,12 @@
 /*Navigation - Mobile  */
     .main-nav {
         margin-top: 0px;
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         width:90%;
     }
@@ -74,11 +93,18 @@
     }
     
     nav .row {
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center
     }
     .mobile-nav-icon {
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
+        -ms-flex-item-align: center;
         align-self: center;
         font-size: 80%;
     }
@@ -118,8 +144,10 @@
 /*Footer*/
     footer { padding: 30px ; }
     .footer-links { display:block; }
-    .footer-nav { justify-content: center; }
+    .footer-nav { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
     .footer-social {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin: 10px 0px;
     }  
@@ -145,8 +173,13 @@
 
 /*Contact Form*/
     .contact-form .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         width:100%;
     }
@@ -155,7 +188,11 @@
         margin-bottom: 2px;
     }
     .submit-button {
+        display:-webkit-box;
+        display:-ms-flexbox;
         display:flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
     
