@@ -3,21 +3,17 @@
 /* ------------------------------------- */
 
 /*
-FONTS:
-
 COLOURS:
 Light: #D5DEE7
 Dark: #9EACBF
 Darkest: #1B1F25 
 */
 
-
 * {  /*Removes all default values*/
     margin: 0;
     padding: 0;
     box-sizing:border-box;
 }
-
 html {  /*Sets defaults for page*/
     background-color:#fff;
     color:#555;
@@ -34,11 +30,10 @@ html {  /*Sets defaults for page*/
 
 .row {
     max-width: 1140px;
-/*    This is the only value to have an absolute value in pixels. All others will be in percentages. */
+/*    'Master value' in pixels. All others as percentages. */
     margin: 0 auto;
 /*    To center rows*/
 }
-
 section {
     padding: 80px 0px;
 }
@@ -86,7 +81,6 @@ h3 {
     color: ; 
     margin: ; 
 }
-
 .icon-small {
     font-size: ;
     display: ; 
@@ -166,7 +160,6 @@ header {
     margin: 5px 0px;
 }
 
-
 /*Main navigation*/
 .main-nav {
     list-style: none;
@@ -175,11 +168,9 @@ header {
     flex-wrap: nowrap;
     justify-content: flex-end;
 }
-
 .nav-links {
     margin-left: 40px;
 }
-
 .nav-links:link,
 .nav-links:visited {
     padding: 8px 0px; 
@@ -202,7 +193,6 @@ header {
     cursor:pointer;
     display:none;
 }
-
 .mobile-nav-icon i {
     font-size: 200%;
     color: #1B1F25;
@@ -296,22 +286,64 @@ header {
 }
 .indiv-project {
     height:240px;
-    width:240px;    
-/*    padding:5px;*/
+    width:240px;   
     margin:3px;
-    background:#555;
-    color:#9EACBF;
-    display:flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border-radius:10%;
-    transition:     opacity 0.5s, color 0.5s, font-size 0.5s;
+    position:relative;
+    border-radius:5%;
+    overflow:hidden;
 }
-.indiv-project:hover {
+
+.indiv-project p {
+    padding-top: 10px;
+    padding-bottom:10px;
+    color: #000;
+    background-color:#fff;
+    align-self:flex-end;
+    flex: 100%;
+}
+.indiv-project a {
+    text-decoration:none;
+    text-align:center;
+}
+.project-mask {
+    overflow:hidden;
+    position:absolute;
+    height:100%;
+    width:100%;
+    left:0;
+    top:0;
+    opacity:0;
+    background-color:#000000;
+    transition: opacity 0.5s;
+    display:flex;
+}
+.indiv-project img {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+    position:relative;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5%;
+    max-width: 100%;
+    height: auto;
+}
+.indiv-project .project-mask:hover {
     opacity: 0.6;
-    color:#fff;
-    font-size:120%;
+}
+.indiv-project .coming-soon {
+    background:#555;
+    height: 240px;
+    color: #ffffff;
+    text-align:center;
+    padding-top:20px;   
 }
 
 /* ------------------------------------- */
@@ -351,8 +383,7 @@ textarea {
     text-align: center;
     color: #222 ;
 }
-.success {
-    background-color: rgba(151, 234, 180, 0.79); }
+.success {background-color: rgba(151, 234, 180, 0.79); }
 .error { background-color: rgba(242, 159, 159, 0.85); }
 
 /* ------------------------------------- */
@@ -363,13 +394,11 @@ footer {
     background-color:#1B1F25;
     padding: 50px ;
 }
-
 .footer-links {
     display:flex;
     align-items:center;
     justify-content: space-between;
 }
-
 .footer-nav {
     display:flex;
     justify-content: flex-start;
@@ -444,16 +473,12 @@ body.fade-out {
 .js-wp-1 {
     opacity: 0;
 }
-
 .js-wp-1 .animated {
     opacity: 1;
 }
-
 .project-four .indiv-project {
     opacity: 0;
 }
 .indiv-project .animated {
     opacity:1;
 }
-
-

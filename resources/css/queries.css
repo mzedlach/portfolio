@@ -7,7 +7,6 @@
     .row{ padding: 0 2%; }
 }
 
-
 /*Small tablets to big tablets: From 768-1023px;*/
 @media only screen and (max-width: 1023px) {
     body {font-size: 18px;}  
@@ -43,13 +42,13 @@
         flex-wrap:wrap;
     }
     .indiv-project { font-size:130%; }
+    
     .contact-form .row {
         display: flex;
         justify-content: center;
         width:80%;
     }
 } 
-
 
 /*Small phones to small tablets: from 481-767 px */
 @media only screen and (max-width: 767px) {
@@ -116,7 +115,7 @@
         font-size:120%;
     }
 
-    /*Footer*/
+/*Footer*/
     footer { padding: 30px ; }
     .footer-links { display:block; }
     .footer-nav { justify-content: center; }
