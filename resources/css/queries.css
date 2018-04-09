@@ -1,6 +1,5 @@
 /*Big tablet to 1200px (widths smaller than the 1140px row)*/
 @media only screen and (max-width:1200px) {
-    section {background-color: orange;}
     .hero-text-box {
         width: 100%;
         padding: 0 2%;
