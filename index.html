@@ -36,7 +36,7 @@
     </head>
     <body>
 <!--        Page Fade in on load-->
-        <script>document.body.className += ' fade-out';</script>
+        <script>document.body.className += 'fade-out';</script>
         
             <header>
                 <nav>
@@ -53,7 +53,9 @@
                 </nav>
                 <div class="hero-text-box">
                     <h1>Maria Lach</h1>
-                    <h3>Freelance developer <br> -Insert catchy phrase here- </h3>
+                    <h3><br>Freelance Software Developer 
+                        <br>
+                        Building a bridge between you and your online audience </h3>
                 </div>
             </header>
 
@@ -67,7 +69,7 @@
                         <img class="about-image" src="resources/img/portrait.png" alt="Maria Lach photo">
                     </div>
                     <div class="col span-3-of-4 about-description">
-                        <p>My name is Maria and I am a self-taught software developer. I work with people to transform their thoughts and sketches in to simple, clear web experiences. I love tackling the clicking gears in the background that make a website go. In addition to my web development skills, I have experience within the fields of genetic research as well as teaching science. These provide me with invaluable experience to approach problems and work with people effectivley. I am continuously expanding my coding knowledge through self-guided resources and online courses. Please take a moment to look through projects and feel free to contact me in the form below. </p>
+                        <p>My name is Maria and I am a self-taught web developer. I work with people to transform their thoughts and sketches in to simple, clear web experiences. I love tackling the clicking gears in the background that make a website go. In addition to my web development skills, I have experience within the fields of genetic research as well as teaching science. These provide me with invaluable experience to approach problems and work with people effectively. I am continuously expanding my coding knowledge through self-guided resources and online courses. Please take a moment to look through my final projects, current github activity, and feel free to contact me in the form below. </p>
                     </div>
                 </div>
                 
@@ -87,6 +89,11 @@
                     <img class="imageLogo" src="vendors/img/css3logo.png" alt="CSS3 logo">
                     <img class="imageLogo" src="vendors/img/javascriptlogo.png" alt="Javascript logo">
                 </div>
+                <div class="row experience-logos js-wp-1">
+                    <img class="imageLogoLibrary" src="vendors/img/sasslogo.png" alt="Sass logo">
+                    <img class="imageLogoLibrary" src="vendors/img/angularlogo.png" alt="Angular logo">
+                    <img class="imageLogoLibrary" src="vendors/img/nodejslogo.png" alt="NodeJS logo">
+                </div>
             </section>
 
             <section class="section-projects" id="projects">
@@ -96,13 +103,13 @@
                 <div class="row">
                     <div class="project-four">
                         <div class="indiv-project js-wp-InLeft">
-                            <img class="img-thumbnail img-fluid" src="resources/img/project-quotemachine.png">
+                            <img class="img-thumbnail img-fluid" src="resources/img/project-quotemachine.png" alt="Random Quote Machine">
                             <a href="https://codepen.io/mzedl/full/ALvQvP/" class="project-mask">
                                 <p>Random Quote Machine</p>
                             </a>
                         </div>
                         <div class="indiv-project js-wp-InDown">
-                            <img class="img-thumbnail img-fluid" src="resources/img/project-weatherAPI.png">
+                            <img class="img-thumbnail img-fluid" src="resources/img/project-weatherAPI.png" alt="Local Weather App">
                             <a href="https://codepen.io/mzedl/full/oGKZvv/" class="project-mask">
                                 <p>Local Weather</p>
                             </a>
@@ -161,13 +168,13 @@
                     
                     <div class="project-two">
                         <div class="indiv-project js-wp-zoom">
-                            <img class="img-thumbnail img-fluid" src="resources/img/project-quotemachine.png">
+                            <img class="img-thumbnail img-fluid" src="resources/img/project-quotemachine.png" alt="Random Quote Machine">
                             <a href="https://codepen.io/mzedl/full/ALvQvP/" class="project-mask">
                                 <p>Random Quote Machine</p>
                             </a>
                         </div>
                         <div class="indiv-project js-wp-zoom">
-                            <img class="img-thumbnail img-fluid" src="resources/img/project-weatherAPI.png">
+                            <img class="img-thumbnail img-fluid" src="resources/img/project-weatherAPI.png"  alt="Local Weather App">
                             <a href="https://codepen.io/mzedl/full/oGKZvv/" class="project-mask">
                                 <p>Local Weather</p>
                             </a>
@@ -228,6 +235,31 @@
                         </div>
                     </div>
                 </div>
+
+                
+                <div class="row">
+                    <h2 style="margin-top: 30px;">Client Projects</h2>
+                </div>
+                <div class="row">
+                    <div class="project-four">
+                        <div class="indiv-project js-wp-InDown">
+                            <img class="img-thumbnail img-fluid wilkdonuts" src="resources/img/logo%20transparent.png" alt="Wilk Mini Donuts">
+                            <a href="https://s3.eu-central-1.amazonaws.com/wilkminidonuts.de/index.html" class="project-mask">
+                                <p>Mini Donut Stand</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-two">
+                        <div class="indiv-project js-wp-InDown">
+                            <img class="img-thumbnail img-fluid wilkdonuts" src="resources/img/logo%20transparent.png" alt="Wilk Mini Donuts">
+                            <a href="https://s3.eu-central-1.amazonaws.com/wilkminidonuts.de/index.html" class="project-mask">
+                                <p>Mini Donut Stand</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                
             </section>
 
             <section class="section-form" id="contactform">
@@ -235,7 +267,7 @@
                     <h2>Get in touch</h2>
                 </div>
                 <div class="row">
-                    <form method="post" action="https://formspree.io/	marialach007@gmail.com" class="contact-form">
+                    <form method="post" action="https://formspree.io/marialach007@gmail.com" class="contact-form">
                         <div class="row">
                             
                             
@@ -262,14 +294,6 @@
                             </div>
                             <div class="col span-2-of-3">
                                 <textarea name="message" id="message" placeholder="Your message" required></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col span-1-of-3">
-                                <label>&nbsp;</label>
-                            </div>
-                            <div class="col span-2-of-3">
-                                <div class="g-recaptcha" data-sitekey="6LcfmDcUAAAAAOVsv84uugtx9imV-2KSTvoo4AZH"></div>
                             </div>
                         </div>
                         <div class="row">
@@ -308,9 +332,6 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="vendors/js/jquery.waypoints.min.js"></script>
             <script src="resources/js/scripts.js"></script>
-            <!--        reCAPTCHA-->
-            <script src='https://www.google.com/recaptcha/api.js'></script>
-        
     </body>
 </html>
     
