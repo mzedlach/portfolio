@@ -1,0 +1,668 @@
+
+// ----------------------------- //
+// ---------- COLOURS ---------- //
+// ----------------------------- //
+
+// old colours
+$color-grey-light: #D5DEE7;
+$color-grey-medium: #9EACBF;
+$color-grey-dark: #1B1F25 ;
+
+$color-blue1: #0a3262;
+$color-blue2: #3c6382;
+$color-green3: #548687;
+$color-blue3: #60a3bc;
+$color-blue4: #82ccdd;
+
+$color-green1: #C5E99B;
+$color-green2: #8FBC94;
+
+$color-background1: rgb(127, 148, 180);
+
+
+// playing with HSL - blues
+
+// $color-blue1: hsl(213, 80%, 20%);
+// $color-blue2: hsl(213, 80%, 30%);
+// $color-green3: hsl(213, 80%, 40%);
+// $color-blue3: hsl(213, 80%, 50%);
+// $color-blue4: hsl(213, 80%, 60%);
+
+$color-dark-grey: #888888;
+// PLaying with HSL - based on backgroudn purple/blue colour
+$color-background1: hsl(216, 20%, 60%);
+$color-test1: hsl(216, 30%, 50%);
+$color-test2: hsl(216, 40%, 40%);
+$color-test3: hsl(216, 50%, 30%);
+$color-test4: hsl(216, 60%, 20%);
+$color-test5: hsl(216, 70%, 60%);
+
+$color-project-link: rgb(127, 148, 180);
+$color-project-link-hover: hsl(216, 50%, 30%); 
+// $color-project-link-hover2: #faba30;
+$color-project-icon: rgb(127, 148, 180);
+// HERE - this is the last thing I was working on - You are tinkering with jus tthe first two colourations - try to figure out a layout and/or colouring that will work - Maybe adding an additional div with just a fade from one colour to the next will work. - OR - fading out hte colours to more aof a pastel may also work well. 
+// $color-background1: rgb(100, 129, 173);
+$color-temporary-tester: rgb(240, 0, 252);
+
+
+// -------------------------------------------- //
+// ---------- PAGE SETUP & OVERRIDES ---------- //
+// -------------------------------------------- //
+*{ 
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0; 
+}
+a:link, 
+a:visited{
+  text-decoration: none;
+}
+
+
+// -------------------------------------- //
+// ---------- REUSABLE CLASSES ---------- //
+// -------------------------------------- //
+// .flex-element-center-fullwidth {
+//   flex: 0 0 100%;
+//   text-align: center;
+// }
+
+// -------------------------------- //
+// ---------- TYPOGRAPHY ---------- //
+// -------------------------------- //
+$font-heading: 'Lato', 'Arial', sans-serif;
+$font-links: 'Lato', 'Arial', sans-serif;
+$font-text: 'Lato', 'Arial', sans-serif;
+//'Raleway', sans-serif;
+
+$font-heading-header: 'Lato', 'Arial', sans-serif;
+$font-heading-section: 'Cousine', monospace;
+//Delete these when you're happy with all your headings
+$font-heading-secondchoice: 'Fira Mono', monospace;
+$font-heading-thirdchoice: 'Inconsolata', monospace;
+
+html {
+  /* Setting HTML font to 62.5% allows user to zoon in and out while giving us the 10px base font to work with */
+  /* Later allows for easier use of rem - note: rem not compatible with ES9 */
+  font-size: 62.5%;
+
+//   @include respond(phone) {
+//     font-size: 56.25% // 1rem=9px, 9/16 = 56.25% - Base is 9px
+//   }
+//   @include respond(big) {
+//     font-size: 75%; //1rem=12px, 12/16 = 75% - Base is 12px
+  // }
+}
+
+body { 
+  font-family: $font-text;
+  color: #555;
+ }
+
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-family: $font-heading-header;
+  // text-align: center;
+  font-weight: 400;
+  color: #000;
+}
+h1 {
+  font-weight: 300;
+}
+// ---------- FONT SIZE ---------- //
+body { font-size: 2rem; }
+h1{ font-size: 8rem; }
+h2 { font-size: 4rem; }
+h3 { font-size: 3rem; }
+p { font-size: 2.2rem; }
+
+// ----------------------------------------- //
+// ---------- SECTION PAGE LAYOUT ---------- //
+// ----------------------------------------- //
+//Form section is separate
+
+section {
+  display: flex;
+}
+
+// ---------- TITLES & CONTENT ---------- //
+
+.section {
+  &--right{
+    padding: 5rem 0rem 5rem 8rem;
+  }
+  &--left{
+    padding: 5rem 8rem 3.5rem 0rem;
+  }
+
+  &__title{
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 2rem;
+     &--left{
+      margin-left: 8rem;
+     }
+     &--right{
+       display: block;
+       width: 85%;
+       text-align: right;
+     }
+  }
+  &__title-underline{
+    position: absolute;
+    height: .6rem;
+    width: 50rem;
+    background-color: black;
+    transform: translateY(7rem);
+    &--right{
+      right: 0;
+    }
+    &--left{
+      left:0;
+    }
+  }
+
+  &__content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100%;
+
+    &-left {
+      border-radius: 0rem 6.5rem 6.5rem 0rem;
+    }
+    &-right{
+      border-radius: 6.5rem 0rem 0rem 4rem;
+    }
+    &--column {
+      flex-direction: column;
+      align-items: center;
+    }
+    &--row {
+      flex-direction: row;
+      // align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    &.small-section-content-padding{
+      padding: 12rem 5rem 5rem 5rem;
+    }
+    &.large-section-content-padding{
+      padding: 12rem 12rem 8rem 12rem;
+    }
+    &.contact-form-padding{
+      padding: 10rem;
+    }
+  }
+}
+
+// ---------- SECTION BACKGROUND COLOURS ---------- //
+
+.section{
+  &__about-me{
+    background-color: $color-background1;
+  }
+  &__skills{
+    background-color: $color-test1;
+  }
+  &__projects{
+    background-color: $color-test2;
+  }
+  &__tinkering{
+    background-color: $color-test3;
+  }
+  &__contact{
+    background-color: white;
+  }
+}
+// -------------------------------------- //
+// ---------- SECTION - HEADER ---------- //
+// -------------------------------------- //
+
+header {
+  background-image: url(img/jesus-kiteque-224069-min.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.navigation {
+  padding: 1.5rem 3rem;
+  display: flex;
+
+  &__logo{
+    height: 7rem;
+    width: auto;
+    margin-right: auto;
+  }
+  &__links{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    &-link{
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-right: 1.5rem;
+      font-family: $font-links;
+      font-size: 2rem;
+      color: black;
+      &:link,
+      &:visited{
+        color: black;
+      }
+      &:hover,
+      &:active {
+        border-bottom: 1px solid black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.header {
+  &__text{
+    &--name{
+      word-spacing: 1rem;
+      letter-spacing: .1rem;
+    }
+  }
+  &__links{
+    display: flex;
+    &-button{
+      height: 5rem;
+      width: 8rem;
+      padding: .5rem;
+      background-color: white;
+      border-radius: 3.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: .5rem;
+      &-link{
+        &:link,
+        &:visited{ color: black; }
+        &:hover,
+        &:active { cursor: pointer;}
+      }
+      &-icon{
+        height: 3.5rem;
+      }
+    }
+  }
+}
+
+// ------------------------------------- //
+// ---------- SECTION - ABOUT ---------- //
+// ------------------------------------- //
+.about-me {
+  &__image {
+    height: 32rem;
+    border-radius: 20%;
+    // margin-left: 3.5rem;
+  }
+  &__description {
+    line-height: 1.5;
+    width: 75%;
+    margin: auto 0rem auto auto;
+    text-align: justify;
+  }
+}
+// -------------------------------------- //
+// ---------- SECTION - SKILLS ---------- //
+// -------------------------------------- //
+.skills{
+  &__tiles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.5rem 0rem 6.5rem 0rem;
+
+    &-tile{
+      height: 11rem;
+      width: 11rem;
+      padding: .5rem;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      
+      &-logo{
+        width: 8rem;
+      }
+      &-title {
+      } 
+    }
+  }
+}
+
+.trello {
+  width: 11rem;
+  height: 11rem;
+}
+
+// -------------------------------------------------------------- //
+// ---------- SHARED SECTION ELEMTNS - PROJECTS & TOOLS---------- //
+// -------------------------------------------------------------- //
+.tool-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0rem 1rem;
+  color: $color-project-icon;
+}
+
+// ---------------------------------------- //
+// ---------- SECTION - PROJECTS ---------- //
+// ---------------------------------------- //
+.project-tile-full {
+  display: flex; 
+  align-items: center;
+  width: 80rem;
+  border-radius: 3.5rem;
+  margin: 3.5rem auto;
+  box-shadow: 8px 8px 40px 8px $color-dark-grey;
+  padding: 2.5rem;
+
+  &__left{
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-image{
+      width: 80%;
+      border: 2px solid $color-project-link; 
+      border-radius: .5rem;
+    }
+    &-links{
+      margin-top: 2rem;
+      &-link{
+        margin: 0rem 1rem;
+        &:link,
+        &:visited{
+          color: $color-project-link;
+        }
+        &:hover,
+        &:active {
+          cursor: pointer;
+          color: $color-project-link-hover;
+        }
+      }
+      &-icon{
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+  }
+
+  &__right{
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2.5rem;
+    font-family: $font-text;
+    &-title{
+      font-family: $font-heading;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid black;
+    }
+    &-description{
+      text-align: justify;
+      line-height: 1.5;
+    }
+    &-tools{
+      margin: 2rem 0rem;
+      &-text{  
+      }
+      &-icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        &-icon{
+
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------- //
+// ---------- SECTION - TINKERING ---------- //
+// ----------------------------------------- //
+
+.tinkering-tile{
+  width: 50rem;
+  border-radius: 3.5rem;
+  margin: 1rem;
+  box-shadow: 5px 5px 25px 5px $color-dark-grey;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title{
+    font-family: $font-heading;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid black;
+  }
+  &__image{
+    width: 70%;
+    height: 20rem;
+    border: 5px solid white; 
+    border-radius: 1rem;
+    &:hover{
+      border: 5px solid $color-temporary-tester; 
+    }
+
+    &-link{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-text{
+      font-size: 1.4rem;
+    }
+  }
+  &__description{
+    margin: 2rem 0rem;
+    &-text-link{
+      
+    }
+    &-icon{
+      &-link{
+        
+      }
+      &-icon{
+        width: 1.5rem;
+      }
+    }
+    &-learning-objectives{
+      margin-top: 2rem;
+      &-items{
+         margin-left: 3rem;
+        &-item{
+          text-indent: -1.6rem;
+          &::before{
+            content: "";
+            display: inline-block;
+            height: 0rem;
+            width: 0rem;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin-right: .7rem;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+  &__tools{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-text{
+
+    }
+    &-icons{
+      &-icon{
+
+      }
+    }
+  }
+}
+// -------------------------------------- //
+// ---------- SECTION - RESUME ---------- //
+// -------------------------------------- //
+// .resume {
+//   width: 90rem;
+//   border: 2px solid lightgrey;
+//   border-radius: 5px;
+//   margin: 3rem 0rem;
+//   padding: 3rem;
+
+//   &__area-title{
+//     display: inline-block;
+//     text-transform: uppercase;
+//     padding: 1rem 3rem;
+//     color: white;
+//     font-size: 2rem;
+//     background-color: $color-test1;
+//     border-radius: 5px;
+//     font-weight: 300;
+//     position: relative;
+//     &:after{
+//       content: "";
+//       height: .5rem;
+//       width: 84rem;
+//       background-color: $color-test1;
+//       position: absolute;
+//       bottom: 0;
+//       left:0;
+
+//     }
+//   }
+//   &__info{
+//     // display: flex;
+//     margin-top: 2rem;
+//     &-title{
+//       font-size: 2rem;
+//       font-weight: 700;
+//     }
+//     &-date{
+
+//     }
+//     &-location{
+
+//     }
+//     &-bulletpoint{
+
+//     }
+//   }
+// }
+
+// --------------------------------------- //
+// ---------- SECTION - CONTACT ---------- //
+// --------------------------------------- //
+
+.section__contact-title{
+  // margin-bottom: 4rem;
+  &-underline{
+    height: .6rem;
+    width: 50rem;
+    background-color: black;
+    margin-bottom: 4rem;
+  }
+}
+
+.contact-form{
+  width: 70%;
+
+  &__group{
+    display: flex;
+    margin: 1rem 0rem;
+    // width: 600px;
+  
+  }
+  &__label{
+    flex: 1 1 35%;
+  }
+  &__input,
+  &__textarea{
+    flex: 1 1 65%;
+    line-height: 1.15;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #9EACBF;
+  }
+  &__textarea{
+    height: 10rem;
+  }
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  font-size: 2rem;
+}
+// /* ------------------------------------- */
+// /* CONTACT */
+// /* ------------------------------------- */
+
+// .contact-form .row {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -webkit-box-pack: center;
+//   -ms-flex-pack: center;
+//   justify-content: center;
+//   width:70%;
+// }
+// .contact-form .col {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -webkit-box-align:center;
+//   -ms-flex-align:center;
+//   align-items:center;
+// }
+
+//   width:100%;
+//   padding: 7px;
+//   border-radius: 3px;
+//   border: 1px solid #9EACBF;
+// }
+// textarea {
+//   height:100px;
+// }
+
+
+
+
+
+// -------------------------------------- //
+// ---------- SECTION - FOOTER ---------- //
+// -------------------------------------- //
+footer{
+  height: 50rem;
+  background-color:grey;
+}
+// ---------------------------------------------- //
+// ---------- MOBILE-SPECIFIC ELEMENTS ---------- //
+// ---------------------------------------------- //
+.mobile-element {
+  display: none;
+}
+
+
+
+
+
+// .tester {
+//   background-color: orangered;
+//   // height: 20px;
+//   // width: 20px;
+// }
