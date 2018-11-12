@@ -330,8 +330,51 @@ textarea {
   font-size: 2rem; }
 
 footer {
-  height: 50rem;
+  height: 10rem;
   background-color: grey; }
 
 .mobile-element {
   display: none; }
+
+.tester {
+  background-color: orangered; }
+
+/* ---------- BUTTONS ----------*/
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300px;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
+  transition: background-color 0.4s, border 0.4s, color 0.4s; }
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #9EACBF;
+  border: 1px solid #9EACBF;
+  color: #fff;
+  margin: 5px; }
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #9EACBF;
+  color: #9EACBF; }
+
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #1B1F25; }
+
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #1B1F25; }
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #1B1F25;
+  color: #fff; }
