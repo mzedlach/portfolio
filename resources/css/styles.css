@@ -40,6 +40,11 @@ h3 {
 p {
   font-size: 2.2rem; }
 
+.footer {
+  font-size: 2rem; }
+  .footer__copyright {
+    font-size: 1.6rem; }
+
 section {
   display: flex; }
 
@@ -148,22 +153,6 @@ header {
 
 .header__links {
   display: flex; }
-  .header__links-button {
-    height: 5rem;
-    width: 8rem;
-    padding: .5rem;
-    background-color: white;
-    border-radius: 3.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: .5rem; }
-    .header__links-button-link:link, .header__links-button-link:visited {
-      color: black; }
-    .header__links-button-link:hover, .header__links-button-link:active {
-      cursor: pointer; }
-    .header__links-button-icon {
-      height: 3.5rem; }
 
 .about-me__image {
   height: 32rem;
@@ -330,8 +319,37 @@ textarea {
   font-size: 2rem; }
 
 footer {
-  height: 10rem;
-  background-color: grey; }
+  background-color: rgba(27, 31, 37, 0.98);
+  padding: 50px;
+  color: #8994a3; }
+
+.footer__links {
+  display: flex;
+  justify-content: space-between; }
+
+.footer__link {
+  margin: 0rem 1rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #8994a3;
+    transition: color 0.2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #d2d4d8; }
+  .footer__link--linkedin:hover {
+    color: #007bb5; }
+  .footer__link--github:hover {
+    color: #4078c0; }
+  .footer__link--twitter:hover {
+    color: #1da1f2; }
+  .footer__link--codepen:hover {
+    color: #d2d4d8; }
+  .footer__link--freecodecamp:hover {
+    color: #006400; }
+
+.footer__copyright {
+  text-align: center; }
+
+.footer__link-icon {
+  height: 3rem; }
 
 .mobile-element {
   display: none; }
@@ -340,41 +358,28 @@ footer {
   background-color: orangered; }
 
 /* ---------- BUTTONS ----------*/
-.btn:link,
-.btn:visited,
+.btn-icon:link,
+.btn-icon:visited,
 input[type="submit"] {
-  display: inline-block;
+  border: 1px solid #9EACBF;
+  color: #fff;
+  margin: 5px;
   padding: 10px 30px;
-  font-weight: 300px;
   text-decoration: none;
   border-radius: 200px;
   -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
-  transition: background-color 0.4s, border 0.4s, color 0.4s; }
-
-.btn-full:link,
-.btn-full:visited,
-input[type="submit"] {
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
   background-color: #9EACBF;
-  border: 1px solid #9EACBF;
-  color: #fff;
-  margin: 5px; }
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
-.btn-ghost:link,
-.btn-ghost:visited {
-  border: 1px solid #9EACBF;
-  color: #9EACBF; }
-
-.btn:hover,
-.btn:active,
+.btn-icon:hover,
+.btn-icon:active,
 input[type="submit"]:hover,
 input[type="submit"]:active {
-  background-color: #1B1F25; }
-
-.btn-full:hover,
-.btn-full:active {
+  background-color: #1B1F25;
   border: 1px solid #1B1F25; }
 
-.btn-ghost:hover,
-.btn-ghost:active {
-  border: 1px solid #1B1F25;
-  color: #fff; }
+.btn-icon svg {
+  height: 3.5rem; }

@@ -44,7 +44,7 @@ $color-project-icon: rgb(127, 148, 180);
 // HERE - this is the last thing I was working on - You are tinkering with jus tthe first two colourations - try to figure out a layout and/or colouring that will work - Maybe adding an additional div with just a fade from one colour to the next will work. - OR - fading out hte colours to more aof a pastel may also work well. 
 // $color-background1: rgb(100, 129, 173);
 $color-temporary-tester: rgb(240, 0, 252);
-
+$color-dark: rgba(27, 31, 37, 0.98);
 
 // -------------------------------------------- //
 // ---------- PAGE SETUP & OVERRIDES ---------- //
@@ -117,6 +117,12 @@ h1{ font-size: 8rem; }
 h2 { font-size: 4rem; }
 h3 { font-size: 3rem; }
 p { font-size: 2.2rem; }
+.footer{ 
+  font-size: 2rem;
+  &__copyright{
+    font-size: 1.6rem;
+  }
+}
 
 // ----------------------------------------- //
 // ---------- SECTION PAGE LAYOUT ---------- //
@@ -222,6 +228,30 @@ section {
 // ---------- SECTION - HEADER ---------- //
 // -------------------------------------- //
 
+
+// /*Sticky Navigation*/
+// .sticky {
+//   position: fixed;
+//   top: 0;
+//   left: 0; 
+//   width: 100%;
+//   background-color: rgba(27, 31, 37, 0.98);
+//   -webkit-box-shadow: 0 5px 5px #1B1F25;
+//   box-shadow: 0 5px 5px #1B1F25;
+//   z-index: 9999;
+// }
+// .sticky .main-nav { margin-top: 15px; }
+
+// .sticky .nav-links:link,
+// .sticky .nav-links:visited {
+//   padding: 8px 0px; 
+//   color: #8994a3; 
+// }
+// .sticky .logo { display:none;}
+// .sticky .logo-grey { display: block; }
+
+
+
 header {
   background-image: url(img/jesus-kiteque-224069-min.jpg);
   background-size: cover;
@@ -271,29 +301,28 @@ header {
   }
   &__links{
     display: flex;
-    &-button{
-      height: 5rem;
-      width: 8rem;
-      padding: .5rem;
-      background-color: white;
-      border-radius: 3.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: .5rem;
-      &-link{
-        &:link,
-        &:visited{ color: black; }
-        &:hover,
-        &:active { cursor: pointer;}
-      }
-      &-icon{
-        height: 3.5rem;
-      }
-    }
+  //   &-button{
+  //     height: 5rem;
+  //     width: 8rem;
+  //     padding: .5rem;
+  //     background-color: white;
+  //     border-radius: 3.5rem;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     margin: .5rem;
+  // //     &-link{
+  // //       &:link,
+  // //       &:visited{ color: black; }
+  // //       &:hover,
+  // //       &:active { cursor: pointer;}
+  // //     }
+  //     &-icon{
+  //       height: 3.5rem;
+  //     }
+  //   }
   }
 }
-
 // ------------------------------------- //
 // ---------- SECTION - ABOUT ---------- //
 // ------------------------------------- //
@@ -336,7 +365,6 @@ header {
     }
   }
 }
-
 .trello {
   width: 11rem;
   height: 11rem;
@@ -351,7 +379,6 @@ header {
   margin: 0rem 1rem;
   color: $color-project-icon;
 }
-
 // ---------------------------------------- //
 // ---------- SECTION - PROJECTS ---------- //
 // ---------------------------------------- //
@@ -427,7 +454,6 @@ header {
     }
   }
 }
-
 // ----------------------------------------- //
 // ---------- SECTION - TINKERING ---------- //
 // ----------------------------------------- //
@@ -514,56 +540,6 @@ header {
     }
   }
 }
-// -------------------------------------- //
-// ---------- SECTION - RESUME ---------- //
-// -------------------------------------- //
-// .resume {
-//   width: 90rem;
-//   border: 2px solid lightgrey;
-//   border-radius: 5px;
-//   margin: 3rem 0rem;
-//   padding: 3rem;
-
-//   &__area-title{
-//     display: inline-block;
-//     text-transform: uppercase;
-//     padding: 1rem 3rem;
-//     color: white;
-//     font-size: 2rem;
-//     background-color: $color-test1;
-//     border-radius: 5px;
-//     font-weight: 300;
-//     position: relative;
-//     &:after{
-//       content: "";
-//       height: .5rem;
-//       width: 84rem;
-//       background-color: $color-test1;
-//       position: absolute;
-//       bottom: 0;
-//       left:0;
-
-//     }
-//   }
-//   &__info{
-//     // display: flex;
-//     margin-top: 2rem;
-//     &-title{
-//       font-size: 2rem;
-//       font-weight: 700;
-//     }
-//     &-date{
-
-//     }
-//     &-location{
-
-//     }
-//     &-bulletpoint{
-
-//     }
-//   }
-// }
-
 // --------------------------------------- //
 // ---------- SECTION - CONTACT ---------- //
 // --------------------------------------- //
@@ -613,9 +589,64 @@ textarea {
 // ---------- SECTION - FOOTER ---------- //
 // -------------------------------------- //
 footer{
-  height: 10rem;
-  background-color:grey;
+  background-color: $color-dark;
+  padding: 50px ;
+  color:  #8994a3;
+  // text-align: center;
 }
+
+.footer {
+
+  &__links{
+    display: flex;
+    justify-content: space-between;
+    &-navigation{
+    }
+    &-social{
+    }
+  }
+  &__link{
+    margin: 0rem 1rem;
+    &:link, 
+    &:visited{
+      color:  #8994a3;
+      transition: color 0.2s;
+    }
+    &:hover, 
+    &:active {
+      color: #d2d4d8;
+    }
+    &--linkedin:hover {
+      color: #007bb5;
+    }
+    &--github:hover {
+      color: #4078c0;
+    }
+    &--twitter:hover {
+      color: #1da1f2;
+    }
+    &--codepen:hover {
+      color: #d2d4d8;
+    }
+    &--freecodecamp:hover {
+      color: #006400;
+    }
+  }
+  &__copyright{
+    text-align: center;
+  }
+}
+
+.footer__link-icon {
+  height: 3rem;
+}
+
+// *:focus {outline:none;}
+// /*Removes blue ouline around input areas*/
+
+
+
+
 // ---------------------------------------------- //
 // ---------- MOBILE-SPECIFIC ELEMENTS ---------- //
 // ---------------------------------------------- //
@@ -625,57 +656,41 @@ footer{
 
 .tester {
   background-color: orangered;
-  // height: 20px;
-  // width: 20px;
 }
 
 
 /* ---------- BUTTONS ----------*/
-.btn:link, 
-.btn:visited,
-input[type="submit"]{
-    display:inline-block;
-    padding: 10px 30px; 
-    font-weight: 300px;
-    text-decoration:none;
-    border-radius:200px;
-    -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
-    transition: background-color 0.4s, border 0.4s, color 0.4s;
+
+.btn-icon:link, 
+.btn-icon:visited,
+input[type="submit"] {
+  border: 1px solid #9EACBF;
+  color: #fff;
+  margin: 5px;
+  padding: 10px 30px; 
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+  background-color: #9EACBF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.btn-full:link, 
-.btn-full:visited,
-input[type="submit"]{
-    background-color: #9EACBF;
-    border: 1px solid #9EACBF;
-    color: #fff;
-    margin: 5px;
-}
-.btn-ghost:link,
-.btn-ghost:visited {
-    border: 1px solid #9EACBF;
-    color: #9EACBF;
-}
-.btn:hover,
-.btn:active,
+.btn-icon:hover,
+.btn-icon:active,
 input[type="submit"]:hover,
 input[type="submit"]:active {
     background-color:#1B1F25; 
-}
-.btn-full:hover, 
-.btn-full:active {
     border: 1px solid #1B1F25;
 }
-.btn-ghost:hover,
-.btn-ghost:active {
-    border: 1px solid #1B1F25;
-    color: #fff;
+.btn-icon svg {
+  height: 3.5rem;
 }
-
-
-
 
 // To do list: 
 // **Responsive
 // Animations
+// Impressum page
 // Reference Font Awesome
 // Reference main image 
