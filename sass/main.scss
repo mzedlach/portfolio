@@ -68,6 +68,36 @@ a:visited{
 //   text-align: center;
 // }
 
+/* ---------- BUTTONS ----------*/
+
+.btn-icon:link, 
+.btn-icon:visited,
+input[type="submit"] {
+  border: 1px solid #9EACBF;
+  color: #fff;
+  margin: 5px;
+  padding: 10px 30px; 
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+  background-color: #9EACBF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-icon:hover,
+.btn-icon:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+    background-color:#1B1F25; 
+    border: 1px solid #1B1F25;
+}
+.btn-icon svg {
+  height: 3.5rem;
+}
+
+
 // -------------------------------- //
 // ---------- TYPOGRAPHY ---------- //
 // -------------------------------- //
@@ -117,6 +147,7 @@ h1{ font-size: 8rem; }
 h2 { font-size: 4rem; }
 h3 { font-size: 3rem; }
 p { font-size: 2.2rem; }
+input[type="submit"] {font-size: 2rem;}
 .footer{ 
   font-size: 2rem;
   &__copyright{
@@ -567,7 +598,7 @@ header {
     flex: 1 1 35%;
   }
   &__input,
-  &__textarea{
+  &__textarea {
     flex: 1 1 65%;
     line-height: 1.15;
     padding: 7px;
@@ -577,7 +608,16 @@ header {
   &__textarea{
     height: 10rem;
   }
+  &__submit{
+    align-content: left;
+    // margin-top: 100px;
+    background-color: orangered;
+  }
 }
+
+
+Yo'ure target INPUT TYPE for button,t hat's why none of your class settings are working!! 
+
 
 input[type=text],
 input[type=email],
@@ -659,34 +699,7 @@ footer{
 }
 
 
-/* ---------- BUTTONS ----------*/
 
-.btn-icon:link, 
-.btn-icon:visited,
-input[type="submit"] {
-  border: 1px solid #9EACBF;
-  color: #fff;
-  margin: 5px;
-  padding: 10px 30px; 
-  text-decoration: none;
-  border-radius: 200px;
-  -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
-  transition: background-color 0.4s, border 0.4s, color 0.4s;
-  background-color: #9EACBF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn-icon:hover,
-.btn-icon:active,
-input[type="submit"]:hover,
-input[type="submit"]:active {
-    background-color:#1B1F25; 
-    border: 1px solid #1B1F25;
-}
-.btn-icon svg {
-  height: 3.5rem;
-}
 
 // To do list: 
 // **Responsive

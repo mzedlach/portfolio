@@ -7,6 +7,33 @@ a:link,
 a:visited {
   text-decoration: none; }
 
+/* ---------- BUTTONS ----------*/
+.btn-icon:link,
+.btn-icon:visited,
+input[type="submit"] {
+  border: 1px solid #9EACBF;
+  color: #fff;
+  margin: 5px;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+  background-color: #9EACBF;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.btn-icon:hover,
+.btn-icon:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #1B1F25;
+  border: 1px solid #1B1F25; }
+
+.btn-icon svg {
+  height: 3.5rem; }
+
 html {
   /* Setting HTML font to 62.5% allows user to zoon in and out while giving us the 10px base font to work with */
   /* Later allows for easier use of rem - note: rem not compatible with ES9 */
@@ -39,6 +66,9 @@ h3 {
 
 p {
   font-size: 2.2rem; }
+
+input[type="submit"] {
+  font-size: 2rem; }
 
 .footer {
   font-size: 2rem; }
@@ -312,6 +342,9 @@ header {
     border: 1px solid #9EACBF; }
   .contact-form__textarea {
     height: 10rem; }
+  .contact-form__submit {
+    align-content: left;
+    background-color: orangered; }
 
 input[type=text],
 input[type=email],
@@ -356,30 +389,3 @@ footer {
 
 .tester {
   background-color: orangered; }
-
-/* ---------- BUTTONS ----------*/
-.btn-icon:link,
-.btn-icon:visited,
-input[type="submit"] {
-  border: 1px solid #9EACBF;
-  color: #fff;
-  margin: 5px;
-  padding: 10px 30px;
-  text-decoration: none;
-  border-radius: 200px;
-  -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
-  transition: background-color 0.4s, border 0.4s, color 0.4s;
-  background-color: #9EACBF;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.btn-icon:hover,
-.btn-icon:active,
-input[type="submit"]:hover,
-input[type="submit"]:active {
-  background-color: #1B1F25;
-  border: 1px solid #1B1F25; }
-
-.btn-icon svg {
-  height: 3.5rem; }
