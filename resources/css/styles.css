@@ -29,7 +29,8 @@ input[type="submit"] {
 input[type="submit"]:hover,
 input[type="submit"]:active {
   background-color: #1B1F25;
-  border: 1px solid #1B1F25; }
+  border: 1px solid #1B1F25;
+  cursor: pointer; }
 
 .btn-icon svg {
   height: 3.5rem; }
@@ -78,11 +79,15 @@ input[type="submit"] {
 section {
   display: flex; }
 
-.section--right {
-  padding: 5rem 0rem 5rem 8rem; }
-
-.section--left {
-  padding: 5rem 8rem 3.5rem 0rem; }
+.section__container {
+  background-color: white;
+  width: 100%; }
+  .section__container--left {
+    border-radius: 0rem 6.5rem 6.5rem 0rem;
+    margin: 5rem 8rem 3.5rem 0rem; }
+  .section__container--right {
+    border-radius: 6.5rem 0rem 0rem 4rem;
+    margin: 5rem 0rem 5rem 8rem; }
 
 .section__title {
   text-transform: uppercase;
@@ -91,7 +96,6 @@ section {
   .section__title--left {
     margin-left: 8rem; }
   .section__title--right {
-    display: block;
     width: 85%;
     text-align: right; }
 
@@ -107,28 +111,31 @@ section {
     left: 0; }
 
 .section__content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: white;
-  width: 100%; }
-  .section__content-left {
-    border-radius: 0rem 6.5rem 6.5rem 0rem; }
-  .section__content-right {
-    border-radius: 6.5rem 0rem 0rem 4rem; }
+  display: flex; }
   .section__content--column {
     flex-direction: column;
     align-items: center; }
-  .section__content--row {
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap; }
-  .section__content.small-section-content-padding {
-    padding: 12rem 5rem 5rem 5rem; }
   .section__content.large-section-content-padding {
     padding: 12rem 12rem 8rem 12rem; }
-  .section__content.contact-form-padding {
-    padding: 10rem; }
+
+/* ---------- BACKGROUNDS ----------*/
+.background-fixed {
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .background-fixed--header {
+    background-image: url(/img/jesus-kiteque-224069-min.jpg); }
+  .background-fixed--skills {
+    background-image: url(/img/rawpixel-558599-unsplash.jpg); }
+  .background-fixed--projects {
+    background-image: url(/img/rawpixel-558599-unsplash.jpg); }
+  .background-fixed--contact {
+    background-image: url(/img/jeff-kepler-1085049-unsplash.jpg); }
+
+.background-plain--about {
+  background-color: #8595ad; }
 
 .section__about-me {
   background-color: #8595ad; }
@@ -144,13 +151,6 @@ section {
 
 .section__contact {
   background-color: white; }
-
-header {
-  background-image: url(img/jesus-kiteque-224069-min.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  background-attachment: fixed; }
 
 .navigation {
   padding: 1.5rem 3rem;
@@ -185,19 +185,22 @@ header {
   display: flex; }
 
 .about-me__image {
-  height: 32rem;
+  height: 30rem;
   border-radius: 20%; }
 
 .about-me__description {
   line-height: 1.5;
-  width: 75%;
-  margin: auto 0rem auto auto;
-  text-align: justify; }
+  text-align: justify;
+  margin-left: 5rem; }
+
+.skills__text {
+  display: flex;
+  align-items: center; }
+  .skills__text--list {
+    margin-left: 2rem; }
 
 .skills__tiles {
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 3.5rem 0rem 6.5rem 0rem; }
   .skills__tiles-tile {
     height: 11rem;
@@ -205,7 +208,8 @@ header {
     padding: .5rem;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
     .skills__tiles-tile-logo {
       width: 8rem; }
 
@@ -321,11 +325,15 @@ header {
     flex-direction: column;
     align-items: center; }
 
-.section__contact-title-underline {
-  height: .6rem;
-  width: 50rem;
-  background-color: black;
-  margin-bottom: 4rem; }
+.section__contact-title {
+  font-weight: 300; }
+  .section__contact-title-underline {
+    height: .6rem;
+    width: 50rem;
+    background-color: black;
+    margin-bottom: 4rem; }
+    .section__contact-title-underline--contact {
+      height: .3rem; }
 
 .contact-form {
   width: 70%; }

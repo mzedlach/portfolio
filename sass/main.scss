@@ -68,6 +68,7 @@ a:visited{
 //   text-align: center;
 // }
 
+
 /* ---------- BUTTONS ----------*/
 
 .btn-icon:link, 
@@ -90,8 +91,9 @@ input[type="submit"] {
 .btn-icon:active,
 input[type="submit"]:hover,
 input[type="submit"]:active {
-    background-color:#1B1F25; 
-    border: 1px solid #1B1F25;
+  background-color:#1B1F25; 
+  border: 1px solid #1B1F25;
+  cursor: pointer;
 }
 .btn-icon svg {
   height: 3.5rem;
@@ -167,11 +169,23 @@ section {
 // ---------- TITLES & CONTENT ---------- //
 
 .section {
-  &--right{
-    padding: 5rem 0rem 5rem 8rem;
-  }
-  &--left{
-    padding: 5rem 8rem 3.5rem 0rem;
+  // &--right{
+  //   padding: 5rem 0rem 5rem 8rem;
+  // }
+  // &--left{
+  //   padding: 5rem 8rem 3.5rem 0rem;
+  // }
+  &__container {
+    background-color: white;
+    width: 100%;
+    &--left {
+      border-radius: 0rem 6.5rem 6.5rem 0rem;
+      margin: 5rem 8rem 3.5rem 0rem;
+    }
+    &--right {
+      border-radius: 6.5rem 0rem 0rem 4rem;
+      margin: 5rem 0rem 5rem 8rem;
+    }
   }
 
   &__title{
@@ -182,7 +196,7 @@ section {
       margin-left: 8rem;
      }
      &--right{
-       display: block;
+      //  display: block;
        width: 85%;
        text-align: right;
      }
@@ -203,40 +217,73 @@ section {
 
   &__content{
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: white;
-    width: 100%;
+    // justify-content: center;
+    // align-items: center;
+    // flex-wrap: wrap;
+    // height: fit-content;
+    
+    // width: 100%;
 
-    &-left {
-      border-radius: 0rem 6.5rem 6.5rem 0rem;
-    }
-    &-right{
-      border-radius: 6.5rem 0rem 0rem 4rem;
-    }
     &--column {
       flex-direction: column;
       align-items: center;
     }
-    &--row {
-      flex-direction: row;
-      // align-items: center;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-    }
-    &.small-section-content-padding{
-      padding: 12rem 5rem 5rem 5rem;
-    }
+    // &--row {
+    //   flex-direction: row;
+    //   // align-items: center;
+    //   justify-content: space-evenly;
+    //   flex-wrap: wrap;
+    // }
+    // &.small-section-content-padding{
+    //   padding: 12rem 5rem 5rem 5rem;
+    // }
     &.large-section-content-padding{
       padding: 12rem 12rem 8rem 12rem;
     }
-    &.contact-form-padding{
-      padding: 10rem;
-    }
+    // &.contact-form-padding{
+    //   padding: 10rem;
+    // }
   }
 }
 
 // ---------- SECTION BACKGROUND COLOURS ---------- //
+
+
+/* ---------- BACKGROUNDS ----------*/
+.background-fixed {
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  &--header{
+    background-image: url(/img/jesus-kiteque-224069-min.jpg);
+  }
+
+  &--skills{
+    background-image: url(/img/rawpixel-558599-unsplash.jpg);
+    // padding-top: 40rem;
+  }
+
+  &--projects{
+// Photo by rawpixel on Unsplash
+    background-image: url(/img/rawpixel-558599-unsplash.jpg);
+  }
+  &--contact{
+    // Photo by Jeff Kepler on Unsplash
+    background-image: url(/img/jeff-kepler-1085049-unsplash.jpg);
+  }
+  // & .background-large-margin {
+  //   margin: 40rem 0rem;
+  // }
+}
+.background-plain {
+  // height: 100vh;
+  &--about{
+    background-color: $color-background1;
+  }
+}
+
 
 .section{
   &__about-me{
@@ -255,6 +302,8 @@ section {
     background-color: white;
   }
 }
+
+
 // -------------------------------------- //
 // ---------- SECTION - HEADER ---------- //
 // -------------------------------------- //
@@ -282,14 +331,6 @@ section {
 // .sticky .logo-grey { display: block; }
 
 
-
-header {
-  background-image: url(img/jesus-kiteque-224069-min.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  background-attachment: fixed;
-}
 .navigation {
   padding: 1.5rem 3rem;
   display: flex;
@@ -332,26 +373,6 @@ header {
   }
   &__links{
     display: flex;
-  //   &-button{
-  //     height: 5rem;
-  //     width: 8rem;
-  //     padding: .5rem;
-  //     background-color: white;
-  //     border-radius: 3.5rem;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //     margin: .5rem;
-  // //     &-link{
-  // //       &:link,
-  // //       &:visited{ color: black; }
-  // //       &:hover,
-  // //       &:active { cursor: pointer;}
-  // //     }
-  //     &-icon{
-  //       height: 3.5rem;
-  //     }
-  //   }
   }
 }
 // ------------------------------------- //
@@ -359,25 +380,36 @@ header {
 // ------------------------------------- //
 .about-me {
   &__image {
-    height: 32rem;
+    height: 30rem;
     border-radius: 20%;
     // margin-left: 3.5rem;
   }
   &__description {
     line-height: 1.5;
-    width: 75%;
-    margin: auto 0rem auto auto;
+    // width: 75%;
+    // margin: auto 0rem auto auto;
     text-align: justify;
+    margin-left: 5rem;
   }
 }
 // -------------------------------------- //
 // ---------- SECTION - SKILLS ---------- //
 // -------------------------------------- //
 .skills{
+  &__text {
+    display: flex;
+    align-items:center;
+    &--title{
+
+    }
+    &--list{
+      margin-left: 2rem;
+    }
+  }
   &__tiles{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
     margin: 3.5rem 0rem 6.5rem 0rem;
 
     &-tile{
@@ -387,12 +419,11 @@ header {
       display: flex;
       flex-direction: column; 
       align-items: center;
+      justify-content: center;
       
       &-logo{
         width: 8rem;
       }
-      &-title {
-      } 
     }
   }
 }
@@ -577,11 +608,15 @@ header {
 
 .section__contact-title{
   // margin-bottom: 4rem;
+  font-weight: 300;
   &-underline{
     height: .6rem;
     width: 50rem;
     background-color: black;
     margin-bottom: 4rem;
+    &--contact{
+      height: .3rem;
+    }
   }
 }
 
@@ -616,7 +651,7 @@ header {
 }
 
 
-Yo'ure target INPUT TYPE for button,t hat's why none of your class settings are working!! 
+// Yo'ure target INPUT TYPE for button,t hat's why none of your class settings are working!! 
 
 
 input[type=text],
@@ -636,7 +671,6 @@ footer{
 }
 
 .footer {
-
   &__links{
     display: flex;
     justify-content: space-between;
