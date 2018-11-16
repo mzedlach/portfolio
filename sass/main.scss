@@ -162,13 +162,16 @@ input[type="submit"] {font-size: 2rem;}
 // ----------------------------------------- //
 //Form section is separate
 
-section {
-  display: flex;
-}
-
 // ---------- TITLES & CONTENT ---------- //
 
+
+// If I change the height to fit content - info inside will flow over when margins are chagned. 
+// The neight of each section is exactly monitor height. Adding margins that cause all off container to be larger that heigh of monitor is what is pushing everythign into next section. 
+// I think I have to set one background image for multiple sections for my idea to work. Read through that article on static backgrounds again
+
 .section {
+  display: flex;
+  border-bottom: 5px solid orangered;
   // &--right{
   //   padding: 5rem 0rem 5rem 8rem;
   // }
@@ -177,16 +180,28 @@ section {
   // }
   &__container {
     background-color: white;
-    width: 100%;
+    // width: 100%;
+    height: fit-content;
     &--left {
       border-radius: 0rem 6.5rem 6.5rem 0rem;
-      margin: 5rem 8rem 3.5rem 0rem;
+      // margin: 5rem 8rem 3.5rem 0rem;
+      // margin: 10rem;
+      &.skills{
+        // margin: 30rem 8rem 20rem 0rem;
+      }
+      &.large-margin {
+        // margin: 20rem 8rem 20rem 0rem;
+      }
     }
     &--right {
       border-radius: 6.5rem 0rem 0rem 4rem;
-      margin: 5rem 0rem 5rem 8rem;
+      // margin: 5rem 0rem 5rem 8rem;
+      &.about{
+        margin: 5rem 0rem 5rem 8rem;
+      }
     }
   }
+
 
   &__title{
     text-transform: uppercase;
@@ -285,23 +300,23 @@ section {
 }
 
 
-.section{
-  &__about-me{
-    background-color: $color-background1;
-  }
-  &__skills{
-    background-color: $color-test1;
-  }
-  &__projects{
-    background-color: $color-test2;
-  }
-  &__tinkering{
-    background-color: $color-test3;
-  }
-  &__contact{
-    background-color: white;
-  }
-}
+// .section{
+//   &__about-me{
+//     background-color: $color-background1;
+//   }
+//   &__skills{
+//     background-color: $color-test1;
+//   }
+//   &__projects{
+//     background-color: $color-test2;
+//   }
+//   &__tinkering{
+//     background-color: $color-test3;
+//   }
+//   &__contact{
+//     background-color: white;
+//   }
+// }
 
 
 // -------------------------------------- //
@@ -395,6 +410,9 @@ section {
 // -------------------------------------- //
 // ---------- SECTION - SKILLS ---------- //
 // -------------------------------------- //
+.section__container--skills {
+  // margin: 40rem 0rem;
+}
 .skills{
   &__text {
     display: flex;

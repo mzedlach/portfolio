@@ -76,47 +76,44 @@ input[type="submit"] {
   .footer__copyright {
     font-size: 1.6rem; }
 
-section {
-  display: flex; }
-
-.section__container {
-  background-color: white;
-  width: 100%; }
-  .section__container--left {
-    border-radius: 0rem 6.5rem 6.5rem 0rem;
-    margin: 5rem 8rem 3.5rem 0rem; }
-  .section__container--right {
-    border-radius: 6.5rem 0rem 0rem 4rem;
-    margin: 5rem 0rem 5rem 8rem; }
-
-.section__title {
-  text-transform: uppercase;
-  position: absolute;
-  margin-top: 2rem; }
-  .section__title--left {
-    margin-left: 8rem; }
-  .section__title--right {
-    width: 85%;
-    text-align: right; }
-
-.section__title-underline {
-  position: absolute;
-  height: .6rem;
-  width: 50rem;
-  background-color: black;
-  transform: translateY(7rem); }
-  .section__title-underline--right {
-    right: 0; }
-  .section__title-underline--left {
-    left: 0; }
-
-.section__content {
-  display: flex; }
-  .section__content--column {
-    flex-direction: column;
-    align-items: center; }
-  .section__content.large-section-content-padding {
-    padding: 12rem 12rem 8rem 12rem; }
+.section {
+  display: flex;
+  border-bottom: 5px solid orangered; }
+  .section__container {
+    background-color: white;
+    height: fit-content; }
+    .section__container--left {
+      border-radius: 0rem 6.5rem 6.5rem 0rem; }
+    .section__container--right {
+      border-radius: 6.5rem 0rem 0rem 4rem; }
+      .section__container--right.about {
+        margin: 5rem 0rem 5rem 8rem; }
+  .section__title {
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 2rem; }
+    .section__title--left {
+      margin-left: 8rem; }
+    .section__title--right {
+      width: 85%;
+      text-align: right; }
+  .section__title-underline {
+    position: absolute;
+    height: .6rem;
+    width: 50rem;
+    background-color: black;
+    transform: translateY(7rem); }
+    .section__title-underline--right {
+      right: 0; }
+    .section__title-underline--left {
+      left: 0; }
+  .section__content {
+    display: flex; }
+    .section__content--column {
+      flex-direction: column;
+      align-items: center; }
+    .section__content.large-section-content-padding {
+      padding: 12rem 12rem 8rem 12rem; }
 
 /* ---------- BACKGROUNDS ----------*/
 .background-fixed {
@@ -136,21 +133,6 @@ section {
 
 .background-plain--about {
   background-color: #8595ad; }
-
-.section__about-me {
-  background-color: #8595ad; }
-
-.section__skills {
-  background-color: #5978a6; }
-
-.section__projects {
-  background-color: #3d5e8f; }
-
-.section__tinkering {
-  background-color: #264573; }
-
-.section__contact {
-  background-color: white; }
 
 .navigation {
   padding: 1.5rem 3rem;
