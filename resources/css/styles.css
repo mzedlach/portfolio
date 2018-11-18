@@ -14,7 +14,7 @@ input[type="submit"] {
   border: 1px solid #9EACBF;
   color: #fff;
   margin: 5px;
-  padding: 10px 30px;
+  padding: .5rem 2rem;
   text-decoration: none;
   border-radius: 200px;
   -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
@@ -76,18 +76,23 @@ input[type="submit"] {
   .footer__copyright {
     font-size: 1.6rem; }
 
+.header__text--position, .header__text--phrase {
+  font-size: 2.6rem;
+  font-weight: 100; }
+
 .section {
-  display: flex;
-  border-bottom: 5px solid orangered; }
+  display: flex; }
   .section__container {
     background-color: white;
     height: fit-content; }
     .section__container--left {
-      border-radius: 0rem 6.5rem 6.5rem 0rem; }
+      border-radius: 0rem 6.5rem 6.5rem 0rem;
+      width: 100%; }
       .section__container--left.skills {
         margin: 30rem 8rem 20rem 0rem; }
       .section__container--left.tinkering {
-        margin: 30rem 8rem 20rem 0rem; }
+        margin: 30rem 8rem 20rem 0rem;
+        background-color: rgba(255, 255, 255, 0.9); }
     .section__container--right {
       border-radius: 6.5rem 0rem 0rem 4rem; }
       .section__container--right.about {
@@ -96,8 +101,16 @@ input[type="submit"] {
         background-color: rgba(255, 255, 255, 0.9);
         margin: 5rem 0rem 5rem 8rem;
         width: 100%; }
+    .section__container.header {
+      padding: 2rem 10rem .5rem 10rem;
+      background-color: transparent;
+      flex-direction: column;
+      justify-content: space-between; }
     .section__container.contact {
-      background-color: white; }
+      background-color: rgba(255, 255, 255, 0.9);
+      justify-content: center;
+      width: 80%;
+      border-radius: 2rem; }
   .section__title {
     text-transform: uppercase;
     position: absolute;
@@ -146,42 +159,47 @@ input[type="submit"] {
   .background-fixed--projects {
     background-image: url(/img/rawpixel-558599-unsplash.jpg); }
   .background-fixed--contact {
-    background-image: url(/img/jeff-kepler-1085049-unsplash.jpg); }
+    background-image: url(/img/jeff-kepler-1085049-unsplash.jpg);
+    background-blend-mode: overlay;
+    background-color: rgba(32, 89, 36, 0.2);
+    justify-content: center;
+    align-items: center; }
 
 .background-plain--about {
   background-color: #8595ad; }
 
-.navigation {
-  padding: 1.5rem 3rem;
-  display: flex; }
-  .navigation__logo {
-    height: 7rem;
-    width: auto;
-    margin-right: auto; }
-  .navigation__links {
-    height: 6rem;
+.header {
+  height: 100vh; }
+  .header__navigation {
+    display: flex; }
+    .header__navigation-logo {
+      height: 7rem;
+      width: auto;
+      margin-right: auto; }
+    .header__navigation-links {
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      padding: 1.5rem; }
+      .header__navigation-links-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-right: 2rem; }
+        .header__navigation-links-link:link, .header__navigation-links-link:visited {
+          color: black; }
+        .header__navigation-links-link:hover, .header__navigation-links-link:active {
+          border-bottom: 1px solid black;
+          cursor: pointer; }
+  .header__text {
+    margin-top: 10rem; }
+    .header__text--name {
+      word-spacing: 1rem;
+      letter-spacing: .5rem; }
+    .header__text--position, .header__text--phrase {
+      text-transform: uppercase; }
+  .header__links {
     display: flex;
-    align-items: center;
-    padding: 1.5rem; }
-    .navigation__links-link {
-      text-decoration: none;
-      text-transform: uppercase;
-      margin-right: 1.5rem;
-      font-family: "Lato", "Arial", sans-serif;
-      font-size: 2rem;
-      color: black; }
-      .navigation__links-link:link, .navigation__links-link:visited {
-        color: black; }
-      .navigation__links-link:hover, .navigation__links-link:active {
-        border-bottom: 1px solid black;
-        cursor: pointer; }
-
-.header__text--name {
-  word-spacing: 1rem;
-  letter-spacing: .1rem; }
-
-.header__links {
-  display: flex; }
+    align-self: center; }
 
 .about-me__image {
   height: 30rem;
@@ -278,7 +296,7 @@ input[type="submit"] {
   background-color: white;
   width: 50rem;
   border-radius: 3.5rem;
-  margin: 1rem;
+  margin: 4rem;
   box-shadow: 5px 5px 25px 5px #888888;
   padding: 3rem;
   display: flex;
@@ -327,7 +345,8 @@ input[type="submit"] {
     align-items: center; }
 
 .section__contact-title {
-  font-weight: 300; }
+  font-weight: 300;
+  margin-top: 2rem; }
   .section__contact-title-underline {
     height: .6rem;
     width: 50rem;
@@ -342,7 +361,7 @@ input[type="submit"] {
     display: flex;
     margin: 1rem 0rem; }
   .contact-form__label {
-    flex: 1 1 35%; }
+    flex: 0 0 35%; }
   .contact-form__input, .contact-form__textarea {
     flex: 1 1 65%;
     line-height: 1.15;
@@ -351,9 +370,6 @@ input[type="submit"] {
     border: 1px solid #9EACBF; }
   .contact-form__textarea {
     height: 10rem; }
-  .contact-form__submit {
-    align-content: left;
-    background-color: orangered; }
 
 input[type=text],
 input[type=email],

@@ -77,7 +77,7 @@ input[type="submit"] {
   border: 1px solid #9EACBF;
   color: #fff;
   margin: 5px;
-  padding: 10px 30px; 
+  padding: .5rem 2rem; 
   text-decoration: none;
   border-radius: 200px;
   -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
@@ -156,7 +156,15 @@ input[type="submit"] {font-size: 2rem;}
     font-size: 1.6rem;
   }
 }
-
+.header{
+  &__text{
+    &--position,
+    &--phrase {
+      font-size: 2.6rem;
+      font-weight: 100;
+    }
+  }
+}
 // ----------------------------------------- //
 // ---------- SECTION PAGE LAYOUT ---------- //
 // ----------------------------------------- //
@@ -166,17 +174,19 @@ input[type="submit"] {font-size: 2rem;}
 
 .section {
   display: flex;
-  border-bottom: 5px solid orangered;
   &__container {
     background-color: white;
     height: fit-content;
     &--left {
       border-radius: 0rem 6.5rem 6.5rem 0rem;
+      width:100%;
       &.skills{
         margin: 30rem 8rem 20rem 0rem;
+        
       }
       &.tinkering{
         margin: 30rem 8rem 20rem 0rem;
+        background-color: rgba(255, 255, 255, 0.9);
       }
     }
     &--right {
@@ -190,9 +200,18 @@ input[type="submit"] {font-size: 2rem;}
         width: 100%;
       }
     }
+    &.header{
+      padding: 2rem 10rem .5rem 10rem;
+      background-color: transparent;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     &.contact{
-      background-color: white;
-      margin: 
+      background-color: rgba(255, 255, 255, 0.9);
+      justify-content: center;
+      // width: 100%;
+      width: 80%;
+      border-radius: 2rem;
     }
   }
 
@@ -204,7 +223,6 @@ input[type="submit"] {font-size: 2rem;}
       margin-left: 8rem;
      }
      &--right{
-      //  display: block;
        width: 85%;
        text-align: right;
      }
@@ -225,11 +243,6 @@ input[type="submit"] {font-size: 2rem;}
 
   &__content{
     display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // flex-wrap: wrap;
-    // height: fit-content;
-    
     width: 100%;
 
     &--column {
@@ -238,7 +251,6 @@ input[type="submit"] {font-size: 2rem;}
     }
     &--row {
       flex-direction: row;
-      // align-items: center;
       justify-content: space-evenly;
       flex-wrap: wrap;
     }
@@ -248,9 +260,6 @@ input[type="submit"] {font-size: 2rem;}
     &.large-content-padding{
       padding: 12rem 12rem 8rem 12rem;
     }
-    // &.contact-form-padding{
-    //   padding: 10rem;
-    // }
   }
 }
 
@@ -266,6 +275,8 @@ input[type="submit"] {font-size: 2rem;}
   background-position: center;
   &--header{
     background-image: url(/img/jesus-kiteque-224069-min.jpg);
+    // background-position: bottom;
+    // background-position-y: -8rem;
   }
 
   &--skills{
@@ -280,13 +291,14 @@ input[type="submit"] {font-size: 2rem;}
   &--contact{
     // Photo by Jeff Kepler on Unsplash
     background-image: url(/img/jeff-kepler-1085049-unsplash.jpg);
+    background-blend-mode: overlay;
+    background-color: rgba(rgb(32, 89, 36),0.2);
+    justify-content: center;
+    align-items: center;
+
   }
-  // & .background-large-margin {
-  //   margin: 40rem 0rem;
-  // }
 }
 .background-plain {
-  // height: 100vh;
   &--about{
     background-color: $color-background1;
   }
@@ -319,50 +331,70 @@ input[type="submit"] {font-size: 2rem;}
 // .sticky .logo-grey { display: block; }
 
 
-.navigation {
-  padding: 1.5rem 3rem;
-  display: flex;
-
-  &__logo{
-    height: 7rem;
-    width: auto;
-    margin-right: auto;
-  }
-  &__links{
-    height: 6rem;
+.header{
+  height: 100vh;
+  &__navigation{
     display: flex;
-    align-items: center;
-    padding: 1.5rem;
-    &-link{
-      text-decoration: none;
-      text-transform: uppercase;
-      margin-right: 1.5rem;
-      font-family: $font-links;
-      font-size: 2rem;
-      color: black;
-      &:link,
-      &:visited{
-        color: black;
-      }
-      &:hover,
-      &:active {
-        border-bottom: 1px solid black;
-        cursor: pointer;
+    &-logo {
+      height: 7rem;
+      width: auto;
+      margin-right: auto;
+    }
+    &-links{
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      &-link{
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-right: 2rem;
+        &:link,
+        &:visited{
+          color: black;
+        }
+        &:hover,
+        &:active {
+          border-bottom: 1px solid black;
+          cursor: pointer;
+        }
       }
     }
   }
-}
-.header {
   &__text{
+    margin-top: 10rem;
     &--name{
       word-spacing: 1rem;
-      letter-spacing: .1rem;
+      letter-spacing: .5rem;
+    }
+    &--position,
+    &--phrase {
+      text-transform: uppercase;
     }
   }
   &__links{
     display: flex;
+    align-self: center;
+    & .btn-icon {
+      // border: 2px solid #1B1F25;
+      // background-color: orangered;
+    }
   }
 }
+
+
+
+
+// .header {
+//   &__text{
+//     position: relative;
+//     top: 20%;
+//     &--name{
+//       word-spacing: 1rem;
+//       letter-spacing: .1rem;
+//     }
+//   }
+
 // ------------------------------------- //
 // ---------- SECTION - ABOUT ---------- //
 // ------------------------------------- //
@@ -513,7 +545,7 @@ input[type="submit"] {font-size: 2rem;}
   background-color: white;
   width: 50rem;
   border-radius: 3.5rem;
-  margin: 1rem;
+  margin: 4rem;
   box-shadow: 5px 5px 25px 5px $color-dark-grey;
   padding: 3rem;
   display: flex;
@@ -599,6 +631,7 @@ input[type="submit"] {font-size: 2rem;}
 .section__contact-title{
   // margin-bottom: 4rem;
   font-weight: 300;
+  margin-top: 2rem;
   &-underline{
     height: .6rem;
     width: 50rem;
@@ -620,7 +653,7 @@ input[type="submit"] {font-size: 2rem;}
   
   }
   &__label{
-    flex: 1 1 35%;
+    flex: 0 0 35%;
   }
   &__input,
   &__textarea {
@@ -632,11 +665,6 @@ input[type="submit"] {font-size: 2rem;}
   }
   &__textarea{
     height: 10rem;
-  }
-  &__submit{
-    align-content: left;
-    // margin-top: 100px;
-    background-color: orangered;
   }
 }
 
@@ -726,6 +754,9 @@ footer{
 
 
 // To do list: 
+// Fix rails icon in skills 
+// Sticky navigation
+// Changing tinkering into FCC certifications
 // **Responsive
 // Animations
 // Impressum page
