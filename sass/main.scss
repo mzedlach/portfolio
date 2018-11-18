@@ -164,44 +164,37 @@ input[type="submit"] {font-size: 2rem;}
 
 // ---------- TITLES & CONTENT ---------- //
 
-
-// If I change the height to fit content - info inside will flow over when margins are chagned. 
-// The neight of each section is exactly monitor height. Adding margins that cause all off container to be larger that heigh of monitor is what is pushing everythign into next section. 
-// I think I have to set one background image for multiple sections for my idea to work. Read through that article on static backgrounds again
-
 .section {
   display: flex;
   border-bottom: 5px solid orangered;
-  // &--right{
-  //   padding: 5rem 0rem 5rem 8rem;
-  // }
-  // &--left{
-  //   padding: 5rem 8rem 3.5rem 0rem;
-  // }
   &__container {
     background-color: white;
-    // width: 100%;
     height: fit-content;
     &--left {
       border-radius: 0rem 6.5rem 6.5rem 0rem;
-      // margin: 5rem 8rem 3.5rem 0rem;
-      // margin: 10rem;
       &.skills{
-        // margin: 30rem 8rem 20rem 0rem;
+        margin: 30rem 8rem 20rem 0rem;
       }
-      &.large-margin {
-        // margin: 20rem 8rem 20rem 0rem;
+      &.tinkering{
+        margin: 30rem 8rem 20rem 0rem;
       }
     }
     &--right {
       border-radius: 6.5rem 0rem 0rem 4rem;
-      // margin: 5rem 0rem 5rem 8rem;
       &.about{
         margin: 5rem 0rem 5rem 8rem;
       }
+      &.projects{
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: 5rem 0rem 5rem 8rem;
+        width: 100%;
+      }
+    }
+    &.contact{
+      background-color: white;
+      margin: 
     }
   }
-
 
   &__title{
     text-transform: uppercase;
@@ -237,22 +230,22 @@ input[type="submit"] {font-size: 2rem;}
     // flex-wrap: wrap;
     // height: fit-content;
     
-    // width: 100%;
+    width: 100%;
 
     &--column {
       flex-direction: column;
       align-items: center;
     }
-    // &--row {
-    //   flex-direction: row;
-    //   // align-items: center;
-    //   justify-content: space-evenly;
-    //   flex-wrap: wrap;
-    // }
-    // &.small-section-content-padding{
-    //   padding: 12rem 5rem 5rem 5rem;
-    // }
-    &.large-section-content-padding{
+    &--row {
+      flex-direction: row;
+      // align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    &.small-content-padding{
+      padding: 12rem 5rem 5rem 5rem;
+    }
+    &.large-content-padding{
       padding: 12rem 12rem 8rem 12rem;
     }
     // &.contact-form-padding{
@@ -266,7 +259,7 @@ input[type="submit"] {font-size: 2rem;}
 
 /* ---------- BACKGROUNDS ----------*/
 .background-fixed {
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -298,26 +291,6 @@ input[type="submit"] {font-size: 2rem;}
     background-color: $color-background1;
   }
 }
-
-
-// .section{
-//   &__about-me{
-//     background-color: $color-background1;
-//   }
-//   &__skills{
-//     background-color: $color-test1;
-//   }
-//   &__projects{
-//     background-color: $color-test2;
-//   }
-//   &__tinkering{
-//     background-color: $color-test3;
-//   }
-//   &__contact{
-//     background-color: white;
-//   }
-// }
-
 
 // -------------------------------------- //
 // ---------- SECTION - HEADER ---------- //
@@ -410,9 +383,6 @@ input[type="submit"] {font-size: 2rem;}
 // -------------------------------------- //
 // ---------- SECTION - SKILLS ---------- //
 // -------------------------------------- //
-.section__container--skills {
-  // margin: 40rem 0rem;
-}
 .skills{
   &__text {
     display: flex;
@@ -463,6 +433,7 @@ input[type="submit"] {font-size: 2rem;}
 // ---------- SECTION - PROJECTS ---------- //
 // ---------------------------------------- //
 .project-tile-full {
+  background-color: white;
   display: flex; 
   align-items: center;
   width: 80rem;
@@ -539,6 +510,7 @@ input[type="submit"] {font-size: 2rem;}
 // ----------------------------------------- //
 
 .tinkering-tile{
+  background-color: white;
   width: 50rem;
   border-radius: 3.5rem;
   margin: 1rem;

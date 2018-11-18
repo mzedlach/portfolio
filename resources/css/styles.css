@@ -84,10 +84,20 @@ input[type="submit"] {
     height: fit-content; }
     .section__container--left {
       border-radius: 0rem 6.5rem 6.5rem 0rem; }
+      .section__container--left.skills {
+        margin: 30rem 8rem 20rem 0rem; }
+      .section__container--left.tinkering {
+        margin: 30rem 8rem 20rem 0rem; }
     .section__container--right {
       border-radius: 6.5rem 0rem 0rem 4rem; }
       .section__container--right.about {
         margin: 5rem 0rem 5rem 8rem; }
+      .section__container--right.projects {
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: 5rem 0rem 5rem 8rem;
+        width: 100%; }
+    .section__container.contact {
+      background-color: white; }
   .section__title {
     text-transform: uppercase;
     position: absolute;
@@ -108,16 +118,23 @@ input[type="submit"] {
     .section__title-underline--left {
       left: 0; }
   .section__content {
-    display: flex; }
+    display: flex;
+    width: 100%; }
     .section__content--column {
       flex-direction: column;
       align-items: center; }
-    .section__content.large-section-content-padding {
+    .section__content--row {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap; }
+    .section__content.small-content-padding {
+      padding: 12rem 5rem 5rem 5rem; }
+    .section__content.large-content-padding {
       padding: 12rem 12rem 8rem 12rem; }
 
 /* ---------- BACKGROUNDS ----------*/
 .background-fixed {
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -206,6 +223,7 @@ input[type="submit"] {
   color: #7f94b4; }
 
 .project-tile-full {
+  background-color: white;
   display: flex;
   align-items: center;
   width: 80rem;
@@ -257,6 +275,7 @@ input[type="submit"] {
         justify-content: center; }
 
 .tinkering-tile {
+  background-color: white;
   width: 50rem;
   border-radius: 3.5rem;
   margin: 1rem;
