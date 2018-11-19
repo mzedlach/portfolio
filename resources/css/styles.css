@@ -12,8 +12,8 @@ a:visited {
 .btn-icon:visited,
 input[type="submit"] {
   border: 1px solid #9EACBF;
-  color: #fff;
-  margin: 5px;
+  color: white;
+  margin: .5rem;
   padding: .5rem 2rem;
   text-decoration: none;
   border-radius: 200px;
@@ -145,7 +145,7 @@ input[type="submit"] {
     .section__content.large-content-padding {
       padding: 12rem 12rem 8rem 12rem; }
 
-/* ---------- BACKGROUNDS ----------*/
+/* ---------- BACKGROUNDS - IMAGES + COLOURS ----------*/
 .background-fixed {
   min-height: 100vh;
   background-size: cover;
@@ -182,7 +182,6 @@ input[type="submit"] {
       align-items: center;
       padding: 1.5rem; }
       .header__navigation-links-link {
-        text-decoration: none;
         text-transform: uppercase;
         margin-right: 2rem; }
         .header__navigation-links-link:link, .header__navigation-links-link:visited {
@@ -196,10 +195,27 @@ input[type="submit"] {
       word-spacing: 1rem;
       letter-spacing: .5rem; }
     .header__text--position, .header__text--phrase {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-left: .5rem; }
   .header__links {
     display: flex;
     align-self: center; }
+
+.header__navigation.sticky {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 5px #1B1F25;
+  z-index: 9999;
+  background-color: rgba(27, 31, 37, 0.98);
+  padding: .5rem 10rem;
+  align-items: center; }
+  .header__navigation.sticky .header__navigation-logo {
+    height: 5rem; }
+  .header__navigation.sticky .header__navigation-links-link {
+    color: #9EACBF; }
 
 .about-me__image {
   height: 30rem;
@@ -221,14 +237,21 @@ input[type="submit"] {
   margin: 3.5rem 0rem 6.5rem 0rem; }
   .skills__tiles-tile {
     height: 11rem;
-    width: 11rem;
-    padding: .5rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
     .skills__tiles-tile-logo {
       width: 8rem; }
+      .skills__tiles-tile-logo.npm {
+        width: 10rem; }
+      .skills__tiles-tile-logo.trello {
+        color: #0084D1; }
+      .skills__tiles-tile-logo.zeplin {
+        width: 9.5rem; }
+      .skills__tiles-tile-logo.rails {
+        width: 13rem; }
 
 .trello {
   width: 11rem;
@@ -247,7 +270,7 @@ input[type="submit"] {
   width: 80rem;
   border-radius: 3.5rem;
   margin: 3.5rem auto;
-  box-shadow: 8px 8px 40px 8px #888888;
+  box-shadow: 8px 8px 40px 8px #1B1F25;
   padding: 2.5rem; }
   .project-tile-full__left {
     flex: 1 1 40%;
@@ -297,7 +320,7 @@ input[type="submit"] {
   width: 50rem;
   border-radius: 3.5rem;
   margin: 4rem;
-  box-shadow: 5px 5px 25px 5px #888888;
+  box-shadow: 5px 5px 25px 5px #1B1F25;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -313,7 +336,7 @@ input[type="submit"] {
     border: 5px solid white;
     border-radius: 1rem; }
     .tinkering-tile__image:hover {
-      border: 5px solid #f000fc; }
+      border: 5px solid hotpink; }
     .tinkering-tile__image-link {
       display: flex;
       justify-content: center;
@@ -356,7 +379,8 @@ input[type="submit"] {
       height: .3rem; }
 
 .contact-form {
-  width: 70%; }
+  width: 70%;
+  margin-bottom: 3rem; }
   .contact-form__group {
     display: flex;
     margin: 1rem 0rem; }
@@ -378,7 +402,7 @@ textarea {
 
 footer {
   background-color: rgba(27, 31, 37, 0.98);
-  padding: 50px;
+  padding: 3rem;
   color: #8994a3; }
 
 .footer__links {

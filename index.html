@@ -1,10 +1,8 @@
 <!DOCTYPE HTML>
 
 <!--Thank you to the following people and sites:-->
-<!--Cory LaViska for the tutoria on fade-ins (https://www.abeautifulsite.net/a-clean-fade-in-effect-for-webpages)-->
 <!--Font awesome for their... awesesome fonts (http://fontawesome.io/)-->
 <!--Jesus Kiteque for the background image (https://unsplash.com/@jesuskiteque)-->
-<!--Please contact me if I forgot to mention someone and they should be noted-->
 
 
 <!-- Icons used from https://fontawesome.com:  SVG Id = headerIcon-( github, twitter, codepen), skillsIcon-trello FreeCodeCamp-Header-->
@@ -33,14 +31,14 @@
 		<title>Maria Lach</title>
 
 <!--        Favicon Info-->
-		<link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
+		<!-- <link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
 		<link rel="manifest" href="/resources/favicons/manifest.json">
 		<link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
 		<link rel="shortcut icon" href="/resources/favicons/favicon.ico">
 		<meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#ffffff">
+		<meta name="theme-color" content="#ffffff"> -->
 			
 	</head>
 	<body>
@@ -57,24 +55,19 @@
 		<header class="background-fixed background-fixed--header">
 			<div class="section section__container header">
 				<div class="header__navigation">
-					<!-- About SVG compatibility https://stackoverflow.com/questions/4476526/do-i-use-img-object-or-embed-for-svg-files  -->
-					<img src="vendors/img/ginger.svg" onerror="this.src=''" alt="Ginger root logo" class="header__navigation-logo">
+					<img src="vendors/img/ginger.png" alt="Ginger root logo" class="header__navigation-logo">
 					<nav class="header__navigation-links">
 						<!-- <img src="resources/img/logo-grey.png" alt="Maria Lach" class="navigation__logo-grey"> -->
 							<a href="#" class="header__navigation-links-link">About</a>
 							<a href="#" class="header__navigation-links-link">Skills</a>
 							<a href="#" class="header__navigation-links-link">Projects</a>
 							<a href="#" class="header__navigation-links-link">Contact</a>
-						<!-- <a class="navigation__mobile-icon">Write your own icon</a> -->
 					</nav>
 				</div>
-
 				<div class="header__text">
 					<h1 class="header__text--name">Maria Lach</h1>
 					<p class="header__text--position">Front-End Web Developer</p>
-					<!-- <p class="header__text--phrase">Insert catchy phrase here.</p> -->
 				</div>
-
 				<div class="header__links">
 					<a href="https://www.linkedin.com/in/maria-lach" target="_blank" class="btn-icon">
 						<svg aria-hidden="true" aria-labelledby="linkedIn-Header" data-prefix="fab" data-icon="linkedin-in" class="header__links-button-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -118,13 +111,30 @@
 
 
 
+		
+		<div class="header__navigation sticky" id="stickyNavigation">
+			<img src="vendors/img/ginger.png"  alt="Ginger root logo" class="header__navigation-logo">
+			<nav class="header__navigation-links">
+				<!-- <img src="resources/img/logo-grey.png" alt="Maria Lach" class="navigation__logo-grey"> -->
+					<a href="#" class="header__navigation-links-link">About</a>
+					<a href="#" class="header__navigation-links-link">Skills</a>
+					<a href="#" class="header__navigation-links-link">Projects</a>
+					<a href="#" class="header__navigation-links-link">Contact</a>
+				<!-- <a class="navigation__mobile-icon">Write your own icon</a> -->
+			</nav>
+		</div>
+		
 
 
 
 
 
 
-		<section class="section background-plain background-plain--about">
+
+
+
+
+		<section class="section background-plain background-plain--about" id="about">
 			<div class="section__container section__container--right about">
 				<h2 class="section__title section__title--left">About Me</h2>
 				<div class="section__title-underline section__title-underline--left"></div>
@@ -138,7 +148,7 @@
 			</div>
 		</section>
 		
-		<section class="section background-fixed background-fixed--skills">
+		<section class="section background-fixed background-fixed--skills" id="skills">
 			<div class="section__container section__container--left skills">
 				<h2 class="section__title section__title--right">Skills</h2>
 				<div class="section__title-underline section__title-underline--right"></div>
@@ -249,49 +259,55 @@
 					</div>
 					<div class="skills__tiles">
 						<a class="skills__tiles-tile" href="https://www.npmjs.com/" target="_blank">
-							<svg role="img" aria-labelledby="skillsIcon-npm" class="skills__tiles-tile-logo" viewBox="0 0 256 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+							<svg role="img" aria-labelledby="skillsIcon-npm" class="skills__tiles-tile-logo npm" viewBox="0 0 256 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+								<title id="skillsIcon-npm">npm icon and link to their site</title>
 								<g>
 										<path d="M0,0 L0,85.4980695 L71.1660232,85.4980695 L71.1660232,99.8301158 L128,99.8301158 L128,85.4980695 L256,85.4980695 L256,0 L0,0 L0,0 Z" fill="#CB3837"></path><path d="M42.5019305,14.3320463 L14.3320463,14.3320463 L14.3320463,28.6640927 L14.3320463,71.1660232 L42.5019305,71.1660232 L42.5019305,28.6640927 L56.8339768,28.6640927 L56.8339768,71.1660232 L71.1660232,71.1660232 L71.1660232,28.6640927 L71.1660232,14.3320463 L42.5019305,14.3320463 L42.5019305,14.3320463 Z" fill="#FFFFFF"></path><path d="M85.4980695,14.3320463 L85.4980695,68.2007722 L85.4980695,71.1660232 L85.4980695,85.4980695 L114.162162,85.4980695 L114.162162,71.1660232 L142.332046,71.1660232 L142.332046,14.3320463 L85.4980695,14.3320463 L85.4980695,14.3320463 Z M128,56.8339768 L114.162162,56.8339768 L114.162162,28.6640927 L128,28.6640927 L128,56.8339768 L128,56.8339768 Z" fill="#FFFFFF"></path><path d="M184.833977,14.3320463 L156.664093,14.3320463 L156.664093,28.6640927 L156.664093,71.1660232 L184.833977,71.1660232 L184.833977,28.6640927 L199.166023,28.6640927 L199.166023,71.1660232 L213.498069,71.1660232 L213.498069,28.6640927 L227.830116,28.6640927 L227.830116,71.1660232 L242.162162,71.1660232 L242.162162,28.6640927 L242.162162,15.3204633 L242.162162,14.3320463 L184.833977,14.3320463 L184.833977,14.3320463 Z" fill="#FFFFFF"></path>
 								</g>
 						</svg>
 						</a>
 						<a class="skills__tiles-tile" href="https://trello.com/" target="_blank">
-							<svg role="img" aria-labelledby="skillsIcon-trello" class="skills__tiles-tile-logo" aria-hidden="true" data-prefix="fab" data-icon="trello" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<svg role="img" aria-labelledby="skillsIcon-trello" class="skills__tiles-tile-logo trello" data-prefix="fab" data-icon="trello" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<title id="skillsIcon-trello">Trello icon and link to their site</title>
 								<path fill="currentColor" d="M392 32H56C25.1 32 0 57.1 0 88v336c0 30.9 25.1 56 56 56h336c30.9 0 56-25.1 56-56V88c0-30.9-25.1-56-56-56zM194.9 371.4c0 14.8-12 26.9-26.9 26.9H85.1c-14.8 0-26.9-12-26.9-26.9V117.1c0-14.8 12-26.9 26.9-26.9H168c14.8 0 26.9 12 26.9 26.9v254.3zm194.9-112c0 14.8-12 26.9-26.9 26.9H280c-14.8 0-26.9-12-26.9-26.9V117.1c0-14.8 12-26.9 26.9-26.9h82.9c14.8 0 26.9 12 26.9 26.9v142.3z"></path>
 							</svg>
 						</a>
 						<a class="skills__tiles-tile"  href="https://zeplin.io/" target="_blank">
-							<svg role="img" aria-labelledby="skillsIcon-zeplin" class="skills__tiles-tile-logo" enable-background="new 0 0 2406.8 1923.8" viewBox="0 0 2406.8 1923.8" xmlns="http://www.w3.org/2000/svg" id="zeplin-icon">
+							<svg role="img" aria-labelledby="skillsIcon-zeplin" class="skills__tiles-tile-logo zeplin" enable-background="new 0 0 2406.8 1923.8" viewBox="0 0 2406.8 1923.8" xmlns="http://www.w3.org/2000/svg" id="zeplin-icon">
+								<title id="skillsIcon-zeplin">Zeplin icon and link to their site</title>
 								<path d="m371 1326.4-125.9 46-6.7 374.5 435.8-159.2c-149.6-50.1-258.7-138.4-303.2-261.3" fill="#fdbd39"/><path d="m436.9 930.3-436.9 159.6 245.1 282.6 125.9-46c-44.4-122.5-17-260.8 65.9-396.2" fill="#f69833"/><path d="m1172 389.8c-556.3 203.2-915 622.6-801 936.6l2014.5-735.9c-114-314-657.2-403.9-1213.5-200.7" fill="#fecf33"/><path d="m1584.4 1527.2c556.3-203.2 915.6-620.7 801-936.6l-2014.5 735.8c114.6 316 657.2 404 1213.5 200.8" fill="#ee6723"/><path d="m2385.4 590.5-2014.4 735.9c39.4 108.8 189.9 162.4 400.9 162.4 205.8 0 469.2-50.9 743.8-151.2 556.3-203.2 947.6-532.3 869.7-747.1" fill="#f69833"/><path d="m1984.5 428.2c-205.7 0-469.2 50.9-743.8 151.2-556.3 203.2-947.6 532.2-869.7 747l2014.5-735.9c-39.5-108.8-189.9-162.3-401-162.3" fill="#fdbd39"/><g fill="#ee6723"><path d="m1873.2 1766.8c-59.3 0-146.7-53.5-259.9-159.1-133.9-124.9-287.2-307.9-431.9-515.2-144.6-207.3-263.4-414.5-334.6-583.6-77.5-184.2-88.6-297.4-32.9-336.6 12.9-8.8 28.2-13.3 43.8-12.9 45.3 0 133.7 33.7 297 194.5l3.6 3.5-.5 5c-1.1 11.6-2.1 23.2-3 34.7l-1.8 22.7-16-16.1c-176-177.3-253.4-196.4-278.6-196.4-7.2 0-12.9 1.4-17 4.3-24.2 17-25.8 100.2 49.4 278.7 69.9 166 187 370.1 329.7 574.7 142.8 204.7 293.8 384.9 425.4 507.6 141.8 132.3 205.7 146.6 226.6 146.6 7.2 0 13-1.5 17.4-4.6 25.5-17.9 25.5-107-58.3-299.2l-3.9-8.8 8.4-4.6c8.4-4.6 16.6-9.1 24.2-13.5l10.1-5.7 4.7 10.6c59.4 136.2 115 309.3 42.1 360.5-12.9 8.8-28.3 13.3-44 12.9zm0-21v10.5z"/><path d="m1597.9 1521.4-.8 10.4c-14.1 174-51.1 383.2-147.7 391.7-2 .2-4 .2-5.9.2-65.6 0-127.7-94-184.4-279.3-53.8-175.4-95.5-410.8-117.4-662.9-22-252.1-21.7-491.2.9-673.3 24.6-198.4 71.4-302 139.2-308 2-.2 4.1-.3 6.1-.3 47.6 0 119.3 53.9 192.7 304.9l-47.9 9.2c-24.5-83.8-51.2-152-77.7-199-24.5-43.3-48.4-67.2-67.1-67.2-.6 0-1.2 0-1.9.1-29.4 2.6-72.2 73.8-96 266.2-22.2 178.8-22.5 414.4-.8 663.2 21.7 248.9 62.7 480.8 115.5 653 23.6 77.1 49.5 140.7 75 183.8 23.4 39.8 46.1 61.7 63.8 61.7.6 0 1.2 0 1.8-.1 28.1-2.4 81.1-76.6 103.4-337.5z"/></g>
 							</svg>
 						</a>
 						<a class="skills__tiles-tile"  href="https://slack.com/" target="_blank">
-							<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+							<svg role="img" aria-labelledby="skillsIcon-slack" class="skills__tiles-tile-logo slack"  viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+								<title id="skillsIcon-slack">Slack icon and link to their site</title>
 								<g>
 									<path d="M165.963541,15.8384262 C162.07318,3.86308197 149.212328,-2.69009836 137.239082,1.20236066 C125.263738,5.09272131 118.710557,17.9535738 122.603016,29.9268197 L181.550164,211.292328 C185.597902,222.478689 197.682361,228.765377 209.282098,225.426885 C221.381246,221.943607 228.756984,209.093246 224.896,197.21023 C224.749115,196.756984 165.963541,15.8384262 165.963541,15.8384262" fill="#DFA22F"></path><path d="M74.6260984,45.515541 C70.7336393,33.5422951 57.8727869,26.9891148 45.899541,30.8794754 C33.9241967,34.7698361 27.3710164,47.6306885 31.2634754,59.6060328 L90.210623,240.971541 C94.2583607,252.157902 106.34282,258.44459 117.942557,255.104 C130.041705,251.62282 137.417443,238.772459 133.556459,226.887344 C133.409574,226.436197 74.6260984,45.515541 74.6260984,45.515541" fill="#3CB187"></path><path d="M240.161574,166.045377 C252.136918,162.155016 258.688,149.294164 254.797639,137.31882 C250.907279,125.345574 238.046426,118.792393 226.07318,122.682754 L44.7076721,181.632 C33.5213115,185.677639 27.234623,197.762098 30.5731148,209.361836 C34.0563934,221.460984 46.9067541,228.836721 58.7897705,224.975738 C59.2430164,224.828852 240.161574,166.045377 240.161574,166.045377" fill="#CE1E5B"></path><path d="M82.507541,217.270557 C94.312918,213.434754 109.528131,208.491016 125.855475,203.186361 C122.019672,191.380984 117.075934,176.163672 111.76918,159.83423 L68.4191475,173.924721 L82.507541,217.270557" fill="#392538"></path><path d="M173.847082,187.591344 C190.235279,182.267803 205.467279,177.31777 217.195016,173.507148 C213.359213,161.70177 208.413377,146.480262 203.106623,130.146623 L159.75659,144.237115 L173.847082,187.591344" fill="#BB242A"></path><path d="M210.484459,74.7058361 C222.457705,70.8154754 229.010885,57.954623 225.120525,45.9792787 C221.230164,34.0060328 208.369311,27.4528525 196.393967,31.3432131 L15.028459,90.292459 C3.84209836,94.3380984 -2.44459016,106.422557 0.896,118.022295 C4.37718033,130.121443 17.227541,137.49718 29.1126557,133.636197 C29.5638033,133.489311 210.484459,74.7058361 210.484459,74.7058361" fill="#72C5CD"></path><path d="M52.8220328,125.933115 C64.6274098,122.097311 79.8468197,117.151475 96.1762623,111.84682 C90.8527213,95.4565246 85.9026885,80.2245246 82.0920656,68.4946885 L38.731541,82.5872787 L52.8220328,125.933115" fill="#248C73"></path><path d="M144.159475,96.256 C160.551869,90.9303607 175.785967,85.9803279 187.515803,82.1676066 C182.190164,65.7752131 177.240131,50.5390164 173.42741,38.807082 L130.068984,52.8996721 L144.159475,96.256" fill="#62803A"></path>
 								</g>
 							</svg>
 						</a>
-						<div class="skills__tiles-tile">
-							<svg width="512px" height="180px" viewBox="0 0 512 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+						<a class="skills__tiles-tile" href="https://rubyonrails.org/" target="_blank">
+							<svg role="img" aria-labelledby="skillsIcon-Rails" class="skills__tiles-tile-logo rails"  viewBox="0 0 512 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+								<title id="skillsIcon-Rails">Ruby on Rails icon and link to their site</title>
 								<g fill="#CC0000">
 									<path d="M219.115365,150.633753 C219.115365,150.633753 241.684635,148.699244 241.684635,119.552645 C241.684635,90.4060453 214.343577,87.697733 214.343577,87.697733 L165.078086,87.697733 L165.078086,179.651385 L189.839798,179.651385 L189.839798,157.469018 L211.248363,179.651385 L247.875063,179.651385 L219.115365,150.633753 Z M209.571788,131.804534 L189.839798,131.804534 L189.839798,110.782872 L209.700756,110.782872 C209.700756,110.782872 215.246348,112.846348 215.246348,121.229219 C215.246348,129.612091 209.571788,131.804534 209.571788,131.804534 Z M302.815113,88.3425693 L277.666499,88.3425693 C259.74005,88.3425693 253.678589,104.592443 253.678589,112.330479 L253.678589,179.651385 L278.827204,179.651385 L278.827204,163.530479 L302.428212,163.530479 L302.428212,179.651385 L326.803023,179.651385 L326.803023,112.330479 C326.803023,92.7274559 309.005542,88.3425693 302.815113,88.3425693 Z M302.428212,137.479093 L278.698237,137.479093 L278.698237,115.167758 C278.698237,115.167758 278.698237,110.138035 286.565239,110.138035 L295.206045,110.138035 C302.170277,110.138035 302.299244,115.167758 302.299244,115.167758 L302.299244,137.479093 L302.428212,137.479093 Z M338.281108,88.3425693 L364.461461,88.3425693 L364.461461,179.651385 L338.281108,179.651385 L338.281108,88.3425693 Z M401.217128,156.050378 L401.217128,88.3425693 L375.165743,88.3425693 L375.165743,156.050378 L375.165743,179.651385 L401.217128,179.651385 L436.425189,179.651385 L436.425189,156.050378 L401.217128,156.050378 Z M445.065995,156.308312 L445.065995,179.651385 L487.238287,179.651385 C495.879093,179.651385 510.710327,173.33199 511.226196,155.663476 L511.226196,146.635768 C511.226196,131.546599 498.84534,122.647859 487.238287,122.647859 L466.216625,122.647859 L466.216625,111.81461 L507.873048,111.81461 L507.873048,88.3425693 L467.893199,88.3425693 C457.575819,88.3425693 443.776322,96.8544081 443.776322,112.71738 L443.776322,120.842317 C443.776322,136.70529 457.446851,144.830227 467.893199,144.830227 C496.910831,144.959194 460.928967,144.830227 487.754156,144.830227 L487.754156,156.179345 L445.065995,156.308312 Z"></path><path d="M9.02770781,179.522418 L110.911839,179.522418 C110.911839,179.522418 91.4377834,90.6639798 155.921411,54.6821159 C169.978841,47.8468514 214.730479,22.311335 287.983879,76.4775819 C290.30529,74.543073 292.497733,72.995466 292.497733,72.995466 C292.497733,72.995466 225.434761,6.06146096 150.76272,13.5415617 C113.233249,16.8947103 67.0629723,51.0710327 39.9798489,96.2095718 C12.8967254,141.348111 9.02770781,179.522418 9.02770781,179.522418 Z M221.307809,20.763728 L221.823678,12.1229219 C220.662972,11.4780856 217.438791,9.93047859 209.313854,7.60906801 L208.797985,16.1209068 C213.053904,17.5395466 217.180856,19.0871537 221.307809,20.763728 Z M209.055919,48.1047859 L208.54005,56.2297229 C212.79597,56.3586902 217.051889,56.8745592 221.307809,57.77733 L221.823678,49.7813602 C217.438791,48.8785894 213.182872,48.3627204 209.055919,48.1047859 Z M161.338035,7.86700252 L162.627708,7.86700252 L160.048363,-7.10542736e-15 C156.050378,-7.10542736e-15 151.923426,0.257934509 147.667506,0.773803526 L150.117884,8.38287154 C153.857935,7.99596977 157.597985,7.86700252 161.338035,7.86700252 Z M167.528463,55.3269521 L170.49471,64.2256927 C174.234761,62.4201511 177.974811,60.8725441 181.714861,59.7118388 L178.877582,51.2 C174.492695,52.4896725 170.752645,53.9083123 167.528463,55.3269521 Z M108.97733,21.4085642 L103.173804,12.5098237 C99.9496222,14.186398 96.5964736,15.9919395 93.1143577,18.0554156 L99.0468514,27.0831234 C102.4,25.0196474 105.624181,23.0851385 108.97733,21.4085642 Z M135.415617,79.4438287 L141.606045,88.729471 C143.798489,85.5052897 146.377834,82.5390428 149.215113,79.572796 L143.411587,70.8030227 C140.44534,73.511335 137.737028,76.4775819 135.415617,79.4438287 Z M116.715365,120.971285 L127.161713,129.225189 C127.677582,124.195466 128.580353,119.165743 129.870025,114.13602 L120.584383,106.784887 C118.907809,111.556675 117.747103,116.328463 116.715365,120.971285 Z M60.2277078,59.7118388 L51.0710327,51.715869 C47.7178841,54.9400504 44.4937028,58.1642317 41.5274559,61.3884131 L51.4579345,69.9002519 C54.1662469,66.418136 57.1324937,62.9360202 60.2277078,59.7118388 Z M21.279597,117.360202 L6.44836272,111.943577 C3.99798489,117.489169 1.28967254,123.937531 0,127.419647 L14.8312343,132.836272 C16.5078086,128.451385 19.2161209,122.13199 21.279597,117.360202 Z M114.780856,153.728967 C115.038791,160.564232 115.683627,166.109824 116.328463,169.978841 L131.804534,175.524433 C130.643829,170.49471 129.483123,164.820151 128.70932,158.75869 L114.780856,153.728967 Z"></path>
 								</g>
 							</svg>
-						</div>
-						<div class="skills__tiles-tile">
-							<svg width="256px" height="272px" viewBox="0 0 256 272" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+						</a>
+						<a class="skills__tiles-tile" href="https://angular.io/" target="_blank">
+							<svg role="img" aria-labelledby="skillsIcon-angular" class="skills__tiles-tile-logo angular"  viewBox="0 0 256 272" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+								<title id="skillsIcon-angular">Angular icon and link to their site</title>
 								<g>
 									<path d="M0.0996108949,45.522179 L125.908171,0.697276265 L255.103502,44.7252918 L234.185214,211.175097 L125.908171,271.140856 L19.3245136,211.971984 L0.0996108949,45.522179 Z" fill="#E23237"></path><path d="M255.103502,44.7252918 L125.908171,0.697276265 L125.908171,271.140856 L234.185214,211.274708 L255.103502,44.7252918 L255.103502,44.7252918 Z" fill="#B52E31"></path><path d="M126.107393,32.27393 L126.107393,32.27393 L47.7136187,206.692607 L76.9992218,206.194553 L92.7377432,166.848249 L126.207004,166.848249 L126.306615,166.848249 L163.063035,166.848249 L180.29572,206.692607 L208.286381,207.190661 L126.107393,32.27393 L126.107393,32.27393 Z M126.306615,88.155642 L152.803113,143.5393 L127.402335,143.5393 L126.107393,143.5393 L102.997665,143.5393 L126.306615,88.155642 L126.306615,88.155642 Z" fill="#FFFFFF"></path>
 								</g>
 							</svg>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="section background-fixed background-fixed--projects">
+		<section class="section background-fixed background-fixed--projects" id="projects">
 			<div class="section__container section__container--right projects">
 				<h2 class="section__title section__title--left">Projects</h2>
 				<div class="section__title-underline section__title-underline--left"></div>
@@ -303,11 +319,11 @@
 							<div class="project-tile-full__left-links">
 								<a href="#" target="_blank" class="project-tile-full__left-links-link">
 									<title id="projectLink-TechByUs-Site">Link to Tech By Us website in new tab</title>
-									<svg aria-hidden="true" aria-labelledby="projectLink-TechByUs-Site" data-prefix="fas" data-icon="external-link-square-alt" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
+									<svg aria-labelledby="projectLink-TechByUs-Site" data-prefix="fas" data-icon="external-link-square-alt" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
 								</a>
 								<a href="#" target="_blank" class="project-tile-full__left-links-link">
 									<title id="projectLink-TechByUs-GitHub">Link to GitHub code for Tech By Us in new tab</title>
-									<svg aria-hidden="true" aria-labelledby="projectLink-TechByUs-GitHub" data-prefix="fab" data-icon="github" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+									<svg aria-labelledby="projectLink-TechByUs-GitHub" data-prefix="fab" data-icon="github" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 								</a>
 							</div>
 						</div>
@@ -332,11 +348,11 @@
 							<div class="project-tile-full__left-links">
 								<a href="http://wilk-minidonuts.de/" target="_blank" class="project-tile-full__left-links-link">
 									<title id="projectLink-WilkDonuts-Site">Link to Wilk Mini Donuts website in new tab</title>
-									<svg aria-hidden="true" aria-labelledby="projectLink-WilkDonuts-Site" data-prefix="fas" data-icon="external-link-square-alt" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
+									<svg aria-labelledby="projectLink-WilkDonuts-Site" data-prefix="fas" data-icon="external-link-square-alt" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
 								</a>
 								<a href="#" target="_blank" class="project-tile-full__left-links-link">
 									<title id="projectLink-WilkDonuts-GitHub">Link to GitHub code for Wilk Mini Donuts website in new tab</title>
-									<svg aria-hidden="true" aria-labelledby="projectLink-WilkDonuts-GitHub" data-prefix="fab" data-icon="github" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+									<svg aria-labelledby="projectLink-WilkDonuts-GitHub" data-prefix="fab" data-icon="github" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 								</a>
 							</div>
 						</div>
@@ -357,7 +373,7 @@
 			</div>
 		</section> 
 
-		<section class="section background-fixed background-fixed--projects">
+		<section class="section background-fixed background-fixed--projects" id="tinkering">
 			<div class="section__container section__container--left tinkering">
 				<h2 class="section__title section__title--right">Tinkering</h2>
 				<div class="section__title-underline section__title-underline--right"></div>
@@ -367,7 +383,7 @@
 						<h3 class="tinkering-tile__title">Local Weather</h3>
 
 						<a href="https://codepen.io/mzedl/pen/oGKZvv" target="_blank" class="tinkering-tile__image-link">
-							<img class="tinkering-tile__image" src="resources/img/project2-FCC3-WeatherAPI.png" alt="Thumbnail link for change. Opens in new tab"/>
+							<img class="tinkering-tile__image" src="resources/img/project2-FCC3-WeatherAPI.png" alt="Thumbnail link for Local Weather App. Opens in new tab"/>
 						</a>
 						<div class="tinkering-tile__image-text mobile-element">Click image for website and source code</div>
 
@@ -378,7 +394,7 @@
 							</a> 
 							<a href="change" target="_blank" class="tinkering-tile__description-icon-link">
 								<title id="projectLink-change-Site">change Link to CodePen in a new tab for FreeCodeCamp Project of Tribute Page.</title>
-								<svg aria-hidden="true" aria-labelledby="projectLink-change-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
+								<svg aria-labelledby="projectLink-change-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
 							</a>
 							<div class="tinkering-tile__description-learning-objectives">
 								Learning Objectives:
@@ -416,7 +432,7 @@
 							</a> 
 							<a href="https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine/" target="_blank" class="tinkering-tile__description-icon-link">
 								<title id="projectLink-change-Site">change Link to CodePen in a new tab for FreeCodeCamp Project of Tribute Page.</title>
-								<svg aria-hidden="true" aria-labelledby="projectLink-change-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
+								<svg aria-labelledby="projectLink-change-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
 							</a>
 							<div class="tinkering-tile__description-learning-objectives">
 								Learning Objectives:
@@ -453,7 +469,7 @@
 							</a> 
 							<a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-tribute-page" target="_blank" class="tinkering-tile__description-icon-link">
 								<title id="projectLink-TributePage-Site">Link to CodePen in a new tab for FreeCodeCamp Project of Tribute Page.</title>
-								<svg aria-hidden="true" aria-labelledby="projectLink-TributePage-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
+								<svg aria-labelledby="projectLink-TributePage-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
 							</a>
 							<div class="tinkering-tile__description-learning-objectives">
 								Learning Objectives:
@@ -479,7 +495,7 @@
 			</div>
 		</section>
 
-		<section class="section background-fixed background-fixed--contact">
+		<section class="section background-fixed background-fixed--contact" id="contact">
 			<div class="section__container contact">
 				<div class="section__content section__content--column">
 
@@ -522,35 +538,35 @@
 				<div class="footer__links-social">
 					
 					<a href="https://www.linkedin.com/in/maria-lach" target="_blank" class="footer__link footer__link--linkedin">
-						<svg aria-hidden="true" aria-labelledby="linkedIn-footer" data-prefix="fab" data-icon="linkedin-in" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+						<svg aria-labelledby="linkedIn-footer" data-prefix="fab" data-icon="linkedin-in" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 							<title id="linkedIn-footer">See LinkedIn profile in a new tab</title>
 							<path fill="currentColor" d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8-24.1 54.3-53.8 54.3zM448 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448h-.1z">
 							</path>
 						</svg>
 					</a>
 					<a href="https://github.com/mzedlach" target="_blank" class="footer__link footer__link--github">
-						<svg aria-hidden="true" aria-labelledby="Github-footer" data-prefix="fab" data-icon="github" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+						<svg aria-labelledby="Github-footer" data-prefix="fab" data-icon="github" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
 							<title id="Github-footer">See Github profile in a new tab</title>
 							<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
 							</path>
 						</svg>
 					</a>
 					<a href="https://twitter.com/mariazlach" target="_blank" class="footer__link footer__link--twitter">
-						<svg aria-hidden="true" aria-labelledby="Twitter-footer" data-prefix="fab" data-icon="twitter" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+						<svg aria-labelledby="Twitter-footer" data-prefix="fab" data-icon="twitter" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 							<title id="Twitter-footer">See Twitter profile in a new tab</title>
 							<path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
 							</path>
 						</svg>
 					</a>
 					<a href="https://codepen.io/mzedl/pens/public/" target="_blank" class="footer__link footer__link--codepen">
-						<svg aria-hidden="true" aria-labelledby="CodePen-footer" data-prefix="fab" data-icon="codepen" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+						<svg aria-labelledby="CodePen-footer" data-prefix="fab" data-icon="codepen" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 							<title id="CodePen-footer">See CodePen profile in a new tab</title>
 							<path fill="currentColor" d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z">
 							</path>
 						</svg>
 					</a>
 					<a href="https://www.freecodecamp.com/mzedlach" target="_blank" class="footer__link footer__link--freecodecamp">
-						<svg aria-hidden="true" aria-labelledby="FreeCodeCamp-footer" data-prefix="fab" data-icon="free-code-camp" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+						<svg aria-labelledby="FreeCodeCamp-footer" data-prefix="fab" data-icon="free-code-camp" class="footer__link-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
 							<title id="FreeCodeCamp-footer">See FreeCodeCamp profile in a new tab</title>
 							<path fill="currentColor" d="M69.3 144.5c-41 68.5-36.4 163 1 227C92.5 409.7 120 423.9 120 438c0 6.8-6 13-12.8 13C87.7 451 8 375.5 8 253.2c0-111.5 78-186 97.1-186 6 0 14.9 4.8 14.9 11.1 0 12.7-28.3 28.6-50.7 66.2zm195.8 213.8c4.5 1.8 12.3 5.2 12.3-1.2 0-2.7-2.2-2.9-4.3-3.6-8.5-3.4-14-7.7-19.1-15.2-8.2-12.1-10.1-24.2-10.1-38.6 0-32.1 44.2-37.9 44.2-70 0-12.3-7.7-15.9-7.7-19.3 0-2.2.7-2.2 2.9-2.2 8 0 19.1 13.3 22.5 19.8 2.2 4.6 2.4 6 2.4 11.1 0 7-.7 14.2-.7 21.3 0 27 31.9 19.8 31.9 6.8 0-6-3.6-11.6-3.6-17.4 0-.7 0-1.2.7-1.2 3.4 0 9.4 7.7 11.1 10.1 5.8 8.9 8.5 20.8 8.5 31.4 0 32.4-29.5 49-29.5 56 0 1 2.9 7.7 12.1 1.9 29.7-15.1 53.1-47.6 53.1-89.8 0-33.6-8.7-57.7-32.1-82.6-3.9-4.1-16.4-16.9-22.5-16.9-8.2 0 7.2 18.6 7.2 31.2 0 7.2-4.8 12.3-12.3 12.3-11.6 0-14.5-25.4-15.9-33.3-5.8-33.8-12.8-58.2-46.4-74.1-10.4-5-36.5-11.8-36.5-2.2 0 2.4 2.7 4.1 4.6 5.1 9.2 5.6 19.6 21.4 19.6 38.2 0 46.1-57.7 88.2-57.7 136.2-.2 40.3 28.1 72.6 65.3 86.2zM470.4 67c-6 0-14.4 6.5-14.4 12.6 0 8.7 12.1 19.6 17.6 25.4 81.6 85.1 78.6 214.3 17.6 291-7 8.9-35.3 35.3-35.3 43.5 0 5.1 8.2 11.4 13.2 11.4 25.4 0 98.8-80.8 98.8-185.7C568 145.9 491.8 67 470.4 67zm-42.3 323.1H167c-9.4 0-15.5 7.5-15.5 16.4 0 8.5 7 15.5 15.5 15.5h261.1c9.4 0 11.9-7.5 11.9-16.4 0-8.5-3.5-15.5-11.9-15.5z">
 							</path>
@@ -560,7 +576,7 @@
 			</div>
 			<div class="footer__copyright">
 				<div>Copyright &copy; 2018 by Maria Lach. All rights reserved.</div>
-				<a href="#">Impressum</a>
+				<a href="impressum.html">Impressum</a>
 			</div>
 		</footer>
 	

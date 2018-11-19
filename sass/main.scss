@@ -43,8 +43,19 @@ $color-project-link-hover: hsl(216, 50%, 30%);
 $color-project-icon: rgb(127, 148, 180);
 // HERE - this is the last thing I was working on - You are tinkering with jus tthe first two colourations - try to figure out a layout and/or colouring that will work - Maybe adding an additional div with just a fade from one colour to the next will work. - OR - fading out hte colours to more aof a pastel may also work well. 
 // $color-background1: rgb(100, 129, 173);
-$color-temporary-tester: rgb(240, 0, 252);
 $color-dark: rgba(27, 31, 37, 0.98);
+
+
+// FINAL COLOUR SELECTION: 
+
+$color-temporary-tester: hotpink;
+
+
+$color-ginger-orange: #F5C86E;
+
+$color-light-grey: #9EACBF;
+$color-mid-grey: #555;
+$color-dark-grey: #1B1F25;
 
 // -------------------------------------------- //
 // ---------- PAGE SETUP & OVERRIDES ---------- //
@@ -74,15 +85,15 @@ a:visited{
 .btn-icon:link, 
 .btn-icon:visited,
 input[type="submit"] {
-  border: 1px solid #9EACBF;
-  color: #fff;
-  margin: 5px;
+  border: 1px solid $color-light-grey;
+  color: white;
+  margin: .5rem;
   padding: .5rem 2rem; 
   text-decoration: none;
   border-radius: 200px;
   -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
   transition: background-color 0.4s, border 0.4s, color 0.4s;
-  background-color: #9EACBF;
+  background-color: $color-light-grey;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +102,8 @@ input[type="submit"] {
 .btn-icon:active,
 input[type="submit"]:hover,
 input[type="submit"]:active {
-  background-color:#1B1F25; 
-  border: 1px solid #1B1F25;
+  background-color:$color-dark-grey;
+  border: 1px solid $color-dark-grey;
   cursor: pointer;
 }
 .btn-icon svg {
@@ -119,24 +130,23 @@ html {
   /* Later allows for easier use of rem - note: rem not compatible with ES9 */
   font-size: 62.5%;
 
-//   @include respond(phone) {
-//     font-size: 56.25% // 1rem=9px, 9/16 = 56.25% - Base is 9px
-//   }
-//   @include respond(big) {
-//     font-size: 75%; //1rem=12px, 12/16 = 75% - Base is 12px
+  // @include respond(phone) {
+  //   font-size: 56.25% // 1rem=9px, 9/16 = 56.25% - Base is 9px
+  // }
+  // @include respond(big) {
+  //   font-size: 75%; //1rem=12px, 12/16 = 75% - Base is 12px
   // }
 }
 
 body { 
   font-family: $font-text;
-  color: #555;
+  color: $color-mid-grey;
  }
 
 
 h1, h2, h3 {
   text-transform: uppercase;
   font-family: $font-heading-header;
-  // text-align: center;
   font-weight: 400;
   color: #000;
 }
@@ -263,10 +273,7 @@ input[type="submit"] {font-size: 2rem;}
   }
 }
 
-// ---------- SECTION BACKGROUND COLOURS ---------- //
-
-
-/* ---------- BACKGROUNDS ----------*/
+/* ---------- BACKGROUNDS - IMAGES + COLOURS ----------*/
 .background-fixed {
   min-height: 100vh;
   background-size: cover;
@@ -308,29 +315,6 @@ input[type="submit"] {font-size: 2rem;}
 // ---------- SECTION - HEADER ---------- //
 // -------------------------------------- //
 
-
-// /*Sticky Navigation*/
-// .sticky {
-//   position: fixed;
-//   top: 0;
-//   left: 0; 
-//   width: 100%;
-//   background-color: rgba(27, 31, 37, 0.98);
-//   -webkit-box-shadow: 0 5px 5px #1B1F25;
-//   box-shadow: 0 5px 5px #1B1F25;
-//   z-index: 9999;
-// }
-// .sticky .main-nav { margin-top: 15px; }
-
-// .sticky .nav-links:link,
-// .sticky .nav-links:visited {
-//   padding: 8px 0px; 
-//   color: #8994a3; 
-// }
-// .sticky .logo { display:none;}
-// .sticky .logo-grey { display: block; }
-
-
 .header{
   height: 100vh;
   &__navigation{
@@ -346,7 +330,6 @@ input[type="submit"] {font-size: 2rem;}
       align-items: center;
       padding: 1.5rem;
       &-link{
-        text-decoration: none;
         text-transform: uppercase;
         margin-right: 2rem;
         &:link,
@@ -370,30 +353,38 @@ input[type="submit"] {font-size: 2rem;}
     &--position,
     &--phrase {
       text-transform: uppercase;
+      margin-left: .5rem;
     }
   }
   &__links{
     display: flex;
     align-self: center;
-    & .btn-icon {
-      // border: 2px solid #1B1F25;
-      // background-color: orangered;
-    }
+  }
+}
+
+.header__navigation.sticky {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 5px #1B1F25;
+  z-index: 9999;
+  background-color: $color-dark;
+  padding: .5rem 10rem;
+  align-items: center;
+  & .header__navigation-logo{
+    height: 5rem;
+  }
+  & .header__navigation-links-link{
+    color: $color-light-grey;
+    
   }
 }
 
 
 
 
-// .header {
-//   &__text{
-//     position: relative;
-//     top: 20%;
-//     &--name{
-//       word-spacing: 1rem;
-//       letter-spacing: .1rem;
-//     }
-//   }
 
 // ------------------------------------- //
 // ---------- SECTION - ABOUT ---------- //
@@ -434,8 +425,8 @@ input[type="submit"] {font-size: 2rem;}
 
     &-tile{
       height: 11rem;
-      width: 11rem;
-      padding: .5rem;
+      // width: 11rem;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column; 
       align-items: center;
@@ -443,6 +434,20 @@ input[type="submit"] {font-size: 2rem;}
       
       &-logo{
         width: 8rem;
+        // height: 9rem;
+
+        &.npm{
+          width: 10rem;
+        }
+        &.trello{
+          color: #0084D1;
+        }
+        &.zeplin{
+          width: 9.5rem;
+        }
+        &.rails{
+          width: 13rem;
+        }
       }
     }
   }
@@ -629,7 +634,6 @@ input[type="submit"] {font-size: 2rem;}
 // --------------------------------------- //
 
 .section__contact-title{
-  // margin-bottom: 4rem;
   font-weight: 300;
   margin-top: 2rem;
   &-underline{
@@ -645,12 +649,11 @@ input[type="submit"] {font-size: 2rem;}
 
 .contact-form{
   width: 70%;
+  margin-bottom: 3rem;
 
   &__group{
     display: flex;
     margin: 1rem 0rem;
-    // width: 600px;
-  
   }
   &__label{
     flex: 0 0 35%;
@@ -683,9 +686,8 @@ textarea {
 // -------------------------------------- //
 footer{
   background-color: $color-dark;
-  padding: 50px ;
+  padding: 3rem;
   color:  #8994a3;
-  // text-align: center;
 }
 
 .footer {
@@ -754,8 +756,7 @@ footer{
 
 
 // To do list: 
-// Fix rails icon in skills 
-// Sticky navigation
+// Unifying all colours
 // Changing tinkering into FCC certifications
 // **Responsive
 // Animations
