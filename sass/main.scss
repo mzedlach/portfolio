@@ -1,61 +1,16 @@
-
 // ----------------------------- //
 // ---------- COLOURS ---------- //
 // ----------------------------- //
 
-// old colours
-$color-grey-light: #D5DEE7;
-$color-grey-medium: #9EACBF;
-$color-grey-dark: #1B1F25 ;
-
-$color-blue1: #0a3262;
-$color-blue2: #3c6382;
-$color-green3: #548687;
-$color-blue3: #60a3bc;
-$color-blue4: #82ccdd;
-
-$color-green1: #C5E99B;
-$color-green2: #8FBC94;
-
-$color-background1: rgb(127, 148, 180);
-
-
-// playing with HSL - blues
-
-// $color-blue1: hsl(213, 80%, 20%);
-// $color-blue2: hsl(213, 80%, 30%);
-// $color-green3: hsl(213, 80%, 40%);
-// $color-blue3: hsl(213, 80%, 50%);
-// $color-blue4: hsl(213, 80%, 60%);
-
-$color-dark-grey: #888888;
-// PLaying with HSL - based on backgroudn purple/blue colour
-$color-background1: hsl(216, 20%, 60%);
-$color-test1: hsl(216, 30%, 50%);
-$color-test2: hsl(216, 40%, 40%);
-$color-test3: hsl(216, 50%, 30%);
-$color-test4: hsl(216, 60%, 20%);
-$color-test5: hsl(216, 70%, 60%);
-
-$color-project-link: rgb(127, 148, 180);
-$color-project-link-hover: hsl(216, 50%, 30%); 
-// $color-project-link-hover2: #faba30;
-$color-project-icon: rgb(127, 148, 180);
-// HERE - this is the last thing I was working on - You are tinkering with jus tthe first two colourations - try to figure out a layout and/or colouring that will work - Maybe adding an additional div with just a fade from one colour to the next will work. - OR - fading out hte colours to more aof a pastel may also work well. 
-// $color-background1: rgb(100, 129, 173);
-$color-dark: rgba(27, 31, 37, 0.98);
-
-
-// FINAL COLOUR SELECTION: 
-
 $color-temporary-tester: hotpink;
-
-
-$color-ginger-orange: #F5C86E;
-
 $color-light-grey: #9EACBF;
 $color-mid-grey: #555;
 $color-dark-grey: #1B1F25;
+$color-background1: #7f94b4;
+// Buttons:
+$color-project-link: #7f94b4;
+$color-project-link-hover: #264573; 
+$color-project-icon: #7f94b4;
 
 // -------------------------------------------- //
 // ---------- PAGE SETUP & OVERRIDES ---------- //
@@ -69,19 +24,69 @@ a:link,
 a:visited{
   text-decoration: none;
 }
+// -------------------------------- //
+// ---------- TYPOGRAPHY ---------- //
+// -------------------------------- //
+$font-heading: 'Lato', 'Arial', sans-serif;
+$font-links: 'Lato', 'Arial', sans-serif;
+$font-text: 'Lato', 'Arial', sans-serif;
+$font-heading-header: 'Lato', 'Arial', sans-serif;
 
+html {
+  font-size: 62.5%;
 
+  // @include respond(phone) {
+  //   font-size: 56.25% // 1rem=9px, 9/16 = 56.25% - Base is 9px
+  // }
+  // @include respond(big) {
+  //   font-size: 75%; //1rem=12px, 12/16 = 75% - Base is 12px
+  // }
+}
+
+body { 
+  font-family: $font-text;
+  color: $color-mid-grey;
+ }
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-family: $font-heading-header;
+  font-weight: 400;
+  color: #000;
+}
+h1 {
+  font-weight: 300;
+}
+
+// ---------- FONT SIZE ---------- //
+body { font-size: 2rem; }
+h1{ font-size: 8rem; }
+h2 { font-size: 4rem; }
+h3 { font-size: 3rem; }
+p { font-size: 2.0rem; }
+input[type="submit"] {font-size: 2rem;}
+.footer{ 
+  font-size: 2rem;
+  &__copyright{
+    font-size: 1.6rem;
+  }
+}
+.header{
+  &__text{
+    &--position,
+    &--phrase {
+      font-size: 2.6rem;
+      font-weight: 100;
+    }
+  }
+}
+.skills__text--list {
+  font-size: 2.2rem;
+}
 // -------------------------------------- //
 // ---------- REUSABLE CLASSES ---------- //
 // -------------------------------------- //
-// .flex-element-center-fullwidth {
-//   flex: 0 0 100%;
-//   text-align: center;
-// }
-
 
 /* ---------- BUTTONS ----------*/
-
 .btn-icon:link, 
 .btn-icon:visited,
 input[type="submit"] {
@@ -106,82 +111,33 @@ input[type="submit"]:active {
   border: 1px solid $color-dark-grey;
   cursor: pointer;
 }
+.btn-icon{
+  &--linkedin:hover {
+    color: #007bb5;
+  }
+  &--github:hover {
+    color: #4078c0;
+  }
+  &--twitter:hover {
+    color: #1da1f2;
+  }
+  &--codepen:hover {
+    color: #d2d4d8;
+  }
+  &--freecodecamp:hover {
+    color: #006400;
+  }
+}
 .btn-icon svg {
   height: 3.5rem;
 }
 
-
-// -------------------------------- //
-// ---------- TYPOGRAPHY ---------- //
-// -------------------------------- //
-$font-heading: 'Lato', 'Arial', sans-serif;
-$font-links: 'Lato', 'Arial', sans-serif;
-$font-text: 'Lato', 'Arial', sans-serif;
-//'Raleway', sans-serif;
-
-$font-heading-header: 'Lato', 'Arial', sans-serif;
-$font-heading-section: 'Cousine', monospace;
-//Delete these when you're happy with all your headings
-$font-heading-secondchoice: 'Fira Mono', monospace;
-$font-heading-thirdchoice: 'Inconsolata', monospace;
-
-html {
-  /* Setting HTML font to 62.5% allows user to zoon in and out while giving us the 10px base font to work with */
-  /* Later allows for easier use of rem - note: rem not compatible with ES9 */
-  font-size: 62.5%;
-
-  // @include respond(phone) {
-  //   font-size: 56.25% // 1rem=9px, 9/16 = 56.25% - Base is 9px
-  // }
-  // @include respond(big) {
-  //   font-size: 75%; //1rem=12px, 12/16 = 75% - Base is 12px
-  // }
-}
-
-body { 
-  font-family: $font-text;
-  color: $color-mid-grey;
- }
-
-
-h1, h2, h3 {
-  text-transform: uppercase;
-  font-family: $font-heading-header;
-  font-weight: 400;
-  color: #000;
-}
-h1 {
-  font-weight: 300;
-}
-// ---------- FONT SIZE ---------- //
-body { font-size: 2rem; }
-h1{ font-size: 8rem; }
-h2 { font-size: 4rem; }
-h3 { font-size: 3rem; }
-p { font-size: 2.2rem; }
-input[type="submit"] {font-size: 2rem;}
-.footer{ 
-  font-size: 2rem;
-  &__copyright{
-    font-size: 1.6rem;
-  }
-}
-.header{
-  &__text{
-    &--position,
-    &--phrase {
-      font-size: 2.6rem;
-      font-weight: 100;
-    }
-  }
-}
 // ----------------------------------------- //
 // ---------- SECTION PAGE LAYOUT ---------- //
 // ----------------------------------------- //
 //Form section is separate
 
 // ---------- TITLES & CONTENT ---------- //
-
 .section {
   display: flex;
   &__container {
@@ -192,7 +148,7 @@ input[type="submit"] {font-size: 2rem;}
       width:100%;
       &.skills{
         margin: 30rem 8rem 20rem 0rem;
-        
+        background-color: rgba(255, 255, 255, 0.9);
       }
       &.tinkering{
         margin: 30rem 8rem 20rem 0rem;
@@ -202,12 +158,17 @@ input[type="submit"] {font-size: 2rem;}
     &--right {
       border-radius: 6.5rem 0rem 0rem 4rem;
       &.about{
-        margin: 5rem 0rem 5rem 8rem;
+        margin: 5rem 0rem 5rem 8rem; 
       }
       &.projects{
         background-color: rgba(255, 255, 255, 0.9);
         margin: 5rem 0rem 5rem 8rem;
         width: 100%;
+      }
+      &.credits{
+        width: 100%;
+        margin: 13rem 0rem 5rem 8rem;
+
       }
     }
     &.header{
@@ -219,12 +180,10 @@ input[type="submit"] {font-size: 2rem;}
     &.contact{
       background-color: rgba(255, 255, 255, 0.9);
       justify-content: center;
-      // width: 100%;
       width: 80%;
       border-radius: 2rem;
     }
   }
-
   &__title{
     text-transform: uppercase;
     position: absolute;
@@ -250,11 +209,9 @@ input[type="submit"] {font-size: 2rem;}
       left:0;
     }
   }
-
   &__content{
     display: flex;
     width: 100%;
-
     &--column {
       flex-direction: column;
       align-items: center;
@@ -270,6 +227,9 @@ input[type="submit"] {font-size: 2rem;}
     &.large-content-padding{
       padding: 12rem 12rem 8rem 12rem;
     }
+    &.about {
+      align-items: center;
+    }
   }
 }
 
@@ -281,18 +241,13 @@ input[type="submit"] {font-size: 2rem;}
   background-repeat: no-repeat;
   background-position: center;
   &--header{
+    // Photo by Jesus Kiteque on Unsplash
     background-image: url(/img/jesus-kiteque-224069-min.jpg);
-    // background-position: bottom;
-    // background-position-y: -8rem;
   }
-
-  &--skills{
-    background-image: url(/img/rawpixel-558599-unsplash.jpg);
-    // padding-top: 40rem;
-  }
-
-  &--projects{
-// Photo by rawpixel on Unsplash
+  &--skills,
+  &--projects,
+  &--credits{
+    // Photo by rawpixel on Unsplash
     background-image: url(/img/rawpixel-558599-unsplash.jpg);
   }
   &--contact{
@@ -302,7 +257,6 @@ input[type="submit"] {font-size: 2rem;}
     background-color: rgba(rgb(32, 89, 36),0.2);
     justify-content: center;
     align-items: center;
-
   }
 }
 .background-plain {
@@ -314,13 +268,13 @@ input[type="submit"] {font-size: 2rem;}
 // -------------------------------------- //
 // ---------- SECTION - HEADER ---------- //
 // -------------------------------------- //
-
 .header{
   height: 100vh;
   &__navigation{
     display: flex;
+    align-items: center;
     &-logo {
-      height: 7rem;
+      height: 10rem;
       width: auto;
       margin-right: auto;
     }
@@ -361,7 +315,6 @@ input[type="submit"] {font-size: 2rem;}
     align-self: center;
   }
 }
-
 .header__navigation.sticky {
   display: none;
   position: fixed;
@@ -370,7 +323,7 @@ input[type="submit"] {font-size: 2rem;}
   width: 100%;
   box-shadow: 0 5px 5px #1B1F25;
   z-index: 9999;
-  background-color: $color-dark;
+  background-color: $color-dark-grey;
   padding: .5rem 10rem;
   align-items: center;
   & .header__navigation-logo{
@@ -378,14 +331,8 @@ input[type="submit"] {font-size: 2rem;}
   }
   & .header__navigation-links-link{
     color: $color-light-grey;
-    
   }
 }
-
-
-
-
-
 // ------------------------------------- //
 // ---------- SECTION - ABOUT ---------- //
 // ------------------------------------- //
@@ -393,14 +340,11 @@ input[type="submit"] {font-size: 2rem;}
   &__image {
     height: 30rem;
     border-radius: 20%;
-    // margin-left: 3.5rem;
   }
   &__description {
     line-height: 1.5;
-    // width: 75%;
-    // margin: auto 0rem auto auto;
     text-align: justify;
-    margin-left: 5rem;
+    margin-left: 3rem;
   }
 }
 // -------------------------------------- //
@@ -419,13 +363,10 @@ input[type="submit"] {font-size: 2rem;}
   }
   &__tiles{
     display: flex;
-    // justify-content: center;
-    // align-items: center;
     margin: 3.5rem 0rem 6.5rem 0rem;
 
     &-tile{
       height: 11rem;
-      // width: 11rem;
       padding: 1.5rem;
       display: flex;
       flex-direction: column; 
@@ -434,8 +375,6 @@ input[type="submit"] {font-size: 2rem;}
       
       &-logo{
         width: 8rem;
-        // height: 9rem;
-
         &.npm{
           width: 10rem;
         }
@@ -466,6 +405,7 @@ input[type="submit"] {font-size: 2rem;}
   margin: 0rem 1rem;
   color: $color-project-icon;
 }
+
 // ---------------------------------------- //
 // ---------- SECTION - PROJECTS ---------- //
 // ---------------------------------------- //
@@ -509,7 +449,6 @@ input[type="submit"] {font-size: 2rem;}
       }
     }
   }
-
   &__right{
     flex: 1 1 60%;
     display: flex;
@@ -542,10 +481,10 @@ input[type="submit"] {font-size: 2rem;}
     }
   }
 }
+
 // ----------------------------------------- //
 // ---------- SECTION - TINKERING ---------- //
 // ----------------------------------------- //
-
 .tinkering-tile{
   background-color: white;
   width: 50rem;
@@ -569,9 +508,8 @@ input[type="submit"] {font-size: 2rem;}
     border: 5px solid white; 
     border-radius: 1rem;
     &:hover{
-      border: 5px solid $color-temporary-tester; 
+      border: 5px solid orange; 
     }
-
     &-link{
       display: flex;
       justify-content: center;
@@ -583,13 +521,7 @@ input[type="submit"] {font-size: 2rem;}
   }
   &__description{
     margin: 2rem 0rem;
-    &-text-link{
-      
-    }
     &-icon{
-      &-link{
-        
-      }
       &-icon{
         width: 1.5rem;
       }
@@ -618,15 +550,6 @@ input[type="submit"] {font-size: 2rem;}
     display:flex;
     flex-direction: column;
     align-items: center;
-
-    &-text{
-
-    }
-    &-icons{
-      &-icon{
-
-      }
-    }
   }
 }
 // --------------------------------------- //
@@ -665,15 +588,12 @@ input[type="submit"] {font-size: 2rem;}
     padding: 7px;
     border-radius: 3px;
     border: 1px solid #9EACBF;
+ 
   }
   &__textarea{
     height: 10rem;
   }
 }
-
-
-// Yo'ure target INPUT TYPE for button,t hat's why none of your class settings are working!! 
-
 
 input[type=text],
 input[type=email],
@@ -685,19 +605,14 @@ textarea {
 // ---------- SECTION - FOOTER ---------- //
 // -------------------------------------- //
 footer{
-  background-color: $color-dark;
+  background-color: $color-dark-grey;
   padding: 3rem;
   color:  #8994a3;
 }
-
 .footer {
   &__links{
     display: flex;
     justify-content: space-between;
-    &-navigation{
-    }
-    &-social{
-    }
   }
   &__link{
     margin: 0rem 1rem;
@@ -730,17 +645,9 @@ footer{
     text-align: center;
   }
 }
-
 .footer__link-icon {
   height: 3rem;
 }
-
-// *:focus {outline:none;}
-// /*Removes blue ouline around input areas*/
-
-
-
-
 // ---------------------------------------------- //
 // ---------- MOBILE-SPECIFIC ELEMENTS ---------- //
 // ---------------------------------------------- //
@@ -752,14 +659,32 @@ footer{
   background-color: orangered;
 }
 
-
+// ------------------------------- //
+// ---------- IMPRESSUM ---------- //
+// ------------------------------- //
+.credits__page{
+  min-height: 100vh;
+}
+.header__navigation.credits{
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 5px 5px #1B1F25;
+  background-color: $color-dark-grey;
+  padding: .5rem 10rem;
+  align-items: center;
+  height: fit-content;
+  & .header__navigation-logo{
+    height: 5rem;
+  }
+  & .header__navigation-links-link{
+    color: $color-light-grey;
+  }
+}
 
 
 // To do list: 
-// Unifying all colours
-// Changing tinkering into FCC certifications
 // **Responsive
 // Animations
-// Impressum page
-// Reference Font Awesome
-// Reference main image 
+//Do Tech By Us Links - website & github
+//HOver on tinkering projects
+// Tinkering - (Codepen) (project guidelines)

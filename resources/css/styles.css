@@ -7,37 +7,7 @@ a:link,
 a:visited {
   text-decoration: none; }
 
-/* ---------- BUTTONS ----------*/
-.btn-icon:link,
-.btn-icon:visited,
-input[type="submit"] {
-  border: 1px solid #9EACBF;
-  color: white;
-  margin: .5rem;
-  padding: .5rem 2rem;
-  text-decoration: none;
-  border-radius: 200px;
-  -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
-  transition: background-color 0.4s, border 0.4s, color 0.4s;
-  background-color: #9EACBF;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.btn-icon:hover,
-.btn-icon:active,
-input[type="submit"]:hover,
-input[type="submit"]:active {
-  background-color: #1B1F25;
-  border: 1px solid #1B1F25;
-  cursor: pointer; }
-
-.btn-icon svg {
-  height: 3.5rem; }
-
 html {
-  /* Setting HTML font to 62.5% allows user to zoon in and out while giving us the 10px base font to work with */
-  /* Later allows for easier use of rem - note: rem not compatible with ES9 */
   font-size: 62.5%; }
 
 body {
@@ -66,7 +36,7 @@ h3 {
   font-size: 3rem; }
 
 p {
-  font-size: 2.2rem; }
+  font-size: 2.0rem; }
 
 input[type="submit"] {
   font-size: 2rem; }
@@ -80,6 +50,52 @@ input[type="submit"] {
   font-size: 2.6rem;
   font-weight: 100; }
 
+.skills__text--list {
+  font-size: 2.2rem; }
+
+/* ---------- BUTTONS ----------*/
+.btn-icon:link,
+.btn-icon:visited,
+input[type="submit"] {
+  border: 1px solid #9EACBF;
+  color: white;
+  margin: .5rem;
+  padding: .5rem 2rem;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
+  transition: background-color 0.4s, border 0.4s, color 0.4s;
+  background-color: #9EACBF;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.btn-icon:hover,
+.btn-icon:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #1B1F25;
+  border: 1px solid #1B1F25;
+  cursor: pointer; }
+
+.btn-icon--linkedin:hover {
+  color: #007bb5; }
+
+.btn-icon--github:hover {
+  color: #4078c0; }
+
+.btn-icon--twitter:hover {
+  color: #1da1f2; }
+
+.btn-icon--codepen:hover {
+  color: #d2d4d8; }
+
+.btn-icon--freecodecamp:hover {
+  color: #006400; }
+
+.btn-icon svg {
+  height: 3.5rem; }
+
 .section {
   display: flex; }
   .section__container {
@@ -89,7 +105,8 @@ input[type="submit"] {
       border-radius: 0rem 6.5rem 6.5rem 0rem;
       width: 100%; }
       .section__container--left.skills {
-        margin: 30rem 8rem 20rem 0rem; }
+        margin: 30rem 8rem 20rem 0rem;
+        background-color: rgba(255, 255, 255, 0.9); }
       .section__container--left.tinkering {
         margin: 30rem 8rem 20rem 0rem;
         background-color: rgba(255, 255, 255, 0.9); }
@@ -101,6 +118,9 @@ input[type="submit"] {
         background-color: rgba(255, 255, 255, 0.9);
         margin: 5rem 0rem 5rem 8rem;
         width: 100%; }
+      .section__container--right.credits {
+        width: 100%;
+        margin: 13rem 0rem 5rem 8rem; }
     .section__container.header {
       padding: 2rem 10rem .5rem 10rem;
       background-color: transparent;
@@ -144,6 +164,8 @@ input[type="submit"] {
       padding: 12rem 5rem 5rem 5rem; }
     .section__content.large-content-padding {
       padding: 12rem 12rem 8rem 12rem; }
+    .section__content.about {
+      align-items: center; }
 
 /* ---------- BACKGROUNDS - IMAGES + COLOURS ----------*/
 .background-fixed {
@@ -154,9 +176,7 @@ input[type="submit"] {
   background-position: center; }
   .background-fixed--header {
     background-image: url(/img/jesus-kiteque-224069-min.jpg); }
-  .background-fixed--skills {
-    background-image: url(/img/rawpixel-558599-unsplash.jpg); }
-  .background-fixed--projects {
+  .background-fixed--skills, .background-fixed--projects, .background-fixed--credits {
     background-image: url(/img/rawpixel-558599-unsplash.jpg); }
   .background-fixed--contact {
     background-image: url(/img/jeff-kepler-1085049-unsplash.jpg);
@@ -166,14 +186,15 @@ input[type="submit"] {
     align-items: center; }
 
 .background-plain--about {
-  background-color: #8595ad; }
+  background-color: #7f94b4; }
 
 .header {
   height: 100vh; }
   .header__navigation {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     .header__navigation-logo {
-      height: 7rem;
+      height: 10rem;
       width: auto;
       margin-right: auto; }
     .header__navigation-links {
@@ -209,7 +230,7 @@ input[type="submit"] {
   width: 100%;
   box-shadow: 0 5px 5px #1B1F25;
   z-index: 9999;
-  background-color: rgba(27, 31, 37, 0.98);
+  background-color: #1B1F25;
   padding: .5rem 10rem;
   align-items: center; }
   .header__navigation.sticky .header__navigation-logo {
@@ -224,7 +245,7 @@ input[type="submit"] {
 .about-me__description {
   line-height: 1.5;
   text-align: justify;
-  margin-left: 5rem; }
+  margin-left: 3rem; }
 
 .skills__text {
   display: flex;
@@ -336,7 +357,7 @@ input[type="submit"] {
     border: 5px solid white;
     border-radius: 1rem; }
     .tinkering-tile__image:hover {
-      border: 5px solid hotpink; }
+      border: 5px solid orange; }
     .tinkering-tile__image-link {
       display: flex;
       justify-content: center;
@@ -401,7 +422,7 @@ textarea {
   font-size: 2rem; }
 
 footer {
-  background-color: rgba(27, 31, 37, 0.98);
+  background-color: #1B1F25;
   padding: 3rem;
   color: #8994a3; }
 
@@ -438,3 +459,19 @@ footer {
 
 .tester {
   background-color: orangered; }
+
+.credits__page {
+  min-height: 100vh; }
+
+.header__navigation.credits {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 5px 5px #1B1F25;
+  background-color: #1B1F25;
+  padding: .5rem 10rem;
+  align-items: center;
+  height: fit-content; }
+  .header__navigation.credits .header__navigation-logo {
+    height: 5rem; }
+  .header__navigation.credits .header__navigation-links-link {
+    color: #9EACBF; }
