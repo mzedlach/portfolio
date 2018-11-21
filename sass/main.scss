@@ -1,3 +1,27 @@
+// @include respond(tab-land) { //1200px
+// }
+// @include respond(tab-port) { //900px
+// }
+// @include respond(phone) { //600px
+// }
+// @include respond(large) { //1800px
+// }
+
+@mixin respond($breakpoint) { 
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) { @content }; 
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) { @content }; 
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) { @content }; 
+  }
+  @if $breakpoint == large {
+    @media only screen and (min-width: 112.5em) { @content }; 
+  }
+}
+
 // ----------------------------- //
 // ---------- COLOURS ---------- //
 // ----------------------------- //
@@ -46,7 +70,21 @@ html {
 body { 
   font-family: $font-text;
   color: $color-mid-grey;
- }
+  //Take this out when you're done
+  @include respond(tab-land) { //1200px
+    color: orangered;
+  }
+  @include respond(tab-port) { //900px
+    color: green;
+  }
+  @include respond(phone) { //600px
+    color: blue;
+  }
+  @include respond(large) { //1800px
+    color: grey;
+  }
+
+}
 h1, h2, h3 {
   text-transform: uppercase;
   font-family: $font-heading-header;
@@ -61,7 +99,12 @@ h1 {
 body { font-size: 2rem; }
 h1{ font-size: 8rem; }
 h2 { font-size: 4rem; }
-h3 { font-size: 3rem; }
+h3 { 
+  font-size: 3rem; 
+  @include respond(tab-land) { 
+    font-size: 2.5rem;
+  }
+}
 p { font-size: 2.0rem; }
 input[type="submit"] {font-size: 2rem;}
 .footer{ 
@@ -164,6 +207,9 @@ input[type="submit"]:active {
         background-color: rgba(255, 255, 255, 0.9);
         margin: 5rem 0rem 5rem 8rem;
         width: 100%;
+        @include respond(tab-land) { 
+          margin: 5rem 0rem 5rem 5rem;
+        }
       }
       &.credits{
         width: 100%;
@@ -226,6 +272,9 @@ input[type="submit"]:active {
     }
     &.large-content-padding{
       padding: 12rem 12rem 8rem 12rem;
+      @include respond(tab-land) { //1200px
+        padding: 10rem 8rem 6rem 8rem;
+      }
     }
     &.about {
       align-items: center;
@@ -354,9 +403,7 @@ input[type="submit"]:active {
   &__text {
     display: flex;
     align-items:center;
-    &--title{
-
-    }
+    flex-direction: column;
     &--list{
       margin-left: 2rem;
     }
@@ -366,7 +413,6 @@ input[type="submit"]:active {
     margin: 3.5rem 0rem 6.5rem 0rem;
 
     &-tile{
-      height: 11rem;
       padding: 1.5rem;
       display: flex;
       flex-direction: column; 
@@ -374,18 +420,44 @@ input[type="submit"]:active {
       justify-content: center;
       
       &-logo{
-        width: 8rem;
+        height: 8rem;
+        &.github{
+          height: 9rem;
+        }
         &.npm{
-          width: 10rem;
+          height: 5rem;
+          @include respond(tab-land) { 
+            height: 4rem;
+          }
         }
         &.trello{
           color: #0084D1;
+          height: 8rem;
+          @include respond(tab-land) { 
+            height: 7rem;
+          }
         }
         &.zeplin{
-          width: 9.5rem;
+          @include respond(tab-land) { 
+            height: 7rem;
+          }
+        }
+        &.slack{
+          @include respond(tab-land) { 
+            height: 7rem;
+          }
         }
         &.rails{
-          width: 13rem;
+          height: 6rem;
+          @include respond(tab-land) { 
+            height: 5rem;
+          }
+        }
+        &.angular{
+          height: 7rem;
+          @include respond(tab-land) { 
+            height: 6rem;
+          }
         }
       }
     }
@@ -418,12 +490,17 @@ input[type="submit"]:active {
   margin: 3.5rem auto;
   box-shadow: 8px 8px 40px 8px $color-dark-grey;
   padding: 2.5rem;
-
+  @include respond(tab-land) { 
+    width: 70rem;
+  }
   &__left{
     flex: 1 1 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include respond(tab-land) { 
+      flex: 1 1 30%;
+    }
     &-image{
       width: 80%;
       border: 2px solid $color-project-link; 
@@ -454,7 +531,6 @@ input[type="submit"]:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 2.5rem;
     font-family: $font-text;
     &-title{
       font-family: $font-heading;
