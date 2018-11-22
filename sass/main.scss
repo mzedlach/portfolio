@@ -346,6 +346,9 @@ input[type="submit"]:active {
         }
       }
     }
+    & .header__navigation-logo--grey{
+      display: none;
+    }
   }
   &__text{
     margin-top: 10rem;
@@ -364,8 +367,7 @@ input[type="submit"]:active {
     align-self: center;
   }
 }
-.header__navigation.sticky {
-  display: none;
+.sticky {
   position: fixed;
   top: 0;
   left: 0;
@@ -381,7 +383,19 @@ input[type="submit"]:active {
   & .header__navigation-links-link{
     color: $color-light-grey;
   }
+  & .header__navigation-logo {
+    display: none;
+  }
+  & .header__navigation-logo--grey {
+    display: block;
+    margin-right: auto;
+    height: 5rem;
+  }
 }
+
+
+
+
 // ------------------------------------- //
 // ---------- SECTION - ABOUT ---------- //
 // ------------------------------------- //

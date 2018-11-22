@@ -89,7 +89,7 @@
 
 
 window.onscroll = function() {stickyNavigation()};
-    console.log("Function working");
+
 // Get sticky navigation section
 var stickyNav = document.getElementById("stickyNavigation");
 // Get about section
@@ -100,8 +100,11 @@ var sticky = about.offsetTop;
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stickyNavigation() {
   if (window.pageYOffset > sticky) {
-    stickyNav.style.display = "flex";
+    // stickyNav.style.display = "flex";
+    stickyNav.classList.add("sticky");
+    //Check ES9 compatiblitiy fix on W3schools (how TO add a class)
   } else {
-    stickyNav.style.display = "none";
+    // stickyNav.style.display = "none";
+    stickyNav.classList.remove("sticky");
   }
 }

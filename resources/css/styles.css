@@ -231,6 +231,8 @@ input[type="submit"]:active {
         .header__navigation-links-link:hover, .header__navigation-links-link:active {
           border-bottom: 1px solid black;
           cursor: pointer; }
+    .header__navigation .header__navigation-logo--grey {
+      display: none; }
   .header__text {
     margin-top: 10rem; }
     .header__text--name {
@@ -243,8 +245,7 @@ input[type="submit"]:active {
     display: flex;
     align-self: center; }
 
-.header__navigation.sticky {
-  display: none;
+.sticky {
   position: fixed;
   top: 0;
   left: 0;
@@ -254,10 +255,16 @@ input[type="submit"]:active {
   background-color: #1B1F25;
   padding: .5rem 10rem;
   align-items: center; }
-  .header__navigation.sticky .header__navigation-logo {
+  .sticky .header__navigation-logo {
     height: 5rem; }
-  .header__navigation.sticky .header__navigation-links-link {
+  .sticky .header__navigation-links-link {
     color: #9EACBF; }
+  .sticky .header__navigation-logo {
+    display: none; }
+  .sticky .header__navigation-logo--grey {
+    display: block;
+    margin-right: auto;
+    height: 5rem; }
 
 .about-me__image {
   height: 30rem;

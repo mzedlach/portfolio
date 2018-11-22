@@ -32,8 +32,9 @@
 
 		<header class="background-fixed background-fixed--header">
 			<div class="section section__container header">
-				<div class="header__navigation">
+				<div class="header__navigation" id="stickyNavigation">
 					<img src="resources/img/logo.png" alt="Maria Lach logo" class="header__navigation-logo">
+					<img src="resources/img/logo-grey.png" alt="Maria Lach logo" class="header__navigation-logo--grey">
 					<nav class="header__navigation-links">
 							<a href="#about" class="header__navigation-links-link">About</a>
 							<a href="#skills" class="header__navigation-links-link">Skills</a>
@@ -82,18 +83,15 @@
 						</svg>
 					</a>
 				</div>
+
+				<input type="checkbox" class="header__navigation-checkbox" id="nav-toggle">
+				<label for="nav-toggle" class="header__navigation-button">
+						<span class="header__navigation-icon">&nbsp;</span>
+				</label>
+
+
 			</div>
 		</header>
-
-		<div class="header__navigation sticky" id="stickyNavigation">
-			<img src="resources/img/logo-grey.png" alt="Maria Lach logo" class="header__navigation-logo">
-			<nav class="header__navigation-links">
-					<a href="#about" class="header__navigation-links-link">About</a>
-					<a href="#skills" class="header__navigation-links-link">Skills</a>
-					<a href="#projects" class="header__navigation-links-link">Projects</a>
-					<a href="#contact" class="header__navigation-links-link">Contact</a>
-			</nav>
-		</div>
 		
 		<section class="section background-plain background-plain--about" id="about">
 			<div class="section__container section__container--right about">
