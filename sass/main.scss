@@ -393,6 +393,119 @@ input[type="submit"]:active {
   }
 }
 
+.header__navigation {
+  &-checkbox{
+    display:none;
+  }
+  &-button{
+    // Label connected to the checkbox - THIS is the clickable element
+    background-color: orangered;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: relative; 
+    cursor: pointer;
+    // z-index: 9000;
+    text-align: center;
+  }
+  &-icon{
+    position: relative;
+    margin-top: 1.5rem; 
+
+    &,
+    &::before,
+    &::after{
+      width: 3rem;
+      height: .5rem;
+      background-color:  $color-dark-grey;
+      // background-color:  green;
+      display: inline-block;
+      z-index: 9001;
+    }
+
+    &::before, 
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all .2s; // For open/close X animation
+    }
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+  
+  &-button:hover &-icon:before {
+    top: -1.2rem;
+  }
+  &-button:hover &-icon:after {
+    top: 1.2rem;
+  }
+}
+// .header{
+
+//   &__navigation-button {
+//     background-color: $color-white;
+
+
+//     border-radius: 50%;
+//     position: fixed;
+//     top: 6rem;
+//     right: 6rem;
+//     z-index: 2000;
+//     box-shadow: 0 1rem 3rem rgba($color-black, .1);
+
+
+//     @include respond(tab-port) {
+//         top: 4rem;
+//         right: 4rem;
+//     }
+//     @include respond(phone) {
+//         top: 3rem;
+//         right: 3rem;
+//     }
+//   }
+// }
+
+
+//   // 3 BAR ICON
+//   &__navigation-icon {
+
+//   &-button:hover &-icon:before {
+//     top: -1.2rem;
+//   }
+//   &-button:hover &-icon:after {
+//     top: 1.2rem;
+//   }
+
+//   // For open/close X animation
+//   &-checkbox:checked + &-button &-icon {
+//     background-color: transparent;
+//   }
+//   &-checkbox:checked + &-button &-icon::before {
+//     top: 0;
+//     transform: rotate(135deg);
+//     background-color: $color-secondary-white;
+//     width: 3rem;
+//   }
+//   &-checkbox:checked + &-button &-icon::after {
+//     top: 0;
+//     transform: rotate(-135deg);
+//     background-color: $color-secondary-white;
+//     width: 3rem;
+//   }
+
+//   // Functionality of button
+//   &-checkbox:checked ~ &-nav{
+//     opacity: 1;
+//     width: 27rem;
+//     transition: all .2s;
+//   }
+// }
+
+
 
 
 

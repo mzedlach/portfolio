@@ -266,6 +266,42 @@ input[type="submit"]:active {
     margin-right: auto;
     height: 5rem; }
 
+.header__navigation-checkbox {
+  display: none; }
+
+.header__navigation-button {
+  background-color: orangered;
+  height: 3.5rem;
+  width: 3.5rem;
+  position: relative;
+  cursor: pointer;
+  text-align: center; }
+
+.header__navigation-icon {
+  position: relative;
+  margin-top: 1.5rem; }
+  .header__navigation-icon, .header__navigation-icon::before, .header__navigation-icon::after {
+    width: 3rem;
+    height: .5rem;
+    background-color: #1B1F25;
+    display: inline-block;
+    z-index: 9001; }
+  .header__navigation-icon::before, .header__navigation-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .header__navigation-icon::before {
+    top: -1rem; }
+  .header__navigation-icon::after {
+    top: 1rem; }
+
+.header__navigation-button:hover .header__navigation-icon:before {
+  top: -1.2rem; }
+
+.header__navigation-button:hover .header__navigation-icon:after {
+  top: 1.2rem; }
+
 .about-me__image {
   height: 30rem;
   border-radius: 20%; }
