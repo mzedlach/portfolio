@@ -58,6 +58,9 @@ $font-heading-header: 'Lato', 'Arial', sans-serif;
 
 html {
   font-size: 62.5%;
+  @include respond(tab-land) {
+    font-size: 60% ;
+  }
 
   // @include respond(phone) {
   //   font-size: 56.25% // 1rem=9px, 9/16 = 56.25% - Base is 9px
@@ -222,6 +225,9 @@ input[type="submit"]:active {
       background-color: transparent;
       flex-direction: column;
       justify-content: space-between;
+      @include respond(tab-land) { 
+        padding: 2rem;
+      }
     }
     &.contact{
       background-color: rgba(255, 255, 255, 0.9);
@@ -328,10 +334,13 @@ input[type="submit"]:active {
       margin-right: auto;
     }
     &-links{
+      @include respond(tab-port) { 
+        display: none;
+      }
       height: 6rem;
       display: flex;
       align-items: center;
-      padding: 1.5rem;
+      // padding: 1.5rem;
       &-link{
         text-transform: uppercase;
         margin-right: 2rem;
@@ -392,57 +401,83 @@ input[type="submit"]:active {
     height: 5rem;
   }
 }
-
+//For mobile navigation bars + functionality 
 .header__navigation {
   &-checkbox{
-    display:none;
+    display: none;
   }
   &-button{
-    // Label connected to the checkbox - THIS is the clickable element
-    background-color: orangered;
-    height: 3.5rem;
-    width: 3.5rem;
-    position: relative; 
+    // Clickable element connected to checkbox
+    height: 4.5rem;
+    width: 4.5rem;
+    position: absolute; 
+    right: 10rem;
     cursor: pointer;
-    // z-index: 9000;
-    text-align: center;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    @include respond(tab-port) { 
+      display: flex;
+    }
   }
   &-icon{
     position: relative;
-    margin-top: 1.5rem; 
-
     &,
     &::before,
     &::after{
-      width: 3rem;
-      height: .5rem;
+      width: 3.5rem;
+      height: .6rem;
       background-color:  $color-dark-grey;
-      // background-color:  green;
       display: inline-block;
-      z-index: 9001;
     }
-
     &::before, 
     &::after {
       content: '';
       position: absolute;
       left: 0;
-      transition: all .2s; // For open/close X animation
+      transition: all .2s;
     }
     &::before {
-      top: -1rem;
+      top: -1.2rem;
     }
     &::after {
-      top: 1rem;
+      top: 1.2rem;
     }
   }
-  
   &-button:hover &-icon:before {
-    top: -1.2rem;
+    top: -1.5rem;
   }
   &-button:hover &-icon:after {
-    top: 1.2rem;
+    top: 1.5rem;
   }
+  &-checkbox:checked + &-button &-icon{
+    background-color: transparent;
+  }
+  &-checkbox:checked + &-button &-icon::before {
+    top: 0;
+    transform: rotate(135deg);
+    background-color: $color-dark-grey;
+    width: 4rem;
+  }
+  &-checkbox:checked + &-button &-icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+    background-color: $color-dark-grey;
+    width: 4rem;
+  }
+
+  // Functionality of button
+  &-checkbox:checked ~ &-links{
+    @include respond(tab-port) { 
+      display: flex;
+      margin-right: 2rem;
+      // opacity: 1;
+      // width: 27rem;
+      transition: all .2s;
+    }
+    
+  }
+
 }
 // .header{
 
@@ -846,6 +881,9 @@ footer{
   }
   &__copyright{
     text-align: center;
+    @include respond(tab-land) {
+      margin-top: 2rem;
+    }
   }
 }
 .footer__link-icon {
@@ -856,10 +894,6 @@ footer{
 // ---------------------------------------------- //
 .mobile-element {
   display: none;
-}
-
-.tester {
-  background-color: orangered;
 }
 
 // ------------------------------- //
@@ -886,7 +920,6 @@ footer{
 
 
 // To do list: 
-// **Responsive
 // Animations
 //Do Tech By Us Links - website & github
 //HOver on tinkering projects
