@@ -59,12 +59,11 @@ $font-heading-header: 'Lato', 'Arial', sans-serif;
 html {
   font-size: 62.5%;
   @include respond(tab-land) {
-    font-size: 60% ;
+    font-size: 60%;
   }
-
-  // @include respond(phone) {
-  //   font-size: 56.25% // 1rem=9px, 9/16 = 56.25% - Base is 9px
-  // }
+  @include respond(phone) {
+    font-size: 56.25%; 
+  }
   // @include respond(big) {
   //   font-size: 75%; //1rem=12px, 12/16 = 75% - Base is 12px
   // }
@@ -84,7 +83,7 @@ body {
     color: blue;
   }
   @include respond(large) { //1800px
-    color: grey;
+    color: rgb(255, 143, 161);
   }
 
 }
@@ -100,7 +99,15 @@ h1 {
 
 // ---------- FONT SIZE ---------- //
 body { font-size: 2rem; }
-h1{ font-size: 8rem; }
+h1{ 
+  font-size: 8rem; 
+  @include respond(tab-port) {
+    font-size: 7rem;
+  }
+  @include respond(phone) {
+    font-size: 5rem;
+  }
+}
 h2 { font-size: 4rem; }
 h3 { 
   font-size: 3rem; 
@@ -195,6 +202,9 @@ input[type="submit"]:active {
       &.skills{
         margin: 30rem 8rem 20rem 0rem;
         background-color: rgba(255, 255, 255, 0.9);
+        @include respond(tab-port) {
+          margin: 20rem 4rem 10rem 0rem;
+        }
       }
       &.tinkering{
         margin: 30rem 8rem 20rem 0rem;
@@ -205,6 +215,9 @@ input[type="submit"]:active {
       border-radius: 6.5rem 0rem 0rem 4rem;
       &.about{
         margin: 5rem 0rem 5rem 8rem; 
+        @include respond(tab-port) {
+          margin: 2.5rem 0rem 2.5rem 4rem;
+        }
       }
       &.projects{
         background-color: rgba(255, 255, 255, 0.9);
@@ -217,7 +230,6 @@ input[type="submit"]:active {
       &.credits{
         width: 100%;
         margin: 13rem 0rem 5rem 8rem;
-
       }
     }
     &.header{
@@ -226,7 +238,8 @@ input[type="submit"]:active {
       flex-direction: column;
       justify-content: space-between;
       @include respond(tab-land) { 
-        padding: 2rem;
+        padding: 2rem 5rem;
+        // HERE HEADER PADDING
       }
     }
     &.contact{
@@ -240,6 +253,9 @@ input[type="submit"]:active {
     text-transform: uppercase;
     position: absolute;
     margin-top: 2rem;
+    @include respond(tab-port) {
+      margin-top: 1rem;
+    }
      &--left{
       margin-left: 8rem;
      }
@@ -254,6 +270,12 @@ input[type="submit"]:active {
     width: 50rem;
     background-color: black;
     transform: translateY(7rem);
+    @include respond(tab-port) {
+      transform: translateY(6rem);
+    }
+    @include respond(tab-port) {
+      width: 40rem;
+    }
     &--right{
       right: 0;
     }
@@ -278,12 +300,18 @@ input[type="submit"]:active {
     }
     &.large-content-padding{
       padding: 12rem 12rem 8rem 12rem;
-      @include respond(tab-land) { //1200px
+      @include respond(tab-land) { 
         padding: 10rem 8rem 6rem 8rem;
+      }
+      @include respond(tab-port) {
+        padding: 8rem 2rem 2rem 2rem;
       }
     }
     &.about {
       align-items: center;
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
     }
   }
 }
@@ -304,6 +332,9 @@ input[type="submit"]:active {
   &--credits{
     // Photo by rawpixel on Unsplash
     background-image: url(/img/rawpixel-558599-unsplash.jpg);
+    @include respond(tab-port) {
+      background-position: right;
+    }
   }
   &--contact{
     // Photo by Jeff Kepler on Unsplash
@@ -332,18 +363,31 @@ input[type="submit"]:active {
       height: 10rem;
       width: auto;
       margin-right: auto;
+      @include respond(phone) {
+        height: 7rem;
+      }
     }
     &-links{
+      position: absolute;
+      right: 10rem;
+      top: 6rem;
+      //I think I don't need any of this - the list can be independent of the rest of everything. 
+      // height: 6rem;
+      // display: flex;
+      // align-items: center;
+      // padding: 1.5rem;
+      @include respond(tab-land) { 
+       right: 5rem;
+      }
       @include respond(tab-port) { 
         display: none;
       }
-      height: 6rem;
-      display: flex;
-      align-items: center;
-      // padding: 1.5rem;
+      &-link:not(:last-child){
+        margin-right: 2rem;
+      }
       &-link{
         text-transform: uppercase;
-        margin-right: 2rem;
+        font-size: 2rem;
         &:link,
         &:visited{
           color: black;
@@ -376,31 +420,12 @@ input[type="submit"]:active {
     align-self: center;
   }
 }
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 5px 5px #1B1F25;
-  z-index: 9999;
-  background-color: $color-dark-grey;
-  padding: .5rem 10rem;
-  align-items: center;
-  & .header__navigation-logo{
-    height: 5rem;
-  }
-  & .header__navigation-links-link{
-    color: $color-light-grey;
-  }
-  & .header__navigation-logo {
-    display: none;
-  }
-  & .header__navigation-logo--grey {
-    display: block;
-    margin-right: auto;
-    height: 5rem;
-  }
-}
+
+// HERE HERE HERE - Working on show/hide of links when button is clicked. 
+// Have finished up to landscape mode which is all the same. 
+// Have portrait show the mobile bars
+// I want to have increase in height of dark blue background header in sticky mode. LIke original site. 
+
 //For mobile navigation bars + functionality 
 .header__navigation {
   &-checkbox{
@@ -408,20 +433,31 @@ input[type="submit"]:active {
   }
   &-button{
     // Clickable element connected to checkbox
+    position: inline-block; //Not sure if this is really necessary.
     height: 4.5rem;
     width: 4.5rem;
-    position: absolute; 
-    right: 10rem;
+    margin-top: 1rem;
+    
     cursor: pointer;
     display: none;
-    justify-content: center;
-    align-items: center;
+    // right: 2rem;
+    // top: 5rem;
+    // display: none;
+    // justify-content: center;
+    // align-items: center;
+    // background-color: orangered;
     @include respond(tab-port) { 
-      display: flex;
+      display: inline-block;
+      // top: 4.5rem;
+    }
+    @include respond(phone) {
+      // top: 3.5rem;
     }
   }
   &-icon{
     position: relative;
+    margin-top: 2rem;
+    margin-left: .5rem;
     &,
     &::before,
     &::after{
@@ -468,81 +504,84 @@ input[type="submit"]:active {
 
   // Functionality of button
   &-checkbox:checked ~ &-links{
+    // position: absolute;
+    // left: 40%;
+    // display:inline-block;
+    // display: flex;
+    // flex-direction: column;
+    color: orange;
+    background-color: green;
     @include respond(tab-port) { 
-      display: flex;
-      margin-right: 2rem;
-      // opacity: 1;
-      // width: 27rem;
-      transition: all .2s;
+      // display: flex;
+      // flex-direction: column;
+      // margin-right: 5rem;
+      // height: fit-content;
+      // border-radius: 1rem;
     }
-    
+    @include respond(phone) {
+      // background-color: $color-mid-grey;
+      // flex-direction: column;
+      // margin: 0;
+      // position: absolute;
+      // right: 1rem;
+      // top: 9rem;
+      // width: 50%;
+      // & .header__navigation-links-link{
+      //   margin: 1rem 0rem;
+      //   color: white;
+      // }
+    }
   }
-
 }
-// .header{
-
-//   &__navigation-button {
-//     background-color: $color-white;
-
-
-//     border-radius: 50%;
-//     position: fixed;
-//     top: 6rem;
-//     right: 6rem;
-//     z-index: 2000;
-//     box-shadow: 0 1rem 3rem rgba($color-black, .1);
-
-
-//     @include respond(tab-port) {
-//         top: 4rem;
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 5px #1B1F25;
+  z-index: 9999;
+  background-color: $color-dark-grey;
+  padding: .5rem 10rem;
+  align-items: center;
+  & .header__navigation-logo{
+    height: 5rem;
+  }
+  & .header__navigation-links{
+    top: 2rem;
+  }
+  & .header__navigation-links-link{
+    color: $color-light-grey;
+  }
+  & .header__navigation-logo {
+    display: none;
+  }
+  & .header__navigation-logo--grey {
+    display: block;
+    margin-right: auto;
+    height: 5rem;
+  }
+}
+//Mobile Sticky navigation
+// .header__navigation.sticky{
+//   @include respond(tab-port) {
+//     & .header__navigation{
+//       &-button{
+//         top: 1rem;
 //         right: 4rem;
+//       }
+//       &-icon{
+//         &,
+//         &::before,
+//         &::after {
+//           background-color:  $color-light-grey;    
+//         }
+//       }
 //     }
-//     @include respond(phone) {
-//         top: 3rem;
-//         right: 3rem;
-//     }
+//   }
+//   @include respond(phone) {
+
 //   }
 // }
-
-
-//   // 3 BAR ICON
-//   &__navigation-icon {
-
-//   &-button:hover &-icon:before {
-//     top: -1.2rem;
-//   }
-//   &-button:hover &-icon:after {
-//     top: 1.2rem;
-//   }
-
-//   // For open/close X animation
-//   &-checkbox:checked + &-button &-icon {
-//     background-color: transparent;
-//   }
-//   &-checkbox:checked + &-button &-icon::before {
-//     top: 0;
-//     transform: rotate(135deg);
-//     background-color: $color-secondary-white;
-//     width: 3rem;
-//   }
-//   &-checkbox:checked + &-button &-icon::after {
-//     top: 0;
-//     transform: rotate(-135deg);
-//     background-color: $color-secondary-white;
-//     width: 3rem;
-//   }
-
-//   // Functionality of button
-//   &-checkbox:checked ~ &-nav{
-//     opacity: 1;
-//     width: 27rem;
-//     transition: all .2s;
-//   }
-// }
-
-
-
-
 
 // ------------------------------------- //
 // ---------- SECTION - ABOUT ---------- //
@@ -556,6 +595,10 @@ input[type="submit"]:active {
     line-height: 1.5;
     text-align: justify;
     margin-left: 3rem;
+    @include respond(tab-port) {
+      margin-left: 0rem;
+      margin-top: 2rem;
+    }
   }
 }
 // -------------------------------------- //
@@ -573,30 +616,46 @@ input[type="submit"]:active {
   &__tiles{
     display: flex;
     margin: 3.5rem 0rem 6.5rem 0rem;
-
     &-tile{
       padding: 1.5rem;
       display: flex;
       flex-direction: column; 
       align-items: center;
       justify-content: center;
-      
+      @include respond(tab-port) {
+        padding: .5rem;
+      }
+
       &-logo{
         height: 8rem;
+        &.sass{
+          height: 7.5rem;
+        }
+        &.javascript{
+          @include respond(tab-port) {
+            height: 7rem;
+          }
+        }
         &.github{
           height: 9rem;
+          transform: translateY(1rem);
         }
         &.npm{
           height: 5rem;
           @include respond(tab-land) { 
             height: 4rem;
           }
+          @include respond(tab-port) {
+            height: 3rem;
+          }
         }
         &.trello{
           color: #0084D1;
           height: 8rem;
+          width: 8rem;
           @include respond(tab-land) { 
             height: 7rem;
+            width: 7rem;
           }
         }
         &.zeplin{
@@ -607,6 +666,9 @@ input[type="submit"]:active {
         &.slack{
           @include respond(tab-land) { 
             height: 7rem;
+            @include respond(tab-port) {
+              height: 6rem;
+            }
           }
         }
         &.rails{
@@ -655,6 +717,12 @@ input[type="submit"]:active {
   @include respond(tab-land) { 
     width: 70rem;
   }
+  @include respond(tab-port) {
+    width: 100%;
+    flex-direction: column;
+    margin: 0rem;
+    margin-bottom: 6rem;
+  }
   &__left{
     flex: 1 1 40%;
     display: flex;
@@ -699,6 +767,9 @@ input[type="submit"]:active {
       font-weight: 400;
       margin-bottom: 2rem;
       border-bottom: 1px solid black;
+      @include respond(tab-port) {
+        display: none;
+      }
     }
     &-description{
       text-align: justify;
@@ -733,6 +804,10 @@ input[type="submit"]:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include respond(tab-port) {
+    margin: 0rem;
+    margin-bottom: 6rem;
+  }
 
   &__title{
     font-family: $font-heading;
@@ -802,12 +877,14 @@ input[type="submit"]:active {
     width: 50rem;
     background-color: black;
     margin-bottom: 4rem;
+    @include respond(tab-port) {
+      width: 35rem;
+    }
     &--contact{
       height: .3rem;
     }
   }
 }
-
 .contact-form{
   width: 70%;
   margin-bottom: 3rem;
@@ -826,7 +903,7 @@ input[type="submit"]:active {
     padding: 7px;
     border-radius: 3px;
     border: 1px solid #9EACBF;
- 
+    width: 100%;
   }
   &__textarea{
     height: 10rem;
@@ -846,11 +923,21 @@ footer{
   background-color: $color-dark-grey;
   padding: 3rem;
   color:  #8994a3;
+
 }
 .footer {
   &__links{
     display: flex;
     justify-content: space-between;
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-navigation{
+      @include respond(tab-port) {
+        margin-bottom: 2rem;
+      }
+    }
   }
   &__link{
     margin: 0rem 1rem;
