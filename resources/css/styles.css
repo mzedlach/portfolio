@@ -349,8 +349,19 @@ input[type="submit"]:active {
   width: 4rem; }
 
 .header__navigation-checkbox:checked ~ .header__navigation-links {
-  color: orange;
-  background-color: green; }
+  display: block;
+  margin-top: 5rem;
+  border-radius: 1rem;
+  background-color: #1B1F25; }
+  .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link {
+    display: block;
+    margin: 0;
+    text-align: center;
+    margin: 4rem;
+    color: #9EACBF; }
+    .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link:hover, .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link:active {
+      border-bottom: 1px solid white;
+      cursor: pointer; }
 
 .sticky {
   position: fixed;
@@ -374,6 +385,17 @@ input[type="submit"]:active {
     display: block;
     margin-right: auto;
     height: 5rem; }
+
+@media only screen and (max-width: 56.25em) {
+  .header__navigation.sticky .header__navigation-button {
+    top: 1rem;
+    right: 4rem; }
+  .header__navigation.sticky .header__navigation-icon, .header__navigation.sticky .header__navigation-icon::before, .header__navigation.sticky .header__navigation-icon::after {
+    background-color: #9EACBF; } }
+
+.header__navigation.sticky .header__navigation-checkbox:checked + .header__navigation-button .header__navigation-icon::before,
+.header__navigation.sticky .header__navigation-checkbox:checked + .header__navigation-button .header__navigation-icon::after {
+  background-color: #9EACBF; }
 
 .about-me__image {
   height: 30rem;

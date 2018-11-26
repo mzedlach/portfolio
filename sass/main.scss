@@ -239,7 +239,6 @@ input[type="submit"]:active {
       justify-content: space-between;
       @include respond(tab-land) { 
         padding: 2rem 5rem;
-        // HERE HEADER PADDING
       }
     }
     &.contact{
@@ -371,11 +370,6 @@ input[type="submit"]:active {
       position: absolute;
       right: 10rem;
       top: 6rem;
-      //I think I don't need any of this - the list can be independent of the rest of everything. 
-      // height: 6rem;
-      // display: flex;
-      // align-items: center;
-      // padding: 1.5rem;
       @include respond(tab-land) { 
        right: 5rem;
       }
@@ -421,11 +415,6 @@ input[type="submit"]:active {
   }
 }
 
-// HERE HERE HERE - Working on show/hide of links when button is clicked. 
-// Have finished up to landscape mode which is all the same. 
-// Have portrait show the mobile bars
-// I want to have increase in height of dark blue background header in sticky mode. LIke original site. 
-
 //For mobile navigation bars + functionality 
 .header__navigation {
   &-checkbox{
@@ -437,18 +426,10 @@ input[type="submit"]:active {
     height: 4.5rem;
     width: 4.5rem;
     margin-top: 1rem;
-    
     cursor: pointer;
     display: none;
-    // right: 2rem;
-    // top: 5rem;
-    // display: none;
-    // justify-content: center;
-    // align-items: center;
-    // background-color: orangered;
     @include respond(tab-port) { 
       display: inline-block;
-      // top: 4.5rem;
     }
     @include respond(phone) {
       // top: 3.5rem;
@@ -503,33 +484,22 @@ input[type="submit"]:active {
   }
 
   // Functionality of button
-  &-checkbox:checked ~ &-links{
-    // position: absolute;
-    // left: 40%;
-    // display:inline-block;
-    // display: flex;
-    // flex-direction: column;
-    color: orange;
-    background-color: green;
-    @include respond(tab-port) { 
-      // display: flex;
-      // flex-direction: column;
-      // margin-right: 5rem;
-      // height: fit-content;
-      // border-radius: 1rem;
-    }
-    @include respond(phone) {
-      // background-color: $color-mid-grey;
-      // flex-direction: column;
-      // margin: 0;
-      // position: absolute;
-      // right: 1rem;
-      // top: 9rem;
-      // width: 50%;
-      // & .header__navigation-links-link{
-      //   margin: 1rem 0rem;
-      //   color: white;
-      // }
+  &-checkbox:checked ~ &-links {
+    display: block;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    background-color: $color-dark-grey;
+    & .header__navigation-links-link{
+      display: block;
+      margin: 0;
+      text-align: center;
+      margin: 4rem;
+      color: $color-light-grey;
+      &:hover,
+      &:active {
+        border-bottom: 1px solid white;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -561,27 +531,30 @@ input[type="submit"]:active {
     height: 5rem;
   }
 }
-//Mobile Sticky navigation
-// .header__navigation.sticky{
-//   @include respond(tab-port) {
-//     & .header__navigation{
-//       &-button{
-//         top: 1rem;
-//         right: 4rem;
-//       }
-//       &-icon{
-//         &,
-//         &::before,
-//         &::after {
-//           background-color:  $color-light-grey;    
-//         }
-//       }
-//     }
-//   }
-//   @include respond(phone) {
 
-//   }
-// }
+// Mobile Sticky navigation
+.header__navigation.sticky{
+  @include respond(tab-port) {
+    & .header__navigation{
+      &-button{
+        top: 1rem;
+        right: 4rem;
+      }
+      &-icon{
+        &,
+        &::before,
+        &::after {
+          background-color:  $color-light-grey;    
+        }
+      }
+    }
+  }
+}
+.header__navigation.sticky .header__navigation-checkbox:checked + .header__navigation-button .header__navigation-icon::before,
+.header__navigation.sticky .header__navigation-checkbox:checked + .header__navigation-button .header__navigation-icon::after {
+  background-color: $color-light-grey;
+}
+
 
 // ------------------------------------- //
 // ---------- SECTION - ABOUT ---------- //
