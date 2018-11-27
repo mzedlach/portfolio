@@ -58,12 +58,12 @@ $font-heading-header: 'Lato', 'Arial', sans-serif;
 
 html {
   font-size: 62.5%;
-  @include respond(tab-land) {
-    font-size: 60%;
-  }
-  @include respond(phone) {
-    font-size: 56.25%; 
-  }
+  // @include respond(tab-land) {
+  //   font-size: 60%;
+  // }
+  // @include respond(phone) {
+  //   font-size: 56.25%; 
+  // }
   // @include respond(big) {
   //   font-size: 75%; //1rem=12px, 12/16 = 75% - Base is 12px
   // }
@@ -98,14 +98,21 @@ h1 {
 }
 
 // ---------- FONT SIZE ---------- //
-body { font-size: 2rem; }
+body { font-size: 2rem; 
+  @include respond(tab-port) {
+    font-size: 1.8rem;
+  }
+  @include respond(phone) {
+    font-size: 1.6rem;
+  }
+}
 h1{ 
   font-size: 8rem; 
   @include respond(tab-port) {
     font-size: 7rem;
   }
   @include respond(phone) {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 h2 { font-size: 4rem; }
@@ -115,7 +122,6 @@ h3 {
     font-size: 2.5rem;
   }
 }
-p { font-size: 2.0rem; }
 input[type="submit"] {font-size: 2rem;}
 .footer{ 
   font-size: 2rem;
@@ -129,11 +135,17 @@ input[type="submit"] {font-size: 2rem;}
     &--phrase {
       font-size: 2.6rem;
       font-weight: 100;
+      @include respond(phone) {
+        font-size: 2rem;
+      }
     }
   }
 }
 .skills__text--list {
   font-size: 2.2rem;
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+  }
 }
 // -------------------------------------- //
 // ---------- REUSABLE CLASSES ---------- //
@@ -155,6 +167,10 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include respond(phone) {
+    padding: .5rem 1.5rem;
+    margin: .3rem;
+  }
 }
 .btn-icon:hover,
 .btn-icon:active,
@@ -183,6 +199,9 @@ input[type="submit"]:active {
 }
 .btn-icon svg {
   height: 3.5rem;
+  @include respond(phone) {
+    height: 2.5rem;
+  }
 }
 
 // ----------------------------------------- //
@@ -191,32 +210,56 @@ input[type="submit"]:active {
 //Form section is separate
 
 // ---------- TITLES & CONTENT ---------- //
+// 
 .section {
   display: flex;
+  // For visibility of background images and spacing between sections
   &__container {
     background-color: white;
     height: fit-content;
+    @include respond(phone) {
+      &:not(.header){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
     &--left {
       border-radius: 0rem 6.5rem 6.5rem 0rem;
       width:100%;
+      @include respond(phone) {
+        border-radius: 0rem;
+      }
       &.skills{
         margin: 30rem 8rem 20rem 0rem;
         background-color: rgba(255, 255, 255, 0.9);
         @include respond(tab-port) {
           margin: 20rem 4rem 10rem 0rem;
         }
+        @include respond(phone) {
+          margin: 20rem 0rem 10rem 0rem;
+        }
       }
       &.tinkering{
         margin: 30rem 8rem 20rem 0rem;
         background-color: rgba(255, 255, 255, 0.9);
+        @include respond(phone) {
+          margin: 20rem 0rem 10rem 0rem;
+        }
       }
     }
     &--right {
       border-radius: 6.5rem 0rem 0rem 4rem;
+      @include respond(phone) {
+        border-radius: 0rem;
+      }
       &.about{
         margin: 5rem 0rem 5rem 8rem; 
         @include respond(tab-port) {
           margin: 2.5rem 0rem 2.5rem 4rem;
+        }
+        @include respond(phone) {
+          margin: 7rem 0rem;
         }
       }
       &.projects{
@@ -225,6 +268,9 @@ input[type="submit"]:active {
         width: 100%;
         @include respond(tab-land) { 
           margin: 5rem 0rem 5rem 5rem;
+        }
+        @include respond(phone) {
+          margin: 5rem 0rem 5rem 0rem;
         }
       }
       &.credits{
@@ -240,14 +286,22 @@ input[type="submit"]:active {
       @include respond(tab-land) { 
         padding: 2rem 5rem;
       }
+      @include respond(phone) {
+        padding: 1rem;
+      }
     }
     &.contact{
-      background-color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(255, 255, 255, 0.85);
       justify-content: center;
       width: 80%;
       border-radius: 2rem;
+      @include respond(phone) {
+        width: 100%;
+        border-radius: 0rem;
+      }
     }
   }
+  //For each section title and underlining bar
   &__title{
     text-transform: uppercase;
     position: absolute;
@@ -257,10 +311,17 @@ input[type="submit"]:active {
     }
      &--left{
       margin-left: 8rem;
+      @include respond(phone) {
+        margin-left: 0rem;
+      }
      }
      &--right{
        width: 85%;
        text-align: right;
+       @include respond(phone) {
+        width: auto;
+        text-align: auto;
+      }
      }
   }
   &__title-underline{
@@ -275,6 +336,9 @@ input[type="submit"]:active {
     @include respond(tab-port) {
       width: 40rem;
     }
+    @include respond(phone) {
+      width: 100%;
+    }
     &--right{
       right: 0;
     }
@@ -282,6 +346,7 @@ input[type="submit"]:active {
       left:0;
     }
   }
+  // For arrangement of content inside white overlaying 'tab' of content
   &__content{
     display: flex;
     width: 100%;
@@ -296,6 +361,9 @@ input[type="submit"]:active {
     }
     &.small-content-padding{
       padding: 12rem 5rem 5rem 5rem;
+      @include respond(phone) {
+        padding: 12rem 1rem 5rem 1rem;
+      }
     }
     &.large-content-padding{
       padding: 12rem 12rem 8rem 12rem;
@@ -303,7 +371,10 @@ input[type="submit"]:active {
         padding: 10rem 8rem 6rem 8rem;
       }
       @include respond(tab-port) {
-        padding: 8rem 2rem 2rem 2rem;
+        padding: 10rem 2rem 2rem 2rem;
+      }
+      @include respond(phone) {
+        padding: 12rem 1rem 5rem 1rem;
       }
     }
     &.about {
@@ -316,6 +387,7 @@ input[type="submit"]:active {
 }
 
 /* ---------- BACKGROUNDS - IMAGES + COLOURS ----------*/
+//Only for setup and alignment of background images, or colour, for each section
 .background-fixed {
   min-height: 100vh;
   background-size: cover;
@@ -399,6 +471,9 @@ input[type="submit"]:active {
   }
   &__text{
     margin-top: 10rem;
+    @include respond(phone) {
+      margin-top: 0rem;
+    }
     &--name{
       word-spacing: 1rem;
       letter-spacing: .5rem;
@@ -489,6 +564,18 @@ input[type="submit"]:active {
     margin-top: 5rem;
     border-radius: 1rem;
     background-color: $color-dark-grey;
+    @include respond(phone) {
+      display: absolute;
+      top: 0;
+      left: 0;
+      margin: 0rem;
+      border-radius: 0rem;
+      background-color: rgba($color-dark-grey, .8)
+      height: 100vh;
+      width: 100vw;
+      //HERE - PUT IN A Z INDEX FOR THE CLOSING BUTTON so that you can close it on mobile. Right now it's getting covered so you can't close it at all. 
+      //ALSO have to fix this in javascript to reset when scrolling. 
+    }
     & .header__navigation-links-link{
       display: block;
       margin: 0;
@@ -513,6 +600,9 @@ input[type="submit"]:active {
   background-color: $color-dark-grey;
   padding: .5rem 10rem;
   align-items: center;
+  @include respond(phone) {
+    padding: .5rem 2rem;
+  }
   & .header__navigation-logo{
     height: 5rem;
   }
@@ -572,6 +662,10 @@ input[type="submit"]:active {
       margin-left: 0rem;
       margin-top: 2rem;
     }
+    @include respond(phone) {
+      line-height: 1.2;
+      margin: 1rem;
+    }
   }
 }
 // -------------------------------------- //
@@ -580,15 +674,25 @@ input[type="submit"]:active {
 .skills{
   &__text {
     display: flex;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
+    margin-top: 2rem;
+    @include respond(tab-land) {
+      text-align: center;
+    }
     &--list{
       margin-left: 2rem;
+      @include respond(tab-port) {
+        margin-left: 0rem;
+        text-align: center;
+      }
     }
   }
   &__tiles{
     display: flex;
     margin: 3.5rem 0rem 6.5rem 0rem;
+    flex-wrap: wrap;
+    justify-content: center;
     &-tile{
       padding: 1.5rem;
       display: flex;
@@ -601,17 +705,30 @@ input[type="submit"]:active {
 
       &-logo{
         height: 8rem;
+        @include respond(phone) {
+          height: 6.5rem;
+        }
         &.sass{
           height: 7.5rem;
+          @include respond(phone) {
+            height: 5rem;
+          }
         }
         &.javascript{
           @include respond(tab-port) {
             height: 7rem;
+            @include respond(phone) {
+              height: 5.5rem;
+            }
           }
         }
         &.github{
           height: 9rem;
           transform: translateY(1rem);
+          @include respond(phone) {
+            height: 7rem;
+            transform: translateY(.8rem);
+          }
         }
         &.npm{
           height: 5rem;
@@ -630,10 +747,17 @@ input[type="submit"]:active {
             height: 7rem;
             width: 7rem;
           }
+          @include respond(phone) {
+            height: 6rem;
+            width: 6rem;
+          }
         }
         &.zeplin{
           @include respond(tab-land) { 
             height: 7rem;
+          }
+          @include respond(phone) {
+            height: 6rem;
           }
         }
         &.slack{
@@ -642,6 +766,9 @@ input[type="submit"]:active {
             @include respond(tab-port) {
               height: 6rem;
             }
+            @include respond(phone) {
+              height: 5rem;
+            }
           }
         }
         &.rails{
@@ -649,11 +776,17 @@ input[type="submit"]:active {
           @include respond(tab-land) { 
             height: 5rem;
           }
+          @include respond(phone) {
+            height: 3rem;
+          }
         }
         &.angular{
           height: 7rem;
           @include respond(tab-land) { 
             height: 6rem;
+          }
+          @include respond(phone) {
+            height: 5rem;
           }
         }
       }
@@ -673,6 +806,9 @@ input[type="submit"]:active {
   height: 4rem;
   margin: 0rem 1rem;
   color: $color-project-icon;
+  @include respond(phone) {
+    margin: 0rem .5rem;
+  }
 }
 
 // ---------------------------------------- //
@@ -696,6 +832,13 @@ input[type="submit"]:active {
     margin: 0rem;
     margin-bottom: 6rem;
   }
+  @include respond(phone) {
+    width: 100%;
+    margin: 4rem 1rem;
+    padding: 0rem;
+    box-shadow: none;
+    background-color: transparent;
+  }
   &__left{
     flex: 1 1 40%;
     display: flex;
@@ -708,11 +851,26 @@ input[type="submit"]:active {
       width: 80%;
       border: 2px solid $color-project-link; 
       border-radius: .5rem;
+      @include respond(tab-port) {
+       width: auto;
+       max-height: 25rem;
+      }
+      @include respond(phone) {
+        height: 20rem;
+        border: 1px solid $color-project-link;
+      }
     }
     &-links{
       margin-top: 2rem;
+      @include respond(phone) {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
       &-link{
         margin: 0rem 1rem;
+        @include respond(phone) {
+          margin: 0rem .5rem;
+        }
         &:link,
         &:visited{
           color: $color-project-link;
@@ -726,6 +884,10 @@ input[type="submit"]:active {
       &-icon{
         height: 5rem;
         width: 5rem;
+        @include respond(phone) {
+          height: 4rem;
+          width: 4rem;
+        }
       }
     }
   }
@@ -747,17 +909,21 @@ input[type="submit"]:active {
     &-description{
       text-align: justify;
       line-height: 1.5;
+      @include respond(phone) {
+        line-height: 1.2;
+      }
     }
     &-tools{
       margin: 2rem 0rem;
-      &-text{  
-      }
       &-icons{
         display: flex;
         flex-direction: row;
         justify-content: center;
+        @include respond(phone) {
+          margin-top: 1rem;
+        }
         &-icon{
-
+      
         }
       }
     }
@@ -781,18 +947,27 @@ input[type="submit"]:active {
     margin: 0rem;
     margin-bottom: 6rem;
   }
-
+  @include respond(phone) {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin: 4rem 1rem;
+  }
   &__title{
     font-family: $font-heading;
     font-weight: 400;
     margin-bottom: 1.5rem;
     border-bottom: 1px solid black;
+    text-align: center;
   }
   &__image{
     width: 70%;
     height: 20rem;
     border: 5px solid white; 
     border-radius: 1rem;
+    @include respond(phone) {
+     width: 100%; 
+    }
     &:hover{
       border: 5px solid orange; 
     }
@@ -807,6 +982,7 @@ input[type="submit"]:active {
   }
   &__description{
     margin: 2rem 0rem;
+    text-align: justify;
     &-icon{
       &-icon{
         width: 1.5rem;
@@ -814,8 +990,12 @@ input[type="submit"]:active {
     }
     &-learning-objectives{
       margin-top: 2rem;
+      text-align: left;
       &-items{
-         margin-left: 3rem;
+        margin-left: 3rem;
+        @include respond(phone) {
+          margin-left: 2rem;
+        }
         &-item{
           text-indent: -1.6rem;
           &::before{
@@ -861,10 +1041,15 @@ input[type="submit"]:active {
 .contact-form{
   width: 70%;
   margin-bottom: 3rem;
-
+  @include respond(phone) {
+    width: 90%;
+  }
   &__group{
     display: flex;
     margin: 1rem 0rem;
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
   &__label{
     flex: 0 0 35%;
@@ -887,6 +1072,9 @@ input[type=text],
 input[type=email],
 textarea {
   font-size: 2rem;
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+  }
 }
 
 // -------------------------------------- //
@@ -910,10 +1098,16 @@ footer{
       @include respond(tab-port) {
         margin-bottom: 2rem;
       }
+      @include respond(phone) {
+        display: none;
+      }
     }
   }
   &__link{
     margin: 0rem 1rem;
+    @include respond(phone) {
+      margin: 0rem .5rem;
+    }
     &:link, 
     &:visited{
       color:  #8994a3;
@@ -948,6 +1142,9 @@ footer{
 }
 .footer__link-icon {
   height: 3rem;
+  @include respond(phone) {
+    height: 2.5rem;
+  }
 }
 // ---------------------------------------------- //
 // ---------- MOBILE-SPECIFIC ELEMENTS ---------- //
