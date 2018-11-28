@@ -1,11 +1,3 @@
-// @include respond(tab-land) { //1200px
-// }
-// @include respond(tab-port) { //900px
-// }
-// @include respond(phone) { //600px
-// }
-// @include respond(large) { //1800px
-// }
 
 @mixin respond($breakpoint) { 
   @if $breakpoint == phone {
@@ -58,34 +50,33 @@ $font-heading-header: 'Lato', 'Arial', sans-serif;
 
 html {
   font-size: 62.5%;
-  // @include respond(tab-land) {
-  //   font-size: 60%;
-  // }
-  // @include respond(phone) {
-  //   font-size: 56.25%; 
-  // }
-  // @include respond(big) {
-  //   font-size: 75%; //1rem=12px, 12/16 = 75% - Base is 12px
-  // }
+  @include respond(tab-port) {
+    font-size: 60%;
+  }
+  @include respond(phone) {
+    font-size: 56.25%; 
+  }
+  @include respond(large) {
+    font-size: 75%;
+  }
 }
 
 body { 
   font-family: $font-text;
   color: $color-mid-grey;
   //Take this out when you're done
-  @include respond(tab-land) { //1200px
-    color: orangered;
-  }
-  @include respond(tab-port) { //900px
-    color: green;
-  }
-  @include respond(phone) { //600px
-    color: blue;
-  }
-  @include respond(large) { //1800px
-    color: rgb(255, 143, 161);
-  }
-
+  // @include respond(tab-land) { //1200px
+  //   color: orangered;
+  // }
+  // @include respond(tab-port) { //900px
+  //   color: green;
+  // }
+  // @include respond(phone) { //600px
+  //   color: blue;
+  // }
+  // @include respond(large) { //1800px
+  //   color: rgb(255, 143, 161);
+  // }
 }
 h1, h2, h3 {
   text-transform: uppercase;
@@ -95,15 +86,18 @@ h1, h2, h3 {
 }
 h1 {
   font-weight: 300;
+  // position: relative;
+  // z-index: 999;
 }
 
 // ---------- FONT SIZE ---------- //
-body { font-size: 2rem; 
+body { 
+  font-size: 2rem; 
   @include respond(tab-port) {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   @include respond(phone) {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 }
 h1{ 
@@ -130,6 +124,9 @@ input[type="submit"] {font-size: 2rem;}
   }
 }
 .header{
+  &__navigation-links-link{
+    font-size: 2rem;
+  }
   &__text{
     &--position,
     &--phrase {
@@ -143,6 +140,19 @@ input[type="submit"] {font-size: 2rem;}
 }
 .skills__text--list {
   font-size: 2.2rem;
+  @include respond(tab-port) {
+    font-size: 1.8rem;
+  }
+}
+.tinkering-tile__image-text{
+  font-size: 1.4rem;
+}
+
+
+input[type=text],
+input[type=email],
+textarea {
+  font-size: 2rem;
   @include respond(tab-port) {
     font-size: 1.6rem;
   }
@@ -168,7 +178,7 @@ input[type="submit"] {
   justify-content: center;
   align-items: center;
   @include respond(phone) {
-    padding: .5rem 1.5rem;
+    padding: .5rem 1.2rem;
     margin: .3rem;
   }
 }
@@ -214,6 +224,12 @@ input[type="submit"]:active {
 .section {
   display: flex;
   // For visibility of background images and spacing between sections
+  &:not(.header){
+    //h1 titles and octocat icon was going above mobile navigation layer. This is the fix for that:
+    //Have to comment this out to gain access to inspect elements. 
+    // z-index: -1;
+    // position: relative;
+  }
   &__container {
     background-color: white;
     height: fit-content;
@@ -301,11 +317,11 @@ input[type="submit"]:active {
       }
     }
   }
-  //For each section title and underlining bar
   &__title{
     text-transform: uppercase;
     position: absolute;
     margin-top: 2rem;
+    z-index: 0;
     @include respond(tab-port) {
       margin-top: 1rem;
     }
@@ -322,7 +338,7 @@ input[type="submit"]:active {
         width: auto;
         text-align: auto;
       }
-     }
+    }
   }
   &__title-underline{
     position: absolute;
@@ -362,7 +378,7 @@ input[type="submit"]:active {
     &.small-content-padding{
       padding: 12rem 5rem 5rem 5rem;
       @include respond(phone) {
-        padding: 12rem 1rem 5rem 1rem;
+        padding: 12rem 2rem 5rem 2rem;
       }
     }
     &.large-content-padding{
@@ -374,7 +390,7 @@ input[type="submit"]:active {
         padding: 10rem 2rem 2rem 2rem;
       }
       @include respond(phone) {
-        padding: 12rem 1rem 5rem 1rem;
+        padding: 12rem 2rem 5rem 2rem;
       }
     }
     &.about {
@@ -421,7 +437,6 @@ input[type="submit"]:active {
     background-color: $color-background1;
   }
 }
-
 // -------------------------------------- //
 // ---------- SECTION - HEADER ---------- //
 // -------------------------------------- //
@@ -442,6 +457,7 @@ input[type="submit"]:active {
       position: absolute;
       right: 10rem;
       top: 6rem;
+      z-index: 1000;
       @include respond(tab-land) { 
        right: 5rem;
       }
@@ -453,7 +469,6 @@ input[type="submit"]:active {
       }
       &-link{
         text-transform: uppercase;
-        font-size: 2rem;
         &:link,
         &:visited{
           color: black;
@@ -489,7 +504,6 @@ input[type="submit"]:active {
     align-self: center;
   }
 }
-
 //For mobile navigation bars + functionality 
 .header__navigation {
   &-checkbox{
@@ -497,23 +511,25 @@ input[type="submit"]:active {
   }
   &-button{
     // Clickable element connected to checkbox
-    position: inline-block; //Not sure if this is really necessary.
+    position: inline-block;
     height: 4.5rem;
     width: 4.5rem;
     margin-top: 1rem;
     cursor: pointer;
     display: none;
+    z-index: 1001;
     @include respond(tab-port) { 
       display: inline-block;
     }
     @include respond(phone) {
-      // top: 3.5rem;
+      margin-right: 1rem;
     }
   }
   &-icon{
     position: relative;
     margin-top: 2rem;
     margin-left: .5rem;
+    z-index: 1001;
     &,
     &::before,
     &::after{
@@ -550,14 +566,20 @@ input[type="submit"]:active {
     transform: rotate(135deg);
     background-color: $color-dark-grey;
     width: 4rem;
+    @include respond(phone) {
+      background-color: $color-light-grey;
+    }
+    
   }
   &-checkbox:checked + &-button &-icon::after {
     top: 0;
     transform: rotate(-135deg);
     background-color: $color-dark-grey;
     width: 4rem;
+    @include respond(phone) {
+      background-color: $color-light-grey;
+    }
   }
-
   // Functionality of button
   &-checkbox:checked ~ &-links {
     display: block;
@@ -570,17 +592,15 @@ input[type="submit"]:active {
       left: 0;
       margin: 0rem;
       border-radius: 0rem;
-      background-color: rgba($color-dark-grey, .8)
+      background-color: $color-dark-grey;
       height: 100vh;
       width: 100vw;
-      //HERE - PUT IN A Z INDEX FOR THE CLOSING BUTTON so that you can close it on mobile. Right now it's getting covered so you can't close it at all. 
-      //ALSO have to fix this in javascript to reset when scrolling. 
     }
     & .header__navigation-links-link{
       display: block;
       margin: 0;
       text-align: center;
-      margin: 4rem;
+      margin: 20% 0rem;
       color: $color-light-grey;
       &:hover,
       &:active {
@@ -596,10 +616,12 @@ input[type="submit"]:active {
   left: 0;
   width: 100%;
   box-shadow: 0 5px 5px #1B1F25;
-  z-index: 9999;
   background-color: $color-dark-grey;
   padding: .5rem 10rem;
   align-items: center;
+  @include respond(tab-port) {
+    padding: .5rem 5rem;
+  }
   @include respond(phone) {
     padding: .5rem 2rem;
   }
@@ -659,13 +681,13 @@ input[type="submit"]:active {
     text-align: justify;
     margin-left: 3rem;
     @include respond(tab-port) {
-      margin-left: 0rem;
-      margin-top: 2rem;
+      margin: 2rem;
     }
     @include respond(phone) {
       line-height: 1.2;
       margin: 1rem;
     }
+
   }
 }
 // -------------------------------------- //
@@ -951,7 +973,7 @@ input[type="submit"]:active {
     background-color: transparent;
     box-shadow: none;
     padding: 0;
-    margin: 4rem 1rem;
+    margin: 4rem 0rem;
   }
   &__title{
     font-family: $font-heading;
@@ -967,6 +989,7 @@ input[type="submit"]:active {
     border-radius: 1rem;
     @include respond(phone) {
      width: 100%; 
+     max-width: 35rem;
     }
     &:hover{
       border: 5px solid orange; 
@@ -975,9 +998,6 @@ input[type="submit"]:active {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    &-text{
-      font-size: 1.4rem;
     }
   }
   &__description{
@@ -1033,6 +1053,9 @@ input[type="submit"]:active {
     @include respond(tab-port) {
       width: 35rem;
     }
+    @include respond(phone) {
+      width: 100%;
+    }
     &--contact{
       height: .3rem;
     }
@@ -1068,25 +1091,13 @@ input[type="submit"]:active {
   }
 }
 
-input[type=text],
-input[type=email],
-textarea {
-  font-size: 2rem;
-  @include respond(tab-port) {
-    font-size: 1.6rem;
-  }
-}
-
 // -------------------------------------- //
 // ---------- SECTION - FOOTER ---------- //
 // -------------------------------------- //
-footer{
+.footer {
   background-color: $color-dark-grey;
   padding: 3rem;
   color:  #8994a3;
-
-}
-.footer {
   &__links{
     display: flex;
     justify-content: space-between;
@@ -1106,7 +1117,7 @@ footer{
   &__link{
     margin: 0rem 1rem;
     @include respond(phone) {
-      margin: 0rem .5rem;
+      margin: 0rem 1rem;
     }
     &:link, 
     &:visited{
@@ -1151,6 +1162,9 @@ footer{
 // ---------------------------------------------- //
 .mobile-element {
   display: none;
+  @include respond(phone) {
+    display: inline-block;
+  }
 }
 
 // ------------------------------- //
@@ -1179,5 +1193,4 @@ footer{
 // To do list: 
 // Animations
 //Do Tech By Us Links - website & github
-//HOver on tinkering projects
 // Tinkering - (Codepen) (project guidelines)
