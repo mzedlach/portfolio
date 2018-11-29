@@ -40,6 +40,11 @@ a:link,
 a:visited{
   text-decoration: none;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 // -------------------------------- //
 // ---------- TYPOGRAPHY ---------- //
 // -------------------------------- //
@@ -86,8 +91,6 @@ h1, h2, h3 {
 }
 h1 {
   font-weight: 300;
-  // position: relative;
-  // z-index: 999;
 }
 
 // ---------- FONT SIZE ---------- //
@@ -224,12 +227,6 @@ input[type="submit"]:active {
 .section {
   display: flex;
   // For visibility of background images and spacing between sections
-  &:not(.header){
-    //h1 titles and octocat icon was going above mobile navigation layer. This is the fix for that:
-    //Have to comment this out to gain access to inspect elements. 
-    // z-index: -1;
-    // position: relative;
-  }
   &__container {
     background-color: white;
     height: fit-content;
@@ -317,11 +314,11 @@ input[type="submit"]:active {
       }
     }
   }
+  //Titles and underlines for h1 elements of each section
   &__title{
     text-transform: uppercase;
     position: absolute;
     margin-top: 2rem;
-    z-index: 0;
     @include respond(tab-port) {
       margin-top: 1rem;
     }
@@ -359,7 +356,7 @@ input[type="submit"]:active {
       right: 0;
     }
     &--left{
-      left:0;
+      left: 0;
     }
   }
   // For arrangement of content inside white overlaying 'tab' of content
@@ -582,30 +579,34 @@ input[type="submit"]:active {
   }
   // Functionality of button
   &-checkbox:checked ~ &-links {
-    display: block;
-    margin-top: 5rem;
-    border-radius: 1rem;
-    background-color: $color-dark-grey;
-    @include respond(phone) {
-      display: absolute;
-      top: 0;
-      left: 0;
-      margin: 0rem;
-      border-radius: 0rem;
-      background-color: $color-dark-grey;
-      height: 100vh;
-      width: 100vw;
-    }
-    & .header__navigation-links-link{
+    //Had to put this into 'tab-port' media query, otherwise the box would hang around when window was made larger, if the checkbox was checked. 
+    @include respond(tab-port) { 
       display: block;
-      margin: 0;
-      text-align: center;
-      margin: 20% 0rem;
-      color: $color-light-grey;
-      &:hover,
-      &:active {
-        border-bottom: 1px solid white;
-        cursor: pointer;
+      margin-top: 5rem;
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      background-color: $color-dark-grey;
+      @include respond(phone) {
+        display: absolute;
+        top: 0;
+        left: 0;
+        margin: 0rem;
+        border-radius: 0rem;
+        background-color: $color-dark-grey;
+        height: 100vh;
+        width: 100vw;
+      }
+      & .header__navigation-links-link{
+        display: block;
+        margin: 0;
+        text-align: center;
+        margin: 20% 0rem;
+        color: $color-light-grey;
+        &:hover,
+        &:active {
+          border-bottom: 1px solid white;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -619,6 +620,7 @@ input[type="submit"]:active {
   background-color: $color-dark-grey;
   padding: .5rem 10rem;
   align-items: center;
+  z-index: 1001;
   @include respond(tab-port) {
     padding: .5rem 5rem;
   }
@@ -1192,5 +1194,6 @@ input[type="submit"]:active {
 
 // To do list: 
 // Animations
-//Do Tech By Us Links - website & github
+// Do Tech By Us Links - website & github
 // Tinkering - (Codepen) (project guidelines)
+// Javascript to uncheck box, maybe?

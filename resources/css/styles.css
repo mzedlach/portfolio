@@ -7,6 +7,11 @@ a:link,
 a:visited {
   text-decoration: none; }
 
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
 html {
   font-size: 62.5%; }
   @media only screen and (max-width: 56.25em) {
@@ -228,8 +233,7 @@ input[type="submit"]:active {
   .section__title {
     text-transform: uppercase;
     position: absolute;
-    margin-top: 2rem;
-    z-index: 0; }
+    margin-top: 2rem; }
     @media only screen and (max-width: 56.25em) {
       .section__title {
         margin-top: 1rem; } }
@@ -434,12 +438,14 @@ input[type="submit"]:active {
     .header__navigation-checkbox:checked + .header__navigation-button .header__navigation-icon::after {
       background-color: #9EACBF; } }
 
-.header__navigation-checkbox:checked ~ .header__navigation-links {
-  display: block;
-  margin-top: 5rem;
-  border-radius: 1rem;
-  background-color: #1B1F25; }
-  @media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 56.25em) {
+  .header__navigation-checkbox:checked ~ .header__navigation-links {
+    display: block;
+    margin-top: 5rem;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    background-color: #1B1F25; } }
+  @media only screen and (max-width: 56.25em) and (max-width: 37.5em) {
     .header__navigation-checkbox:checked ~ .header__navigation-links {
       display: absolute;
       top: 0;
@@ -449,15 +455,17 @@ input[type="submit"]:active {
       background-color: #1B1F25;
       height: 100vh;
       width: 100vw; } }
-  .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link {
-    display: block;
-    margin: 0;
-    text-align: center;
-    margin: 20% 0rem;
-    color: #9EACBF; }
-    .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link:hover, .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link:active {
-      border-bottom: 1px solid white;
-      cursor: pointer; }
+
+@media only screen and (max-width: 56.25em) {
+    .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link {
+      display: block;
+      margin: 0;
+      text-align: center;
+      margin: 20% 0rem;
+      color: #9EACBF; }
+      .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link:hover, .header__navigation-checkbox:checked ~ .header__navigation-links .header__navigation-links-link:active {
+        border-bottom: 1px solid white;
+        cursor: pointer; } }
 
 .sticky {
   position: fixed;
@@ -467,7 +475,8 @@ input[type="submit"]:active {
   box-shadow: 0 5px 5px #1B1F25;
   background-color: #1B1F25;
   padding: .5rem 10rem;
-  align-items: center; }
+  align-items: center;
+  z-index: 1001; }
   @media only screen and (max-width: 56.25em) {
     .sticky {
       padding: .5rem 5rem; } }
