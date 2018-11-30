@@ -19,6 +19,7 @@
 // ----------------------------- //
 
 $color-temporary-tester: hotpink;
+$color-links-hover: #d2d4d8;
 $color-light-grey: #9EACBF;
 $color-mid-grey: #555;
 $color-dark-grey: #1B1F25;
@@ -122,9 +123,6 @@ h3 {
 input[type="submit"] {font-size: 2rem;}
 .footer{ 
   font-size: 2rem;
-  &__copyright{
-    font-size: 1.6rem;
-  }
 }
 .header{
   &__navigation-links-link{
@@ -165,6 +163,7 @@ textarea {
 // -------------------------------------- //
 
 /* ---------- BUTTONS ----------*/
+.btn, 
 .btn-icon:link, 
 .btn-icon:visited,
 input[type="submit"] {
@@ -185,6 +184,7 @@ input[type="submit"] {
     margin: .3rem;
   }
 }
+.btn:hover, 
 .btn-icon:hover,
 .btn-icon:active,
 input[type="submit"]:hover,
@@ -389,6 +389,10 @@ input[type="submit"]:active {
       @include respond(phone) {
         padding: 12rem 2rem 5rem 2rem;
       }
+    }
+    &.projects {
+      justify-content: center;  
+      margin: 10rem 0rem;
     }
     &.about {
       align-items: center;
@@ -669,6 +673,23 @@ input[type="submit"]:active {
   background-color: $color-light-grey;
 }
 
+// Headers for linked pages from main page. Simple. 
+.header__navigation--sidepage{
+  width: 100%;
+  box-shadow: 0 5px 5px #1B1F25;
+  background-color: $color-dark-grey;
+  padding: .5rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+  & .header__navigation-logo--sidepage{
+    height: 5rem;
+  }
+  & .header__navigation-links-link--sidepage{
+    color: $color-light-grey;
+  }
+}
 
 // ------------------------------------- //
 // ---------- SECTION - ABOUT ---------- //
@@ -838,121 +859,136 @@ input[type="submit"]:active {
 // ---------------------------------------- //
 // ---------- SECTION - PROJECTS ---------- //
 // ---------------------------------------- //
-.project-tile-full {
-  background-color: white;
-  display: flex; 
-  align-items: center;
-  width: 80rem;
-  border-radius: 3.5rem;
-  margin: 3.5rem auto;
-  box-shadow: 8px 8px 40px 8px $color-dark-grey;
-  padding: 2.5rem;
-  @include respond(tab-land) { 
-    width: 70rem;
-  }
-  @include respond(tab-port) {
-    width: 100%;
-    flex-direction: column;
-    margin: 0rem;
-    margin-bottom: 6rem;
-  }
-  @include respond(phone) {
-    width: 100%;
-    margin: 4rem 1rem;
-    padding: 0rem;
-    box-shadow: none;
-    background-color: transparent;
-  }
-  &__left{
-    flex: 1 1 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include respond(tab-land) { 
-      flex: 1 1 30%;
-    }
-    &-image{
-      width: 80%;
-      border: 2px solid $color-project-link; 
-      border-radius: .5rem;
-      @include respond(tab-port) {
-       width: auto;
-       max-height: 25rem;
-      }
-      @include respond(phone) {
-        height: 20rem;
-        border: 1px solid $color-project-link;
-      }
-    }
-    &-links{
-      margin-top: 2rem;
-      @include respond(phone) {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
-      &-link{
-        margin: 0rem 1rem;
-        @include respond(phone) {
-          margin: 0rem .5rem;
-        }
-        &:link,
-        &:visited{
-          color: $color-project-link;
-        }
-        &:hover,
-        &:active {
-          cursor: pointer;
-          color: $color-project-link-hover;
-        }
-      }
-      &-icon{
-        height: 5rem;
-        width: 5rem;
-        @include respond(phone) {
-          height: 4rem;
-          width: 4rem;
-        }
-      }
-    }
-  }
-  &__right{
-    flex: 1 1 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: $font-text;
-    &-title{
-      font-family: $font-heading;
-      font-weight: 400;
-      margin-bottom: 2rem;
-      border-bottom: 1px solid black;
-      @include respond(tab-port) {
-        display: none;
-      }
-    }
-    &-description{
-      text-align: justify;
-      line-height: 1.5;
-      @include respond(phone) {
-        line-height: 1.2;
-      }
-    }
-    &-tools{
-      margin: 2rem 0rem;
-      &-icons{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        @include respond(phone) {
-          margin-top: 1rem;
-        }
-        &-icon{
-      
-        }
-      }
+.project{
+  &__tile{
+    height: 25rem;
+    border: 5px solid transparent;
+    border-radius: .5rem;
+    margin: 0rem 5rem;
+    &:hover{
+      border: 5px solid orange; 
     }
   }
 }
+
+// .project-tile-full {
+//   background-color: white;
+//   display: flex; 
+//   align-items: center;
+//   width: 80rem;
+//   border-radius: 3.5rem;
+//   margin: 3.5rem auto;
+//   box-shadow: 8px 8px 40px 8px $color-dark-grey;
+//   padding: 2.5rem;
+//   @include respond(tab-land) { 
+//     width: 70rem;
+//   }
+//   @include respond(tab-port) {
+//     width: 100%;
+//     flex-direction: column;
+//     margin: 0rem;
+//     margin-bottom: 6rem;
+//   }
+//   @include respond(phone) {
+//     width: 100%;
+//     margin: 4rem 1rem;
+//     padding: 0rem;
+//     box-shadow: none;
+//     background-color: transparent;
+//   }
+//   &__left{
+//     flex: 1 1 40%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     @include respond(tab-land) { 
+//       flex: 1 1 30%;
+//     }
+//     &-image{
+//       width: 80%;
+//       border: 5px solid transparent;
+//       border-radius: .5rem;
+//       &:hover{
+//         border: 5px solid orange; 
+//       }
+//       @include respond(tab-port) {
+//        width: auto;
+//        max-height: 25rem;
+//       }
+//       @include respond(phone) {
+//         height: 20rem;
+//         border: 1px solid $color-project-link;
+//       }
+//     }
+//     &-links{
+//       margin-top: 2rem;
+//       @include respond(phone) {
+//         margin-top: 1rem;
+//         margin-bottom: 1rem;
+//       }
+//       &-link{
+//         margin: 0rem 1rem;
+//         @include respond(phone) {
+//           margin: 0rem .5rem;
+//         }
+//         &:link,
+//         &:visited{
+//           color: $color-project-link;
+//         }
+//         &:hover,
+//         &:active {
+//           cursor: pointer;
+//           color: $color-project-link-hover;
+//         }
+//       }
+//       &-icon{
+//         height: 5rem;
+//         width: 5rem;
+//         @include respond(phone) {
+//           height: 4rem;
+//           width: 4rem;
+//         }
+//       }
+//     }
+//   }
+//   &__right{
+//     flex: 1 1 60%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     font-family: $font-text;
+//     &-title{
+//       font-family: $font-heading;
+//       font-weight: 400;
+//       margin-bottom: 2rem;
+//       border-bottom: 1px solid black;
+//       @include respond(tab-port) {
+//         display: none;
+//       }
+//     }
+//     &-description{
+//       text-align: justify;
+//       line-height: 1.5;
+//       @include respond(phone) {
+//         line-height: 1.2;
+//       }
+//     }
+//     &-tools{
+//       margin: 2rem 0rem;
+//       &-icons{
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: center;
+//         @include respond(phone) {
+//           margin-top: 1rem;
+//         }
+//         &-icon{
+      
+//         }
+//       }
+//     }
+//   }
+// }
 
 // ----------------------------------------- //
 // ---------- SECTION - TINKERING ---------- //
@@ -1123,12 +1159,12 @@ input[type="submit"]:active {
     }
     &:link, 
     &:visited{
-      color:  #8994a3;
+      color:  $color-light-grey;
       transition: color 0.2s;
     }
     &:hover, 
     &:active {
-      color: #d2d4d8;
+      color: $color-links-hover;
     }
     &--linkedin:hover {
       color: #007bb5;
@@ -1152,6 +1188,18 @@ input[type="submit"]:active {
       margin-top: 2rem;
     }
   }
+  &__projects{
+    text-align: center;
+    &-link:link, 
+    &-link:visited {
+      color: $color-light-grey;
+      transition: color 0.2s;
+    }
+    &-link:hover,
+    &-link:active{
+      color: $color-links-hover;
+    }
+  }
 }
 .footer__link-icon {
   height: 3rem;
@@ -1169,31 +1217,54 @@ input[type="submit"]:active {
   }
 }
 
-// ------------------------------- //
-// ---------- IMPRESSUM ---------- //
-// ------------------------------- //
-.credits__page{
-  min-height: 100vh;
-}
-.header__navigation.credits{
-  position: fixed;
-  width: 100%;
-  box-shadow: 0 5px 5px #1B1F25;
-  background-color: $color-dark-grey;
-  padding: .5rem 10rem;
-  align-items: center;
-  height: fit-content;
-  & .header__navigation-logo{
-    height: 5rem;
-  }
-  & .header__navigation-links-link{
-    color: $color-light-grey;
-  }
-}
 
+// ----------------------------------------- //
+// ---------- PAGE - PROJECT INFO ---------- //
+// ----------------------------------------- //
+
+.project{
+  &__content{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  &__visit-site{
+    width: fit-content;
+    margin-right: 0%;
+  }
+
+  &__slider{
+    width: 80%;
+    max-width: 70rem;
+    margin: 5rem auto 7rem auto;
+  }
+
+  &__buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    &-btn{
+      width: 22rem;
+    }
+  }
+  &__writeup{
+    &-text{
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+    &-list{
+      margin-left: 5rem;
+      margin-top: -3rem;
+    }
+  }
+}
 
 // To do list: 
 // Animations
 // Do Tech By Us Links - website & github
 // Tinkering - (Codepen) (project guidelines)
 // Javascript to uncheck box, maybe?
+
+
+//TECH BY US - page - add code links 
