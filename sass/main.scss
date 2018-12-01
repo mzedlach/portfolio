@@ -172,7 +172,7 @@ input[type="submit"] {
   margin: .5rem;
   padding: .5rem 2rem; 
   text-decoration: none;
-  border-radius: 200px;
+  border-radius: 20rem;
   -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
   transition: background-color 0.4s, border 0.4s, color 0.4s;
   background-color: $color-light-grey;
@@ -215,6 +215,11 @@ input[type="submit"]:active {
   @include respond(phone) {
     height: 2.5rem;
   }
+}
+.btn-coming-soon:hover {
+  background-color: $color-light-grey;
+  border: 1px solid $color-light-grey;
+  cursor: auto;
 }
 
 // ----------------------------------------- //
@@ -1247,19 +1252,35 @@ input[type="submit"]:active {
     &-btn{
       width: 22rem;
     }
+    &--cert{
+      margin-bottom: 0rem;
+    }
   }
   &__writeup{
     &-text{
-      margin-top: 2rem;
-      margin-bottom: 4rem;
+      margin: 2rem 0rem;
+      &.technology {
+        margin-bottom: 1rem;
+      }
     }
     &-list{
       margin-left: 5rem;
-      margin-top: -3rem;
+      margin-top: 2rem;
+    }
+  }
+  &__group{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    & .project__writeup-title {
+      margin-left: 3rem;
+      flex: 0 0 40%;
     }
   }
 }
-
+.spacer-top {
+  margin-top: 2rem;
+}
 // To do list: 
 // Animations
 // Do Tech By Us Links - website & github

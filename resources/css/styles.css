@@ -109,7 +109,7 @@ input[type="submit"] {
   margin: .5rem;
   padding: .5rem 2rem;
   text-decoration: none;
-  border-radius: 200px;
+  border-radius: 20rem;
   -webkit-transition: background-color 0.4s, border 0.4s, color 0.4s;
   transition: background-color 0.4s, border 0.4s, color 0.4s;
   background-color: #9EACBF;
@@ -153,6 +153,11 @@ input[type="submit"]:active {
   @media only screen and (max-width: 37.5em) {
     .btn-icon svg {
       height: 2.5rem; } }
+
+.btn-coming-soon:hover {
+  background-color: #9EACBF;
+  border: 1px solid #9EACBF;
+  cursor: auto; }
 
 .section {
   display: flex; }
@@ -860,11 +865,24 @@ input[type="submit"]:active {
   margin-bottom: 3rem; }
   .project__buttons-btn {
     width: 22rem; }
+  .project__buttons--cert {
+    margin-bottom: 0rem; }
 
 .project__writeup-text {
-  margin-top: 2rem;
-  margin-bottom: 4rem; }
+  margin: 2rem 0rem; }
+  .project__writeup-text.technology {
+    margin-bottom: 1rem; }
 
 .project__writeup-list {
   margin-left: 5rem;
-  margin-top: -3rem; }
+  margin-top: 2rem; }
+
+.project__group {
+  display: flex;
+  align-items: center; }
+  .project__group .project__writeup-title {
+    margin-left: 3rem;
+    flex: 0 0 40%; }
+
+.spacer-top {
+  margin-top: 2rem; }
