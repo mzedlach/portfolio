@@ -88,7 +88,8 @@
 // });
 
 
-window.onscroll = function() {stickyNavigation()};
+window.onscroll = function() {navAndAnimations()};
+
 
 // Get sticky navigation section
 var stickyNav = document.getElementById("stickyNavigation");
@@ -97,14 +98,67 @@ var about = document.getElementById("about");
 // Get the offset position of the About section
 var sticky = about.offsetTop;
 
+
+
+
+
+//variables of div containing elements with animation. 
+var skillsList1Location = (document.getElementById("skills1")).offsetTop;
+var skillsList2Location = (document.getElementById("skills2")).offsetTop;
+var projectTile1Location = (document.getElementById("project1")).offsetTop;
+
+
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyNavigation() {
+function navAndAnimations() {
+
+  var height = window.innerHeight
+  || document.documentElement.clientHeight
+  || document.body.clientHeight;
+
+  var halfway = height * 0.8;
+
+
   if (window.pageYOffset > sticky) {
-    // stickyNav.style.display = "flex";
     stickyNav.classList.add("sticky");
     //Check ES9 compatiblitiy fix on W3schools (how TO add a class)
   } else {
-    // stickyNav.style.display = "none";
     stickyNav.classList.remove("sticky");
   }
+
+
+  //There has to be a more efficient way to do this. This is not very DRY :|
+  //Skills list 1 animation
+  var skillsList1Trigger = skillsList1Location - halfway;
+  if (window.pageYOffset > skillsList1Trigger) {
+    skills1.classList.add("animated","fadeInUp");
+  } else {
+    skills1.classList.remove("animated","fadeInUp");
+  }
+
+  //Skills list 2 animation
+  var skillsList2Trigger = skillsList2Location - halfway;
+  if (window.pageYOffset > skillsList2Trigger) {
+    skills2.classList.add("animated","fadeInUp");
+  } else {
+    skills2.classList.remove("animated","fadeInUp");
+  }
+
+  // .style.display = "none";
+
+  // Project tile 1 animation
+  var projectTile1Trigger = projectTile1Location - halfway;
+  if (window.pageYOffset > projectTile1Trigger) {
+    project1.classList.add("animated","zoomIn");
+  } else {
+    project1.classList.remove("animated","zoomIn");
+  }
+
+  // Project tile 2+3 animation
+  var projectTile1Trigger = projectTile1Location - halfway;
+  if (window.pageYOffset > projectTile1Trigger) {
+    project1.classList.add("animated","zoomIn");
+  } else {
+    project1.classList.remove("animated","zoomIn");
+  }
+
 }
