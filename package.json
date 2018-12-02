@@ -4,7 +4,7 @@
   "description": "Portfolio for Maria Lach. ",
   "main": "index.js",
   "scripts": {
-    "sassitup": "node-sass sass/main.scss resources/css/styles.css -w",
+    "sassitup": "node-sass main.scss styles.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver sassitup",
     

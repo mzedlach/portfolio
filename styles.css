@@ -317,14 +317,14 @@ input[type="submit"]:active {
   background-repeat: no-repeat;
   background-position: center; }
   .background-fixed--header {
-    background-image: url(/img/jesus-kiteque-224069-min.jpg); }
+    background-image: url(/images/vendors/jesus-kiteque-224069-min.jpg); }
   .background-fixed--skills, .background-fixed--projects, .background-fixed--credits {
-    background-image: url(/img/rawpixel-558599-unsplash.jpg); }
+    background-image: url(/images/vendors/rawpixel-558599-unsplash.jpg); }
     @media only screen and (max-width: 56.25em) {
       .background-fixed--skills, .background-fixed--projects, .background-fixed--credits {
         background-position: right; } }
   .background-fixed--contact {
-    background-image: url(/img/jeff-kepler-1085049-unsplash.jpg);
+    background-image: url(/images/vendors/jeff-kepler-1085049-unsplash.jpg);
     background-blend-mode: overlay;
     background-color: rgba(32, 89, 36, 0.2);
     justify-content: center;
@@ -663,13 +663,46 @@ input[type="submit"]:active {
     .tool-icon {
       margin: 0rem .5rem; } }
 
-.project__tile {
-  height: 25rem;
-  border: 5px solid transparent;
+.projects__title {
+  margin-bottom: 3rem; }
+  .projects__title:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-11rem) translateY(4rem);
+    height: 3px;
+    width: 30rem;
+    background-color: #1B1F25; }
+  .projects__title.certs:after {
+    width: 50rem;
+    transform: translateX(-20rem) translateY(4rem); }
+
+.projects__tile-display {
+  display: flex;
+  margin-bottom: 5rem; }
+
+.project-tile {
+  position: relative;
+  overflow: hidden;
+  height: 20rem;
+  width: 30rem;
+  border: 2px solid #9EACBF;
   border-radius: .5rem;
-  margin: 0rem 5rem; }
-  .project__tile:hover {
-    border: 5px solid orange; }
+  background-color: white;
+  margin: 0rem 2rem; }
+  .project-tile:hover {
+    border: 3px solid orange; }
+  .project-tile__img {
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    max-height: 90%;
+    max-width: 90%; }
+  .project-tile--links {
+    margin: auto 0rem auto 0rem; }
 
 .tinkering-tile {
   background-color: white;

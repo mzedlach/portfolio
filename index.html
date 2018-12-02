@@ -13,19 +13,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="I am a software developer driven by the desire for knowledge and satisfaction of challenges. Come and have a glimpse of my current projects and past experience.">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="resources/css/styles.css">
-		<!-- <link rel="stylesheet" type="text/css" href="vendors/css/animate.css"> -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
 		<!-- <link rel="stylesheet" type="text/css" href="resources/css/queries.css"> -->
 		
 		<title>Maria Lach</title>
 <!--        Favicon Info-->
-		<link rel="apple-touch-icon" sizes="180x180" href="/resources/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/resources/favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/resources/favicons/favicon-16x16.png">
-		<link rel="manifest" href="/resources/favicons/manifest.json">
-		<link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="/resources/favicons/favicon.ico">
-		<meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+		<link rel="manifest" href="/favicons/manifest.json">
+		<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+		<link rel="shortcut icon" href="/favicons/favicon.ico">
+		<meta name="msapplication-config" content="/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
@@ -33,14 +33,14 @@
 		<header class="background-fixed background-fixed--header">
 			<div class="section section__container header">
 				<div class="header__navigation" id="stickyNavigation">
-					<img src="resources/img/logo.png" alt="Maria Lach logo" class="header__navigation-logo">
-					<img src="resources/img/logo-grey.png" alt="Maria Lach logo" class="header__navigation-logo--grey">
+					<img src="images/logo.png" alt="Maria Lach logo" class="header__navigation-logo animated slideInUp">
+					<img src="images/logo-grey.png" alt="Maria Lach logo" class="header__navigation-logo--grey animated slideInUp">
 
 					<input type="checkbox" class="header__navigation-checkbox" id="nav-toggle">
 					<label for="nav-toggle" class="header__navigation-button">
 							<span class="header__navigation-icon">&nbsp;</span>
 					</label>
-					<nav class="header__navigation-links">
+					<nav class="header__navigation-links animated slideInUp">
 						<a href="#about" class="header__navigation-links-link">About</a>
 						<a href="#skills" class="header__navigation-links-link">Skills</a>
 						<a href="#projects" class="header__navigation-links-link">Projects</a>
@@ -48,10 +48,10 @@
 					</nav>
 				</div>
 				<div class="header__text">
-					<h1 class="header__text--name">Maria Lach</h1>
-					<div class="header__text--position">Front-End Web Developer</div>
+					<h1 class="header__text--name animated slideInUp">Maria Lach</h1>
+					<div class="header__text--position animated slideInUp">Front-End Web Developer</div>
 				</div>
-				<div class="header__links">
+				<div class="header__links animated slideInUp">
 					<a href="https://www.linkedin.com/in/maria-lach" target="_blank" class="btn-icon btn-icon--linkedin">
 						<svg aria-hidden="true" aria-labelledby="linkedIn-Header" data-prefix="fab" data-icon="linkedin-in" class="header__links-button-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
 							<title id="linkedIn-Header">See LinkedIn profile in a new tab</title>
@@ -97,7 +97,7 @@
 				<h2 class="section__title section__title--left">About Me</h2>
 				<div class="section__title-underline section__title-underline--left"></div>
 				<div class="section__content large-content-padding about">
-					<img class="about-me__image" src="resources/img/portrait2.png" alt="Maria Lach photo">
+					<img class="about-me__image" src="images/vendors/portrait2.png" alt="Maria Lach photo">
 					<div class="about-me__description">
 						<div>My name is Maria and I am a self-taught web developer. I work with people to transform their thoughts and sketches in to simple, clear web experiences. I love tackling the clicking gears in the background that make a website go. In addition to my web development skills, I have experience within the fields of genetic research as well as teaching science. These provide me with invaluable experience to approach problems and work with people effectively. I am continuously expanding my coding knowledge through self-guided resources and online courses. Please take a moment to look through my final projects, current github activity, and feel free to contact me in the form below. </div>
 					</div>
@@ -269,219 +269,94 @@
 			<div class="section__container section__container--right projects">
 				<h2 class="section__title section__title--left">Projects</h2>
 				<div class="section__title-underline section__title-underline--left"></div>
-				<div class="section__content section__content--row small-content-padding projects">
+				<div class="section__content section__content--column projects">
 
-					<a href="web1-techbyus.html" target="_blank" class="project-tile-full__image-link  project__tile-link">
-						<img class="project-tile-full__left-image project__tile" src="resources/img/techbyus-logo.png" alt="Tech By Us website logo"/>
-					</a>
 
-					<a href="web2-wilkdonuts.html" target="_blank" class="project-tile-full__image-link project__tile-link">
-						<img class="project-tile-full__left-image project__tile" src="resources/img/minidonuts-logo.png" alt="Wilk Mini-Donuts website logo"/>
-					</a>
 
-					<!-- <div class="project-tile-full">
-						<div class="project-tile-full__left">
-							<a href="http://techbyus.herokuapp.com/" target="_blank" class="project-tile-full__image-link">
-								<img class="project-tile-full__left-image" src="resources/img/techbyus-logo.png" alt="Tech By Us website logo"/>
-							</a>
-							<div class="project-tile-full__left-links">
-								<a href="#" target="_blank" class="project-tile-full__left-links-link">
-									<title id="projectLink-TechByUs-Site">Link to Tech By Us website in new tab</title>
-									<svg aria-labelledby="projectLink-TechByUs-Site" data-prefix="fas" data-icon="external-link-square-alt" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
-								</a>
-								<a href="#" target="_blank" class="project-tile-full__left-links-link">
-									<title id="projectLink-TechByUs-GitHub">Link to GitHub code for Tech By Us in new tab</title>
-									<svg aria-labelledby="projectLink-TechByUs-GitHub" data-prefix="fab" data-icon="github" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-								</a>
-							</div>
+
+
+					
+					<h3 class="projects__title">Work</h3>
+					<div class="projects__tile-display">
+						<a href="web1-techbyus.html" target="_blank" class="project-tile">
+							<img class="project-tile__img" src="images/techbyus-logo.png" alt="Tech By Us website logo"/>
+						</a>
+						<a href="web2-wilkdonuts.html" target="_blank" class="project-tile">
+							<img class="project-tile__img" src="images/minidonuts-logo.png" alt="Wilk Mini-Donuts website logo"/>
+						</a>
+					</div>
+
+
+
+
+					<h3 class="projects__title certs">Certification Projects</h3>
+					<!-- <div class="projects__tile-display"> -->
+
+					<div class="projects__tile-display">
+						<div class="project-tile">
+								<img class="project-tile__img" src="images/vendors/freeCodeCamp.jpg" alt="Free Code Camp website logo"/>
 						</div>
-						<div class="project-tile-full__right">
-							<h3 class="project-tile-full__right-title">Tech By Us</h3>
-							<div class="project-tile-full__right-description">This website was created with other remote developers around the world. It was created using the Ruby on Rails environment and I was responsbible for coding the Front-End using HTML, Sass, and Javascript. Mockups were provided from a designer and were followed using Sass styling with the BEM method. Several areas of the site were enhanced or designed on my own and with the lead developer. Communication and version control was maintained using Slack, Git, and Github.</div>
-							<div class="project-tile-full__right-tools">
-								<div class="project-tile-full__right-tools-text">Langauges Used: HTML5, CSS3, Sass, Javascript</div> 
-								<div class="project-tile-full__right-tools-icons">
-									<svg aria-hidden="true" data-prefix="fab" data-icon="html5" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg>
-									<svg aria-hidden="true" data-prefix="fab" data-icon="css3-alt" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
-									<svg aria-hidden="true" data-prefix="fab" data-icon="sass" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M551.1 291.9c-22.4.1-41.8 5.5-58 13.5-5.9-11.9-12-22.3-13-30.1-1.2-9.1-2.5-14.5-1.1-25.3s7.7-26.1 7.6-27.2c-.1-1.1-1.4-6.6-14.3-6.7-12.9-.1-24 2.5-25.3 5.9-1.3 3.4-3.8 11.1-5.3 19.1-2.3 11.7-25.8 53.5-39.1 75.3-4.4-8.5-8.1-16-8.9-22-1.2-9.1-2.5-14.5-1.1-25.3s7.7-26.1 7.6-27.2c-.1-1.1-1.4-6.6-14.3-6.7-12.9-.1-24 2.5-25.3 5.9-1.3 3.4-2.7 11.4-5.3 19.1-2.6 7.7-33.9 77.3-42.1 95.4-4.2 9.2-7.8 16.6-10.4 21.6s-.2.3-.4.9c-2.2 4.3-3.5 6.7-3.5 6.7v.1c-1.7 3.2-3.6 6.1-4.5 6.1-.6 0-1.9-8.4.3-19.9 4.7-24.2 15.8-61.8 15.7-63.1-.1-.7 2.1-7.2-7.3-10.7-9.1-3.3-12.4 2.2-13.2 2.2-.8 0-1.4 2-1.4 2s10.1-42.4-19.4-42.4c-18.4 0-44 20.2-56.6 38.5-7.9 4.3-25 13.6-43 23.5-6.9 3.8-14 7.7-20.7 11.4-.5-.5-.9-1-1.4-1.5-35.8-38.2-101.9-65.2-99.1-116.5 1-18.7 7.5-67.8 127.1-127.4 98-48.8 176.4-35.4 189.9-5.6 19.4 42.5-41.9 121.6-143.7 133-38.8 4.3-59.2-10.7-64.3-16.3-5.3-5.9-6.1-6.2-8.1-5.1-3.3 1.8-1.2 7 0 10.1 3 7.9 15.5 21.9 36.8 28.9 18.7 6.1 64.2 9.5 119.2-11.8C367 196.5 415.1 130.2 401 74.7 386.6 18.3 293.1-.2 204.6 31.2 151.9 49.9 94.9 79.3 53.9 117.6 5.2 163.2-2.6 202.9.6 219.5c11.4 58.9 92.6 97.3 125.1 125.7-1.6.9-3.1 1.7-4.5 2.5-16.3 8.1-78.2 40.5-93.7 74.7-17.5 38.8 2.9 66.6 16.3 70.4 41.8 11.6 84.6-9.3 107.6-43.6s20.2-79.1 9.6-99.5c-.1-.3-.3-.5-.4-.8 4.2-2.5 8.5-5 12.8-7.5 8.3-4.9 16.4-9.4 23.5-13.3-4 10.8-6.9 23.8-8.4 42.6-1.8 22 7.3 50.5 19.1 61.7 5.2 4.9 11.5 5 15.4 5 13.8 0 20-11.4 26.9-25 8.5-16.6 16-35.9 16-35.9s-9.4 52.2 16.3 52.2c9.4 0 18.8-12.1 23-18.3v.1s.2-.4.7-1.2c1-1.5 1.5-2.4 1.5-2.4v-.3c3.8-6.5 12.1-21.4 24.6-46 16.2-31.8 31.7-71.5 31.7-71.5s1.4 9.7 6.2 25.8c2.8 9.5 8.7 19.9 13.4 30-3.8 5.2-6.1 8.2-6.1 8.2s0 .1.1.2c-3 4-6.4 8.3-9.9 12.5-12.8 15.2-28 32.6-30 37.6-2.4 5.9-1.8 10.3 2.8 13.7 3.4 2.6 9.4 3 15.7 2.5 11.5-.8 19.6-3.6 23.5-5.4 6.2-2.2 13.4-5.7 20.2-10.6 12.5-9.2 20.1-22.4 19.4-39.8-.4-9.6-3.5-19.2-7.3-28.2 1.1-1.6 2.3-3.3 3.4-5 19.8-28.9 35.1-60.6 35.1-60.6s1.4 9.7 6.2 25.8c2.4 8.1 7.1 17 11.4 25.7-18.6 15.1-30.1 32.6-34.1 44.1-7.4 21.3-1.6 30.9 9.3 33.1 4.9 1 11.9-1.3 17.1-3.5 6.5-2.2 14.3-5.7 21.6-11.1 12.5-9.2 24.6-22.1 23.8-39.6-.3-7.9-2.5-15.8-5.4-23.4 15.7-6.6 36.1-10.2 62.1-7.2 55.7 6.5 66.6 41.3 64.5 55.8-2.1 14.6-13.8 22.6-17.7 25-3.9 2.4-5.1 3.3-4.8 5.1.5 2.6 2.3 2.5 5.6 1.9 4.6-.8 29.2-11.8 30.3-38.7 1.6-34-31.1-71.4-89-71.1zM121.8 436.6c-18.4 20.1-44.2 27.7-55.3 21.3C54.6 451 59.3 421.4 82 400c13.8-13 31.6-25 43.4-32.4 2.7-1.6 6.6-4 11.4-6.9.8-.5 1.2-.7 1.2-.7.9-.6 1.9-1.1 2.9-1.7 8.3 30.4.3 57.2-19.1 78.3zm134.4-91.4c-6.4 15.7-19.9 55.7-28.1 53.6-7-1.8-11.3-32.3-1.4-62.3 5-15.1 15.6-33.1 21.9-40.1 10.1-11.3 21.2-14.9 23.8-10.4 3.5 5.9-12.2 49.4-16.2 59.2zm111 53c-2.7 1.4-5.2 2.3-6.4 1.6-.9-.5 1.1-2.4 1.1-2.4s13.9-14.9 19.4-21.7c3.2-4 6.9-8.7 10.9-13.9 0 .5.1 1 .1 1.6-.1 17.9-17.3 30-25.1 34.8zm85.6-19.5c-2-1.4-1.7-6.1 5-20.7 2.6-5.7 8.6-15.3 19-24.5 1.2 3.8 1.9 7.4 1.9 10.8-.1 22.5-16.2 30.9-25.9 34.4z"></path></svg>
-									<svg aria-hidden="true" data-prefix="fab" data-icon="js-square" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>
-								</div>
+						<div class="project-tile--links">
+							<a href="FCC-cert1.html" target="_blank" class="btn">Responsive Web Design</a>
+							<a href="FCC-cert2.html" target="_blank" class="btn">Javascript Algorithms & Data Structures</a>
+							<a href="FCC-cert3.html" target="_blank" class="btn">Front End Libraries</a>
+							<!-- <a href="FCC-cert4.html" target="_blank" class="btn">Data Visualization Certification</a> -->
+							<!-- <a href="FCC-cert5.html" target="_blank" class="btn">APIs and Microservices Certification</a> -->
+							<!-- <a href="FCC-cert6.html" target="_blank" class="btn">Information Security and Quality Assurance Certification</a> -->
+						</div>	
+					</div>
+
+					<div class="projects__tile-display">
+						<a href="codewars.html" target="_blank" class="project-tile">
+							<img class="project-tile__img" src="images/vendors/codewars-logo.png" alt="New tab link to my codewars info"/>
+						</a>
+						<a href="udemy.html" target="_blank" class="project-tile">
+							<img class="project-tile__img" src="images/vendors/udemy-logo.png" alt="New tab link to my Udemy courses info"/>
+						</a>
+					</div>
+
+
+					<!-- <div class="projects__large-project">
+						<div class="large-tile__image">
+								<img class="large-tile__image-img" src="images/vendors/codewars-logo.png" alt="Free Code Camp website logo"/>
+						</div>
+						<div class="large-tile__content">
+								<div class="large-tile__description">
+								CodeWars is an online collective of coding challenges, known as Kata, created by users. I have been using CodeWars to challenge my Javascript knowledge and analyze the different appraoches to Katas. When viewing solutions in the links below, clicking on the Kata name will give further information on the challenge instructions. 
 							</div>
+							<div class="cert-tile__links">
+								<a href="https://www.codewars.com/users/mlach" target="_blank" class="btn cert-tile__links-link">CodeWars Profile</a>
+								<a href="https://www.codewars.com/users/mlach/completed_solutions" target="_blank" class="btn cert-tile__links-link">Solutions</a>
+							</div>	
 						</div>
 					</div>
 
-					<div class="project-tile-full">
-						<div class="project-tile-full__left">
-							<img class="project-tile-full__left-image" src="resources/img/minidonuts-logo.png" alt="Logo for Wilk Mini Donuts"/>
-							<div class="project-tile-full__left-links">
-								<a href="http://wilk-minidonuts.de/" target="_blank" class="project-tile-full__left-links-link">
-									<title id="projectLink-WilkDonuts-Site">Link to Wilk Mini Donuts website in new tab</title>
-									<svg aria-labelledby="projectLink-WilkDonuts-Site" data-prefix="fas" data-icon="external-link-square-alt" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
-								</a>
-								<a href="https://github.com/mzedlach/minidonuts" target="_blank" class="project-tile-full__left-links-link">
-									<title id="projectLink-WilkDonuts-GitHub">Link to GitHub code for Wilk Mini Donuts website in new tab</title>
-									<svg aria-labelledby="projectLink-WilkDonuts-GitHub" data-prefix="fab" data-icon="github" class="project-tile-full__left-links-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-								</a>
-							</div>
+					<div class="projects__large-project">
+						<div class="large-tile__image">
+								<img class="large-tile__image-img" src="images/vendors/udemy-logo.png" alt="Free Code Camp website logo"/>
 						</div>
-						<div class="project-tile-full__right">
-							<h3 class="project-tile-full__right-title">Wilk Mini Donuts</h3>
-							<div class="project-tile-full__right-description">This website was created to communicate a food truck's information and upcoming locations. The site was designed, styled, and coded by myself, including taking and editing of photos as well as writing of descriptions. Photos were edited using Pixlr Editor and layouts were setup using CSS Grid.</div>
-							<div class="project-tile-full__right-tools">
-								<div class="project-tile-full__right-tools-text">Langauges Used: HTML, CSS, Javascipt</div> 
-								<div class="project-tile-full__right-tools-icons">
-									<svg aria-hidden="true" data-prefix="fab" data-icon="html5" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg>
-									<svg aria-hidden="true" data-prefix="fab" data-icon="css3-alt" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
-									<svg aria-hidden="true" data-prefix="fab" data-icon="js-square" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>
-								</div>
+						<div class="large-tile__content">
+								<div class="large-tile__description">
+								Udemy is an online learning platform. Here, I have, and am, taking courses which have been highly recommended on online programming communities. I have continued on with some teachers who have additional courses to those that were recommended. 
 							</div>
+							<div class="cert-tile__links">
+								<a href="FCC-cert1.html" target="_blank" class="btn cert-tile__links-link">Responsive Web Design</a>
+								<a href="FCC-cert2.html" target="_blank" class="btn cert-tile__links-link">Javascript Algorithms And Data Structures</a>
+								<a href="https://www.udemy.com/certificate/UC-BQE252L4/" target="_blank" class="btn cert-tile__links-link">Front End Libraries</a>
+							</div>	
 						</div>
 					</div> -->
+
 				</div>
 			</div>
 		</section> 
 
-		<section class="section background-fixed background-fixed--projects" id="tinkering">
-			<div class="section__container section__container--left tinkering">
-				<h2 class="section__title section__title--right">Tinkering</h2>
-				<div class="section__title-underline section__title-underline--right"></div>
-				<div class="section__content section__content--row section__content-left small-content-padding">
-
-					<!-- CODE WARS -->
-					<!-- WEATHER API -->
-					
-					<img src="resources/img/freeCodeCamp.jpg" class="tinkering-tile"/>
-					<a href="FCC-cert1.html" target="_blank" class="project-tile-full__image-link  project__tile-link">Responsive Web Design Certification</a>
-					<a href="FCC-cert2.html" target="_blank" class="project-tile-full__image-link  project__tile-link">Javascript Algorithms And Data Structures Certification</a>
-					<a href="FCC-cert3.html" target="_blank" class="project-tile-full__image-link  project__tile-link">Front End Libraries Certification</a>
-					<!-- <a href="FCC-cert4.html" target="_blank" class="project-tile-full__image-link  project__tile-link">Data Visualization Certification</a> -->
-					<!-- <a href="FCC-cert5.html" target="_blank" class="project-tile-full__image-link  project__tile-link">APIs and Microservices Certification</a> -->
-					<!-- <a href="FCC-cert6.html" target="_blank" class="project-tile-full__image-link  project__tile-link">Information Security and Quality Assurance Certification</a> -->
-					
-
-					<div class="tinkering-tile">
-						<h3 class="tinkering-tile__title">Local Weather</h3>
-
-						<a href="https://codepen.io/mzedl/pen/oGKZvv" target="_blank" class="tinkering-tile__image-link">
-							<img class="tinkering-tile__image" src="resources/img/project2-FCC3-WeatherAPI.png" alt="Thumbnail link for Local Weather App. Opens in new tab"/>
-						</a>
-						<div class="tinkering-tile__image-text mobile-element">Click image for website and source code</div>
-<!-- 
-						<div class="tinkering-tile__description">
-							FreeCodeCamp project for "Coding Interview Take Home Projects" unit. Task was to create a local weather page that would display weather based on the user's location. Location, background weather image, and temperature all update based on the user's geolocation. Page was created using the
-							<a href="https://learn.freecodecamp.org/coding-interview-prep/take-home-projects/show-the-local-weather/" target="_blank" class="tinkering-tile__description-text-link">
-								following guidelines 
-								<div class="tinkering-tile__description-icon-link">
-									<title id="projectLink-change-Site">change Link to CodePen in a new tab for FreeCodeCamp Project of Tribute Page.</title>
-									<svg aria-labelledby="projectLink-change-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
-								</div>
-							</a>
-							<div class="tinkering-tile__description-learning-objectives">
-								Learning Objectives:
-								<div class="tinkering-tile__description-learning-objectives-items">
-									<div class="tinkering-tile__description-learning-objectives-items-item">Find a user's location using GeoLocation</div>
-									<div class="tinkering-tile__description-learning-objectives-items-item">Use API to display location weather</div>
-									<div class="tinkering-tile__description-learning-objectives-items-item">Change background image based on current weather</div>
-									<div class="tinkering-tile__description-learning-objectives-items-item">Button for Fahrenheit and Celsius conversion</div>
-								</div>
-							</div>
-						</div> -->
-
-						<!-- <div class="tinkering-tile__tools">
-							<div class="tinkering-tile__tools-text">Langauges Used: HTML5, CSS3, JavaScript</div> 
-							<div class="tinkering-tile__tools-icons">
-								<svg aria-hidden="true" data-prefix="fab" data-icon="html5" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg>
-								<svg aria-hidden="true" data-prefix="fab" data-icon="css3-alt" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
-								<svg aria-hidden="true" data-prefix="fab" data-icon="js-square" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>
-							</div>
-						</div> -->
-					</div>
-
-					<!-- <div class="tinkering-tile">
-						<h3 class="tinkering-tile__title">Random Quote Machine</h3>
-
-						<a href="https://codepen.io/mzedl/pen/BQrraz" target="_blank" class="tinkering-tile__image-link">
-							<img class="tinkering-tile__image" src="resources/img/project2-FCC2-QuoteGenerator2.png" alt="Thumbnail link for change. Opens in new tab"/>
-						</a>
-						<div class="tinkering-tile__image-text mobile-element">Click image for website and source code</div>
-
-						<div class="tinkering-tile__description">
-							FreeCodeCamp project for "Front End Libraries" unit. The Task was to create a page that would generate a random quote on click and is based on the 
-							<a href="https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine/" target="_blank" class="tinkering-tile__description-text-link">
-								following guidelines 
-							</a> 
-							<a href="https://learn.freecodecamp.org/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine/" target="_blank" class="tinkering-tile__description-icon-link">
-								<title id="projectLink-change-Site">change Link to CodePen in a new tab for FreeCodeCamp Project of Tribute Page.</title>
-								<svg aria-labelledby="projectLink-change-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
-							</a>
-							<div class="tinkering-tile__description-learning-objectives">
-								Learning Objectives:
-								<div class="tinkering-tile__description-learning-objectives-items">
-									<div class="tinkering-tile__description-learning-objectives-items-item">Create library of quotes</div>
-									<div class="tinkering-tile__description-learning-objectives-items-item">Randomly select quote when button is clicked</div>
-									<div class="tinkering-tile__description-learning-objectives-items-item">Tweet link of quote generator</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="tinkering-tile__tools">
-							<div class="tinkering-tile__tools-text">Langauges Used: HTML5, CSS3, JavaScript</div> 
-							<div class="tinkering-tile__tools-icons">
-								<svg aria-hidden="true" data-prefix="fab" data-icon="html5" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg>
-								<svg aria-hidden="true" data-prefix="fab" data-icon="css3-alt" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
-								<svg aria-hidden="true" data-prefix="fab" data-icon="js-square" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>
-							</div>
-						</div>
-					</div>
-
-					<div class="tinkering-tile">
-						<h3 class="tinkering-tile__title">Tribute Page</h3>
-
-						<a href="https://codepen.io/mzedl/pen/JKvzyj" target="_blank" class="tinkering-tile__image-link">
-							<img class="tinkering-tile__image" src="resources/img/project2-FCC1-MariaCurie.png" alt="Thumbnail link for Tribute Page to Maria Skłodowska-Curie. Opens in new tab"/>
-						</a>
-						<div class="tinkering-tile__image-text mobile-element">Click image for website and source code</div>
-
-						<div class="tinkering-tile__description">
-							FreeCodeCamp project for "Responsive Web Design" unit. Task was to create a tribute page based on the 
-							<a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-tribute-page" target="_blank" class="tinkering-tile__description-text-link">
-								following guidelines 
-							</a> 
-							<a href="https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-tribute-page" target="_blank" class="tinkering-tile__description-icon-link">
-								<title id="projectLink-TributePage-Site">Link to CodePen in a new tab for FreeCodeCamp Project of Tribute Page.</title>
-								<svg aria-labelledby="projectLink-TributePage-Site" data-prefix="fas" data-icon="external-link-square-alt" class="tinkering-tile__description-icon-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 80v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48zm-88 16H248.029c-21.313 0-32.08 25.861-16.971 40.971l31.984 31.987L67.515 364.485c-4.686 4.686-4.686 12.284 0 16.971l31.029 31.029c4.687 4.686 12.285 4.686 16.971 0l195.526-195.526 31.988 31.991C358.058 263.977 384 253.425 384 231.979V120c0-13.255-10.745-24-24-24z"></path></svg>
-							</a>
-							<div class="tinkering-tile__description-learning-objectives">
-								Learning Objectives:
-								<div class="tinkering-tile__description-learning-objectives-items">
-									<div class="tinkering-tile__description-learning-objectives-items-item">Correct practices for HTML containers</div>
-									<div class="tinkering-tile__description-learning-objectives-items-item">Correct practices for HTML classes & ID's</div>
-									<div class="tinkering-tile__description-learning-objectives-items-item">Correct practices for HTML links & images</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="tinkering-tile__tools">
-							<div class="tinkering-tile__tools-text">Langauges Used: HTML5, CSS3</div> 
-							<div class="tinkering-tile__tools-icons">
-								<svg aria-hidden="true" data-prefix="fab" data-icon="html5" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg>
-								<svg aria-hidden="true" data-prefix="fab" data-icon="css3-alt" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"></path></svg>
-								<svg aria-hidden="true" data-prefix="fab" data-icon="js-square" class="tool-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM243.8 381.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg>
-							</div>
-						</div> -->
-					</div>
-
-				</div>
-			</div>
-		</section>
 
 		<section class="section background-fixed background-fixed--contact" id="contact">
 			<div class="section__container contact">
 				<div class="section__content section__content--column">
-
 					<h2 class='section__contact-title'>Get In Touch</h2>
 					<div class="section__contact-title-underline section__contact-title-underline--contact"></div>
-
 					<form method="post" action="https://formspree.io/marialach007@gmail.com" class="contact-form">
 						<div class="contact-form__group">
 							<label class="contact-form__label" for="name">Name</label>
@@ -500,8 +375,6 @@
 							<input type="submit" value="Send" class="btn contact-form__submit">
 						</div>
 					</form>
-
-
 				</div>
 			</div>
 		</section>
@@ -562,7 +435,7 @@
 	
 			<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 			<!-- <script src="vendors/js/jquery.waypoints.min.js"></script> -->
-		<script src="resources/js/scripts.js"></script>
+		<script src="scripts.js"></script>
 
 	</body>
 </html>
