@@ -654,15 +654,6 @@ input[type="submit"]:active {
   width: 11rem;
   height: 11rem; }
 
-.tool-icon {
-  width: 4rem;
-  height: 4rem;
-  margin: 0rem 1rem;
-  color: #7f94b4; }
-  @media only screen and (max-width: 37.5em) {
-    .tool-icon {
-      margin: 0rem .5rem; } }
-
 .projects__title {
   margin-bottom: 3rem; }
   .projects__title:after {
@@ -703,76 +694,6 @@ input[type="submit"]:active {
     max-width: 90%; }
   .project-tile--links {
     margin: auto 0rem auto 0rem; }
-
-.tinkering-tile {
-  background-color: white;
-  width: 50rem;
-  border-radius: 3.5rem;
-  margin: 4rem;
-  box-shadow: 5px 5px 25px 5px #1B1F25;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  @media only screen and (max-width: 56.25em) {
-    .tinkering-tile {
-      margin: 0rem;
-      margin-bottom: 6rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .tinkering-tile {
-      background-color: transparent;
-      box-shadow: none;
-      padding: 0;
-      margin: 4rem 0rem; } }
-  .tinkering-tile__title {
-    font-family: "Lato", "Arial", sans-serif;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid black;
-    text-align: center; }
-  .tinkering-tile__image {
-    width: 70%;
-    height: 20rem;
-    border: 5px solid white;
-    border-radius: 1rem; }
-    @media only screen and (max-width: 37.5em) {
-      .tinkering-tile__image {
-        width: 100%;
-        max-width: 35rem; } }
-    .tinkering-tile__image:hover {
-      border: 5px solid orange; }
-    .tinkering-tile__image-link {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-  .tinkering-tile__description {
-    margin: 2rem 0rem;
-    text-align: justify; }
-    .tinkering-tile__description-icon-icon {
-      width: 1.5rem; }
-    .tinkering-tile__description-learning-objectives {
-      margin-top: 2rem;
-      text-align: left; }
-      .tinkering-tile__description-learning-objectives-items {
-        margin-left: 3rem; }
-        @media only screen and (max-width: 37.5em) {
-          .tinkering-tile__description-learning-objectives-items {
-            margin-left: 2rem; } }
-        .tinkering-tile__description-learning-objectives-items-item {
-          text-indent: -1.6rem; }
-          .tinkering-tile__description-learning-objectives-items-item::before {
-            content: "";
-            display: inline-block;
-            height: 0rem;
-            width: 0rem;
-            border: 3px solid black;
-            border-radius: 50%;
-            margin-right: .7rem;
-            transform: translateY(-3px); }
-  .tinkering-tile__tools {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
 
 .section__contact-title {
   font-weight: 300;
@@ -919,3 +840,6 @@ input[type="submit"]:active {
 
 .spacer-top {
   margin-top: 2rem; }
+
+.animation-preset {
+  opacity: 0; }

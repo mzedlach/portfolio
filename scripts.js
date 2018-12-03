@@ -1,92 +1,3 @@
-// $(document).ready(function() {
-    
-
-
-
-// // document.getElementById("p2").style.color = "blue"
-
-
-
-// //    Sticky Navigation
-//     // $('.js-aboutme').waypoint(function(direction) {
-//     //     if (direction == 'down') {
-//     //         $('nav').addClass('sticky');
-//     //     } else {
-//     //         $('nav').removeClass('sticky');
-//     //     };
-
-//     // });
-    
-
-
-
-// //    Scrolling Navigation
-//     $('.js-scroll-to-aboutme').click(function () {
-//         $('html, body').animate({scrollTop: $('#aboutme').offset().top}, 500);
-//     });
-//     $('.js-scroll-to-projects').click(function () {
-//         $('html, body').animate({scrollTop: $('#projects').offset().top}, 500);
-//     });
-//     $('.js-scroll-to-contact').click(function () {
-//         $('html, body').animate({scrollTop: $('#contactform').offset().top}, 500);
-//     });
-
-// //    Scrolling Animations
-//     $('.js-wp-1').waypoint(function(direction) {
-//         $('.js-wp-1').addClass('animated fadeInUp');
-//     }, {
-//         offset: '70%'
-//     });
-
-    
-// //    PROJETS
-//     $('.js-wp-InLeft').waypoint(function(direction) {
-//         $('.js-wp-InLeft').addClass('animated fadeInLeft');
-//     }, {
-//         offset: '60%'
-//     });
-//     $('.js-wp-InRight').waypoint(function(direction) {
-//         $('.js-wp-InRight').addClass('animated fadeInRight');
-//     }, {
-//         offset: '60%'
-//     });
-//     $('.js-wp-InUp').waypoint(function(direction) {
-//         $('.js-wp-InUp').addClass('animated fadeInUp');
-//     }, {
-//         offset: '70%'
-//     });
-//     $('.js-wp-InDown').waypoint(function(direction) {
-//         $('.js-wp-InDown').addClass('animated fadeInDown');
-//     }, {
-//         offset: '60%'
-//     });
-    
-    
-    
-//     $('.js-wp-zoom').waypoint(function(direction) {
-//         $('.js-wp-zoom').addClass('animated zoomIn');
-//     }, {
-//         offset: '60%'
-//     });
-    
-// //    Mobile Navigation - Open/Close Nav
-//     $('.js-nav-icon').click(function() {
-//         var nav = $('.nav-links');
-//         var icon = $('.js-nav-icon i');
-        
-//         nav.slideToggle(200);
-//         if (icon.hasClass('fa-navicon')) {
-//             icon.addClass('fa-close');
-//             icon.removeClass('fa-navicon');
-//         } else {
-//             icon.addClass('fa-navicon');
-//             icon.removeClass('fa-close');
-//         };
-        
-//     });
-    
-// });
-
 
 window.onscroll = function() {navAndAnimations()};
 
@@ -98,67 +9,76 @@ var about = document.getElementById("about");
 // Get the offset position of the About section
 var sticky = about.offsetTop;
 
-
-
-
-
 //variables of div containing elements with animation. 
 var skillsList1Location = (document.getElementById("skills1")).offsetTop;
 var skillsList2Location = (document.getElementById("skills2")).offsetTop;
-var projectTile1Location = (document.getElementById("project1")).offsetTop;
+var projectTile1Location = (document.getElementById("projectTrigger1")).offsetTop;
+var projectTile2Location = (document.getElementById("projectTrigger2")).offsetTop;
+var projectTile3Location = (document.getElementById("projectTrigger3")).offsetTop;
+var contactLocation = (document.getElementById("contactTriggerTitle")).offsetTop;
 
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function navAndAnimations() {
 
-  var height = window.innerHeight
-  || document.documentElement.clientHeight
-  || document.body.clientHeight;
-
-  var halfway = height * 0.8;
-
-
+  // ----- STICKY NAVIGATION ----- //
   if (window.pageYOffset > sticky) {
     stickyNav.classList.add("sticky");
     //Check ES9 compatiblitiy fix on W3schools (how TO add a class)
   } else {
     stickyNav.classList.remove("sticky");
   }
-
-
   //There has to be a more efficient way to do this. This is not very DRY :|
+  // ----- ANIMATIONS ----- //
+  var height = window.innerHeight
+  || document.documentElement.clientHeight
+  || document.body.clientHeight;
+
   //Skills list 1 animation
-  var skillsList1Trigger = skillsList1Location - halfway;
+  var skillsList1Trigger = skillsList1Location - height*0.6;
   if (window.pageYOffset > skillsList1Trigger) {
     skills1.classList.add("animated","fadeInUp");
-  } else {
-    skills1.classList.remove("animated","fadeInUp");
+    skills1.classList.remove("animation-preset");
   }
-
   //Skills list 2 animation
-  var skillsList2Trigger = skillsList2Location - halfway;
+  var skillsList2Trigger = skillsList2Location - height*0.6;
   if (window.pageYOffset > skillsList2Trigger) {
     skills2.classList.add("animated","fadeInUp");
-  } else {
-    skills2.classList.remove("animated","fadeInUp");
+    skills2.classList.remove("animation-preset");
   }
 
-  // .style.display = "none";
-
-  // Project tile 1 animation
-  var projectTile1Trigger = projectTile1Location - halfway;
+  // PROJECT - All tiles in "Work"
+  var projectTile1Trigger = projectTile1Location - height*0.9;
   if (window.pageYOffset > projectTile1Trigger) {
-    project1.classList.add("animated","zoomIn");
-  } else {
-    project1.classList.remove("animated","zoomIn");
+    projectTile1.classList.add("animated","zoomIn");
+    projectTile1.classList.remove("animation-preset");
+    projectTile2.classList.add("animated","zoomIn");
+    projectTile2.classList.remove("animation-preset");
   }
 
-  // Project tile 2+3 animation
-  var projectTile1Trigger = projectTile1Location - halfway;
-  if (window.pageYOffset > projectTile1Trigger) {
-    project1.classList.add("animated","zoomIn");
+  // PROJECT - FCC Tiles in "Certification Projects"
+  var projectTile2Trigger = projectTile2Location - height*0.9;
+  if (window.pageYOffset > projectTile2Trigger) {
+    projectTile3.classList.add("animated","zoomIn");
+    projectTile3.classList.remove("animation-preset");
+  }
+
+  // PROJECT -  Tile after FCC in "Certification Projects"
+  var projectTile3Trigger = projectTile3Location - height*0.9;
+  if (window.pageYOffset > projectTile3Trigger) {
+    projectTile4.classList.add("animated","zoomIn");
+    projectTile4.classList.remove("animation-preset");
+    projectTile5.classList.add("animated","zoomIn");
+    projectTile5.classList.remove("animation-preset");
+  }
+
+  // CONTACT
+  var contactTrigger = contactLocation - height*0.8;
+  if (window.pageYOffset > contactTrigger) {
+    contactTriggerTitle.classList.add("animated","flipInY");
+    contactTriggerTitle.classList.remove("animation-preset");
   } else {
-    project1.classList.remove("animated","zoomIn");
+    contactTriggerTitle.classList.remove("animated","flipInY");
   }
 
 }

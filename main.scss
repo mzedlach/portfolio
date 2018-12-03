@@ -848,19 +848,6 @@ input[type="submit"]:active {
   height: 11rem;
 }
 
-// -------------------------------------------------------------- //
-// ---------- SHARED SECTION ELEMTNS - PROJECTS & TOOLS---------- //
-// -------------------------------------------------------------- //
-.tool-icon {
-  width: 4rem;
-  height: 4rem;
-  margin: 0rem 1rem;
-  color: $color-project-icon;
-  @include respond(phone) {
-    margin: 0rem .5rem;
-  }
-}
-
 // ---------------------------------------- //
 // ---------- SECTION - PROJECTS ---------- //
 // ---------------------------------------- //
@@ -914,95 +901,6 @@ input[type="submit"]:active {
   }
 }
 
-
-// ----------------------------------------- //
-// ---------- SECTION - TINKERING ---------- //
-// ----------------------------------------- //
-
-
-.tinkering-tile{
-  background-color: white;
-  width: 50rem;
-  border-radius: 3.5rem;
-  margin: 4rem;
-  box-shadow: 5px 5px 25px 5px $color-dark-grey;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include respond(tab-port) {
-    margin: 0rem;
-    margin-bottom: 6rem;
-  }
-  @include respond(phone) {
-    background-color: transparent;
-    box-shadow: none;
-    padding: 0;
-    margin: 4rem 0rem;
-  }
-  &__title{
-    font-family: $font-heading;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid black;
-    text-align: center;
-  }
-  &__image{
-    width: 70%;
-    height: 20rem;
-    border: 5px solid white; 
-    border-radius: 1rem;
-    @include respond(phone) {
-     width: 100%; 
-     max-width: 35rem;
-    }
-    &:hover{
-      border: 5px solid orange; 
-    }
-    &-link{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  &__description{
-    margin: 2rem 0rem;
-    text-align: justify;
-    &-icon{
-      &-icon{
-        width: 1.5rem;
-      }
-    }
-    &-learning-objectives{
-      margin-top: 2rem;
-      text-align: left;
-      &-items{
-        margin-left: 3rem;
-        @include respond(phone) {
-          margin-left: 2rem;
-        }
-        &-item{
-          text-indent: -1.6rem;
-          &::before{
-            content: "";
-            display: inline-block;
-            height: 0rem;
-            width: 0rem;
-            border: 3px solid black;
-            border-radius: 50%;
-            margin-right: .7rem;
-            transform: translateY(-3px);
-          }
-        }
-      }
-    }
-  }
-  &__tools{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
 // --------------------------------------- //
 // ---------- SECTION - CONTACT ---------- //
 // --------------------------------------- //
@@ -1144,7 +1042,6 @@ input[type="submit"]:active {
   }
 }
 
-
 // ----------------------------------------- //
 // ---------- PAGE - PROJECT INFO ---------- //
 // ----------------------------------------- //
@@ -1202,6 +1099,14 @@ input[type="submit"]:active {
 }
 .spacer-top {
   margin-top: 2rem;
+}
+
+// ---------------------------------------- //
+// ---------- ANIMATION SPECIFIC ---------- //
+// ---------------------------------------- //
+
+.animation-preset {
+  opacity: 0;
 }
 // To do list: 
 // Animations
