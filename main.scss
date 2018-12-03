@@ -424,14 +424,14 @@ input[type="submit"]:active {
   &--projects,
   &--credits{
     // Photo by rawpixel on Unsplash
-    background-image: url(/images/vendors/rawpixel-558599-unsplash.jpg);
+    background-image: url(/images/vendors/rawpixel-558599-unsplash-min.jpg);
     @include respond(tab-port) {
       background-position: right;
     }
   }
   &--contact{
     // Photo by Jeff Kepler on Unsplash
-    background-image: url(/images/vendors/jeff-kepler-1085049-unsplash.jpg);
+    background-image: url(/images/vendors/jeff-kepler-1085049-unsplash-min.jpg);
     background-blend-mode: overlay;
     background-color: rgba(rgb(32, 89, 36),0.2);
     justify-content: center;
@@ -886,6 +886,11 @@ input[type="submit"]:active {
   &:hover{
     border: 3px solid orange; 
   }
+  &.FCC-tile{
+    &:hover{
+      border: 2px solid $color-light-grey;
+    }
+  }
   &__img {
     position: absolute;
     top: -9999px;
@@ -1090,10 +1095,28 @@ input[type="submit"]:active {
   &__group{
     display: flex;
     align-items: center;
-    // justify-content: center;
     & .project__writeup-title {
       margin-left: 3rem;
       flex: 0 0 40%;
+    }
+  }
+  &__code{
+    display: none;
+    margin-bottom: 5rem;
+    &-block{
+      margin-top: 5rem;
+    }
+    &-title{
+      font-weight: 700;
+    }
+    &-description{
+      margin-bottom: 1rem;
+    }
+    &--javascript{
+      display: none;
+      width: 100%;
+      min-width: 110rem;
+      margin-bottom: 4rem;
     }
   }
 }
@@ -1111,12 +1134,9 @@ input[type="submit"]:active {
 
 
 // To do list: 
-// Do Tech By Us Links - website & github
-// Tinkering - (Codepen) (project guidelines)
-
-
-//TECH BY US page - add code links 
-//FCC Cert 2 - take screen shots of code adn put into awesome slider 
-//Make contact background image 
+// Create Github Repo with all of your Javascript challenges 
+// FCC page THREE
+// WEBKIT 
+// condense code 
 
 //JAVASCRIPT //Check ES9 compatiblitiy fix on W3schools (how TO add a class)****

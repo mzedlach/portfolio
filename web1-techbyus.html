@@ -4,7 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
 		
     <title>Tech By Us</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.5/webcomponents.min.js"></script>
@@ -39,8 +40,53 @@
       </div>
       <div class="project__buttons">
         <a href="http://techbyus.herokuapp.com/" target="_blank" class="project__buttons-btn btn">Visit the Demo Site</a>
-        <a href="#" target="_blank" class="project__buttons-btn btn">See the code</a>
+        <a class="project__buttons-btn btn" id="seeTheCode-TechByUs">See the code</a>
       </div>
+
+      <div class="project__code" id="code-TechByUs">
+        <div class="project__code-block">
+          <div class="project__code-title">Code Organization</div>
+          <div class="project__code-description">All code was written in Sass, organized into folders, then imported in main Scss file.</div>
+          <img src="images/web-tech1.png" alt="">
+        </div>
+        <div class="project__code-block">
+          <div class="project__code-title">Colours</div>
+          <div class="project__code-description">All colours were set in the colours scss file using variables.</div>
+          <img src="images/web-tech2.png" alt="">
+        </div>
+        <div class="project__code-block">
+          <div class="project__code-title">Typography</div>
+          <div class="project__code-description">All font types were imported and adjusted here.</div>
+          <img src="images/web-tech3.png" alt="">
+        </div>
+        <div class="project__code-block">
+          <div class="project__code-title">Site Structure</div>
+          <div class="project__code-description">The general site layout was initially defined here.</div>
+          <img src="images/web-tech4.png" alt="">
+        </div>
+        <div class="project__code-block">
+          <div class="project__code-title">Elements used throughout site</div>
+          <div class="project__code-description">Ellipses were definied here, as well as mixins for media queries.</div>
+          <img src="images/web-tech5.png" alt="">
+        </div>
+        <div class="project__code-block">
+          <div class="project__code-title">SVG Icons</div>
+          <div class="project__code-description">All SVG icons were imported through rails to be used inline in the HTML. Each icon had to be styled based based on page location. </div>
+          <img src="images/web-tech6.png" alt="">
+        </div>
+        <div class="project__code-block">
+          <div class="project__code-title">Buttons</div>
+          <div class="project__code-description">Buttons were styled using a checkbox hack to create a styled checkbox while maintaining functionality of labels and information gathered from input.</div>
+          <img src="images/web-tech7.png" alt="">
+        </div>
+        <div class="project__code-block">
+          <div class="project__code-title">Forms</div>
+          <div class="project__code-description">Styling and animation of forms was all completed through Sass (no Javascript).</div>
+          <img src="images/web-tech8.png" alt="">
+        </div>
+        <a class="project__buttons-btn btn" id="seeTheCode-TechByUs">Close The Code</a>
+      </div>
+      
       <div class="project__writeup">
         <h3 class="project__writeup-title">About the Project</h3>
         <div class="project__writeup-text">Tech By Us was developed with a vision of connecting more women with the growing demand of female developers in the workplace. The project was developed by several programmers located around the world using Ruby on Rails. We volunteered our time and communicated using Slack, Zepplin, Trello, Github, and frequent Google Hangouts. </div>
@@ -63,6 +109,22 @@
         Interested in working together?<br>Contact me at mariazlach@gmail.com or through the <a href="index.html#contact" class="footer__projects-link">Contact Form</a>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener('click', function (event) {
+        var codeElement = document.getElementById('code-TechByUs')
+        if (event.target.matches('#seeTheCode-TechByUs')) {
+          if (codeElement.style.display !== "block") {
+            codeElement.style.display = "block";
+            codeElement.classList.add("animated","swing");
+          } else {
+            codeElement.style.display = "none";
+            codeElement.classList.remove("animated","swing");
+          }
+        };
+        return;
+      }, false);
+    </script>
 
   </body>
 </html>
