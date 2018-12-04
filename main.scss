@@ -1079,12 +1079,20 @@ input[type="submit"]:active {
     &--cert{
       margin-bottom: 0rem;
     }
+    &--udemy{
+      margin: 0;
+      justify-content: left;
+    }
   }
   &__writeup{
     &-text{
       margin: 2rem 0rem;
-      &.technology {
+      &--FCC,
+      &--techByUs {
         margin-bottom: 1rem;
+      }
+      &--udemy{
+        margin: 0;
       }
     }
     &-list{
@@ -1117,6 +1125,18 @@ input[type="submit"]:active {
       width: 100%;
       min-width: 110rem;
       margin-bottom: 4rem;
+    }
+  }
+  &__course-group{
+    margin-bottom: 3rem;
+    &-header{
+      display: flex;
+      & .btn{
+        margin-left: auto;
+      }
+    }
+    &-completed {
+      border-bottom: 1px solid $color-mid-grey ;
     }
   }
 }

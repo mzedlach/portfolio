@@ -823,11 +823,16 @@ input[type="submit"]:active {
     width: 22rem; }
   .project__buttons--cert {
     margin-bottom: 0rem; }
+  .project__buttons--udemy {
+    margin: 0;
+    justify-content: left; }
 
 .project__writeup-text {
   margin: 2rem 0rem; }
-  .project__writeup-text.technology {
+  .project__writeup-text--FCC, .project__writeup-text--techByUs {
     margin-bottom: 1rem; }
+  .project__writeup-text--udemy {
+    margin: 0; }
 
 .project__writeup-list {
   margin-left: 5rem;
@@ -854,6 +859,15 @@ input[type="submit"]:active {
     width: 100%;
     min-width: 110rem;
     margin-bottom: 4rem; }
+
+.project__course-group {
+  margin-bottom: 3rem; }
+  .project__course-group-header {
+    display: flex; }
+    .project__course-group-header .btn {
+      margin-left: auto; }
+  .project__course-group-completed {
+    border-bottom: 1px solid #555; }
 
 .spacer-top {
   margin-top: 2rem; }
