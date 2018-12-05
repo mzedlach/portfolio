@@ -688,6 +688,9 @@ input[type="submit"]:active {
   align-items: center;
   justify-content: space-between;
   height: fit-content;
+  @include respond(tab-land) {
+    padding: .5rem 3rem;
+  }
   & .header__navigation-logo--sidepage{
     height: 5rem;
   }
@@ -871,6 +874,10 @@ input[type="submit"]:active {
   &__tile-display {
     display: flex;
     margin-bottom: 5rem;
+    justify-content: center;
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -882,7 +889,7 @@ input[type="submit"]:active {
   border: 2px solid $color-light-grey;
   border-radius: .5rem;
   background-color: white;
-  margin: 0rem 2rem;
+  margin: 1rem 2rem;
   &:hover{
     border: 3px solid orange; 
   }
@@ -1057,6 +1064,11 @@ input[type="submit"]:active {
     margin: 0 auto;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    & > * {
+      @include respond(tab-land) {
+        margin: 0 2rem;
+      }
+    }
   }
   &__visit-site{
     width: fit-content;
@@ -1067,6 +1079,9 @@ input[type="submit"]:active {
     width: 80%;
     max-width: 70rem;
     margin: 5rem auto 7rem auto;
+    @include respond(tab-land) {
+      margin: 2rem auto 5rem auto;
+    }
   }
 
   &__buttons{

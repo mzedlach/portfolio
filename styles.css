@@ -525,6 +525,9 @@ input[type="submit"]:active {
   align-items: center;
   justify-content: space-between;
   height: fit-content; }
+  @media only screen and (max-width: 75em) {
+    .header__navigation--sidepage {
+      padding: .5rem 3rem; } }
   .header__navigation--sidepage .header__navigation-logo--sidepage {
     height: 5rem; }
   .header__navigation--sidepage .header__navigation-links-link--sidepage {
@@ -670,7 +673,11 @@ input[type="submit"]:active {
 
 .projects__tile-display {
   display: flex;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  justify-content: center; }
+  @media only screen and (max-width: 56.25em) {
+    .projects__tile-display {
+      flex-wrap: wrap; } }
 
 .project-tile {
   position: relative;
@@ -680,7 +687,7 @@ input[type="submit"]:active {
   border: 2px solid #9EACBF;
   border-radius: .5rem;
   background-color: white;
-  margin: 0rem 2rem; }
+  margin: 1rem 2rem; }
   .project-tile:hover {
     border: 3px solid orange; }
   .project-tile.FCC-tile:hover {
@@ -805,6 +812,9 @@ input[type="submit"]:active {
   margin: 0 auto;
   padding-top: 5rem;
   padding-bottom: 5rem; }
+  @media only screen and (max-width: 75em) {
+    .project__content > * {
+      margin: 0 2rem; } }
 
 .project__visit-site {
   width: fit-content;
@@ -814,6 +824,9 @@ input[type="submit"]:active {
   width: 80%;
   max-width: 70rem;
   margin: 5rem auto 7rem auto; }
+  @media only screen and (max-width: 75em) {
+    .project__slider {
+      margin: 2rem auto 5rem auto; } }
 
 .project__buttons {
   display: flex;
