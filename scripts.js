@@ -11,6 +11,10 @@ var sticky = about.offsetTop -10;
 //variables of div containing elements with animation. 
 var skillsList1Location = (document.getElementById("skills1")).offsetTop;
 var skillsList2Location = (document.getElementById("skills2")).offsetTop;
+
+// YOU ARE HERE - changing ID's to classes.
+var projectTilseSet1Location = (document.getElementsByClassName("js-tile-set-1")).offsetTop;
+
 var projectTile1Location = (document.getElementById("projectTrigger1")).offsetTop;
 var projectTile2Location = (document.getElementById("projectTrigger2")).offsetTop;
 var projectTile3Location = (document.getElementById("projectTrigger3")).offsetTop;
@@ -35,42 +39,44 @@ function navAndAnimations() {
   || document.documentElement.clientHeight
   || document.body.clientHeight;
 
-  //Skills list 1 animation
+  //Skills list 1 animation - Work
   var skillsList1Trigger = skillsList1Location - height*0.6;
   if (window.pageYOffset > skillsList1Trigger) {
     skills1.classList.add("animated","fadeInUp");
     skills1.classList.remove("animation-preset");
   }
-  //Skills list 2 animation
+  //Skills list 2 animation - FCC Certifications
   var skillsList2Trigger = skillsList2Location - height*0.6;
   if (window.pageYOffset > skillsList2Trigger) {
     skills2.classList.add("animated","fadeInUp");
     skills2.classList.remove("animation-preset");
   }
 
-  // PROJECT - All tiles in "Work"
-  var projectTile1Trigger = projectTile1Location - height*0.9;
+  // PROJECT - All tiles in "Work" - CodeWars, Udemy
+  var projectTile1Trigger = projectTile1Location - height*0.8;
   if (window.pageYOffset > projectTile1Trigger) {
     projectTile1.classList.add("animated","zoomIn");
     projectTile1.classList.remove("animation-preset");
     projectTile2.classList.add("animated","zoomIn");
     projectTile2.classList.remove("animation-preset");
+    projectTile3.classList.add("animated","zoomIn");
+    projectTile3.classList.remove("animation-preset");
   }
 
   // PROJECT - FCC Tiles in "Certification Projects"
   var projectTile2Trigger = projectTile2Location - height*0.9;
   if (window.pageYOffset > projectTile2Trigger) {
-    projectTile3.classList.add("animated","zoomIn");
-    projectTile3.classList.remove("animation-preset");
+    projectTileA.classList.add("animated","zoomIn");
+    projectTileA.classList.remove("animation-preset");
   }
 
   // PROJECT -  Tile after FCC in "Certification Projects"
   var projectTile3Trigger = projectTile3Location - height*0.9;
   if (window.pageYOffset > projectTile3Trigger) {
-    projectTile4.classList.add("animated","zoomIn");
-    projectTile4.classList.remove("animation-preset");
-    projectTile5.classList.add("animated","zoomIn");
-    projectTile5.classList.remove("animation-preset");
+    projectTileB.classList.add("animated","zoomIn");
+    projectTileB.classList.remove("animation-preset");
+    projectTileC.classList.add("animated","zoomIn");
+    projectTileC.classList.remove("animation-preset");
   }
 
   // CONTACT

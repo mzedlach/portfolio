@@ -1064,6 +1064,9 @@ input[type="submit"]:active {
     margin: 0 auto;
     padding-top: 5rem;
     padding-bottom: 5rem;
+
+    // This is not applying to FCC Cert #1, 2, OR 3. Still working for TECH by us and Donuts site. 
+    // YOU ARE HERE 
     & > * {
       @include respond(tab-land) {
         margin: 0 2rem;
@@ -1093,6 +1096,10 @@ input[type="submit"]:active {
     }
     &--cert{
       margin-bottom: 0rem;
+      @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+      }
     }
     &--udemy{
       margin: 0;
@@ -1102,6 +1109,9 @@ input[type="submit"]:active {
   &__writeup{
     &-text{
       margin: 2rem 0rem;
+      // @include respond(tab-land) {
+      //   margin: 0;
+      // }
       &--FCC,
       &--techByUs {
         margin-bottom: 1rem;
@@ -1118,9 +1128,18 @@ input[type="submit"]:active {
   &__group{
     display: flex;
     align-items: center;
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     & .project__writeup-title {
       margin-left: 3rem;
       flex: 0 0 40%;
+      @include respond(tab-port) {
+        flex: 100%;
+        text-align: center;
+        margin-top: 2rem;
+      }
     }
   }
   &__code{
