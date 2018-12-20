@@ -4,9 +4,10 @@
   "description": "Portfolio for Maria Lach. ",
   "main": "index.js",
   "scripts": {
-    "watchsass": "node-sass main.scss style.css -w",
+    "watchsass": "node-sass main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watchsass",
+    
     "compile:sass": "node-sass main.scss css/style.comp.css",
     "concat:css": "concat -o css/style.concat.css css/style.comp.css animate.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",

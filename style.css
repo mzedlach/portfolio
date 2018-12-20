@@ -184,12 +184,6 @@ input[type="submit"]:active {
         @media only screen and (max-width: 37.5em) {
           .section__container--left.skills {
             margin: 20rem 0rem 10rem 0rem; } }
-      .section__container--left.tinkering {
-        margin: 30rem 8rem 20rem 0rem;
-        background-color: rgba(255, 255, 255, 0.9); }
-        @media only screen and (max-width: 37.5em) {
-          .section__container--left.tinkering {
-            margin: 20rem 0rem 10rem 0rem; } }
     .section__container--right {
       border-radius: 6.5rem 0rem 0rem 4rem; }
       @media only screen and (max-width: 37.5em) {
@@ -302,7 +296,7 @@ input[type="submit"]:active {
           padding: 12rem 2rem 5rem 2rem; } }
     .section__content.projects {
       justify-content: center;
-      margin: 10rem 0rem; }
+      margin: 20rem 0rem; }
     .section__content.about {
       align-items: center; }
       @media only screen and (max-width: 56.25em) {

@@ -12,7 +12,6 @@ var sticky = about.offsetTop -10;
 var skillsList1Location = (document.getElementById("skills1")).offsetTop;
 var skillsList2Location = (document.getElementById("skills2")).offsetTop;
 
-// YOU ARE HERE - changing ID's to classes.
 var projectTilseSet1Location = (document.getElementsByClassName("js-tile-set-1")).offsetTop;
 
 var projectTile1Location = (document.getElementById("projectTrigger1")).offsetTop;

@@ -184,12 +184,6 @@ input[type="submit"]:active {
         @media only screen and (max-width: 37.5em) {
           .section__container--left.skills {
             margin: 20rem 0rem 10rem 0rem; } }
-      .section__container--left.tinkering {
-        margin: 30rem 8rem 20rem 0rem;
-        background-color: rgba(255, 255, 255, 0.9); }
-        @media only screen and (max-width: 37.5em) {
-          .section__container--left.tinkering {
-            margin: 20rem 0rem 10rem 0rem; } }
     .section__container--right {
       border-radius: 6.5rem 0rem 0rem 4rem; }
       @media only screen and (max-width: 37.5em) {
@@ -674,10 +668,8 @@ input[type="submit"]:active {
 .projects__tile-display {
   display: flex;
   margin-bottom: 5rem;
-  justify-content: center; }
-  @media only screen and (max-width: 56.25em) {
-    .projects__tile-display {
-      flex-wrap: wrap; } }
+  justify-content: center;
+  flex-wrap: wrap; }
 
 .project-tile {
   position: relative;
@@ -810,8 +802,7 @@ input[type="submit"]:active {
 .project__content {
   max-width: 100rem;
   margin: 0 auto;
-  padding-top: 5rem;
-  padding-bottom: 5rem; }
+  padding: 5rem 0rem; }
   @media only screen and (max-width: 75em) {
     .project__content > * {
       margin: 0 2rem; } }
