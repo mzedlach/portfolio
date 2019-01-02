@@ -296,7 +296,7 @@ input[type="submit"]:active {
           padding: 12rem 2rem 5rem 2rem; } }
     .section__content.projects {
       justify-content: center;
-      margin: 20rem 0rem; }
+      margin: 10rem 0rem; }
     .section__content.about {
       align-items: center; }
       @media only screen and (max-width: 56.25em) {
@@ -668,10 +668,8 @@ input[type="submit"]:active {
 .projects__tile-display {
   display: flex;
   margin-bottom: 5rem;
-  justify-content: center; }
-  @media only screen and (max-width: 56.25em) {
-    .projects__tile-display {
-      flex-wrap: wrap; } }
+  justify-content: center;
+  flex-wrap: wrap; }
 
 .project-tile {
   position: relative;
@@ -804,8 +802,7 @@ input[type="submit"]:active {
 .project__content {
   max-width: 100rem;
   margin: 0 auto;
-  padding-top: 5rem;
-  padding-bottom: 5rem; }
+  padding: 5rem 0rem; }
   @media only screen and (max-width: 75em) {
     .project__content > * {
       margin: 0 2rem; } }
