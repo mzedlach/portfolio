@@ -903,5 +903,11 @@ input[type="submit"]:active {
 .spacer-top {
   margin-top: 2rem; }
 
+.credit-element {
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .animation-preset {
   opacity: 0; }
