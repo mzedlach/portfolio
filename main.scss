@@ -854,6 +854,10 @@ input[type="submit"]:active {
 .projects{
   &__title{
     margin-bottom: 3rem;
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
     &:after{
       content:"";
       position: absolute;
@@ -862,10 +866,20 @@ input[type="submit"]:active {
       height: 3px;
       width: 30rem;
       background-color: $color-dark-grey;
+      @include respond(phone) {
+        position: relative;
+        left: auto;
+        transform: none;
+        width: 100%;
+      }
     }
     &.certs:after{
       width: 50rem;
       transform: translateX(-20rem) translateY(4rem);
+      @include respond(phone) {
+        transform: none;
+        width: 100%;
+      }
     }
   }
   &__tile-display {
