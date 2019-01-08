@@ -94,6 +94,12 @@ h1 {
   font-weight: 300;
 }
 
+input[type=text],
+input[type=email],
+textarea {
+  font-family: $font-text;
+}
+
 // ---------- FONT SIZE ---------- //
 body { 
   font-size: 2rem; 
@@ -148,7 +154,6 @@ input[type="submit"] {font-size: 2rem;}
 .tinkering-tile__image-text{
   font-size: 1.4rem;
 }
-
 
 input[type=text],
 input[type=email],
