@@ -818,8 +818,8 @@ input[type="submit"]:active {
   margin: 0 auto;
   padding: 5rem 0rem; }
   @media only screen and (max-width: 75em) {
-    .project__content > * {
-      margin: 0 2rem; } }
+    .project__content {
+      margin: 2rem; } }
 
 .project__visit-site {
   width: fit-content;

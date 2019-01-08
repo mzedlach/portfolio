@@ -1073,15 +1073,8 @@ input[type="submit"]:active {
     max-width: 100rem;
     margin: 0 auto;
     padding: 5rem 0rem;
-    // padding-top: 5rem;
-    // padding-bottom: 5rem;
-
-    // This is not applying to FCC Cert #1, 2, OR 3. Still working for TECH by us and Donuts site. 
-    // YOU ARE HERE 
-    & > * {
-      @include respond(tab-land) {
-        margin: 0 2rem;
-      }
+    @include respond(tab-land) {
+      margin: 2rem;
     }
   }
   &__visit-site{
@@ -1194,11 +1187,3 @@ input[type="submit"]:active {
 .animation-preset {
   opacity: 0;
 }
-
-
-// To do list: 
-// WEBKIT 
-// condense code 
-//REsponsiveness for teh additional pages 
-
-//JAVASCRIPT //Check ES9 compatiblitiy fix on W3schools (how TO add a class)****
