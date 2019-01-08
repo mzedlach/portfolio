@@ -37,6 +37,11 @@ h1, h2, h3 {
 h1 {
   font-weight: 300; }
 
+input[type=text],
+input[type=email],
+textarea {
+  font-family: "Lato", "Arial", sans-serif; }
+
 body {
   font-size: 2rem; }
   @media only screen and (max-width: 56.25em) {
@@ -653,6 +658,10 @@ input[type="submit"]:active {
 
 .projects__title {
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .projects__title {
+      display: flex;
+      flex-direction: column; } }
   .projects__title:after {
     content: "";
     position: absolute;
@@ -661,9 +670,19 @@ input[type="submit"]:active {
     height: 3px;
     width: 30rem;
     background-color: #1B1F25; }
+    @media only screen and (max-width: 37.5em) {
+      .projects__title:after {
+        position: relative;
+        left: auto;
+        transform: none;
+        width: 100%; } }
   .projects__title.certs:after {
     width: 50rem;
     transform: translateX(-20rem) translateY(4rem); }
+    @media only screen and (max-width: 37.5em) {
+      .projects__title.certs:after {
+        transform: none;
+        width: 100%; } }
 
 .projects__tile-display {
   display: flex;
@@ -804,8 +823,8 @@ input[type="submit"]:active {
   margin: 0 auto;
   padding: 5rem 0rem; }
   @media only screen and (max-width: 75em) {
-    .project__content > * {
-      margin: 0 2rem; } }
+    .project__content {
+      margin: 2rem; } }
 
 .project__visit-site {
   width: fit-content;
@@ -888,6 +907,12 @@ input[type="submit"]:active {
 
 .spacer-top {
   margin-top: 2rem; }
+
+.credit-element {
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .animation-preset {
   opacity: 0; }
