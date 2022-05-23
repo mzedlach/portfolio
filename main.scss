@@ -420,20 +420,20 @@ input[type="submit"]:active {
   background-position: center;
   &--header{
     // Photo by Jesus Kiteque on Unsplash
-    background-image: url(/images/vendors/jesus-kiteque-224069-min.jpg);
+    background-image: url(images/vendors/jesus-kiteque-224069-min.jpg);
   }
   &--skills,
   &--projects,
   &--credits{
     // Photo by rawpixel on Unsplash
-    background-image: url(/images/vendors/rawpixel-558599-unsplash-min.jpg);
+    background-image: url(images/vendors/rawpixel-558599-unsplash-min.jpg);
     @include respond(tab-port) {
       background-position: right;
     }
   }
   &--contact{
     // Photo by Jeff Kepler on Unsplash
-    background-image: url(/images/vendors/jeff-kepler-1085049-unsplash-min.jpg);
+    background-image: url(images/vendors/jeff-kepler-1085049-unsplash-min.jpg);
     background-blend-mode: overlay;
     background-color: rgba(rgb(32, 89, 36),0.2);
     justify-content: center;
