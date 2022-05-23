@@ -426,10 +426,11 @@ input[type="submit"]:active {
   &--projects,
   &--credits{
     // Photo by rawpixel on Unsplash
-    background-image: url(images/vendors/rawpixel-558599-unsplash-min.jpg);
-    @include respond(tab-port) {
-      background-position: right;
-    }
+    // background-image: url(images/vendors/rawpixel-558599-unsplash-min.jpg);
+    // @include respond(tab-port) {
+    //   background-position: right;
+    // }
+    background-color: #e3e6eb;
   }
   &--contact{
     // Photo by Jeff Kepler on Unsplash
@@ -856,6 +857,52 @@ input[type="submit"]:active {
 // ---------------------------------------- //
 // ---------- SECTION - PROJECTS ---------- //
 // ---------------------------------------- //
+
+
+.project-tile2 {
+  width:90%;
+  padding: 5rem;
+  // border: 2px solid blue;
+  border-radius: 10px;
+  display:flex;
+  justify-content: space-between;
+  position:relative;
+  & img {
+    max-width: 400px;
+    border: 10px solid black;
+    border-radius: 4px;
+    z-index: 401;
+  }
+  &__background {
+    border: 2px solid #9EACBF;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3rem 3rem 3rem 10rem;
+    height: 100%;
+    width: 80%;
+    border-radius: 20px;
+    z-index: 400;
+  }
+  &__info {
+    width: 50%;
+    z-index: 401;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-title{
+      text-align: center;
+    }
+    &-description{
+      padding: 0rem;
+    }
+    &-buttons{
+      display: flex;
+      justify-content: center;
+      min-width:160px;
+    }
+  }
+}
 .projects{
   &__title{
     margin-bottom: 3rem;

@@ -318,10 +318,7 @@ input[type="submit"]:active {
   .background-fixed--header {
     background-image: url(images/vendors/jesus-kiteque-224069-min.jpg); }
   .background-fixed--skills, .background-fixed--projects, .background-fixed--credits {
-    background-image: url(images/vendors/rawpixel-558599-unsplash-min.jpg); }
-    @media only screen and (max-width: 56.25em) {
-      .background-fixed--skills, .background-fixed--projects, .background-fixed--credits {
-        background-position: right; } }
+    background-color: #e3e6eb; }
   .background-fixed--contact {
     background-image: url(images/vendors/jeff-kepler-1085049-unsplash-min.jpg);
     background-blend-mode: overlay;
@@ -655,6 +652,43 @@ input[type="submit"]:active {
 .trello {
   width: 11rem;
   height: 11rem; }
+
+.project-tile2 {
+  width: 90%;
+  padding: 5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative; }
+  .project-tile2 img {
+    max-width: 400px;
+    border: 10px solid black;
+    border-radius: 4px;
+    z-index: 401; }
+  .project-tile2__background {
+    border: 2px solid #9EACBF;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 3rem 3rem 3rem 10rem;
+    height: 100%;
+    width: 80%;
+    border-radius: 20px;
+    z-index: 400; }
+  .project-tile2__info {
+    width: 50%;
+    z-index: 401;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .project-tile2__info-title {
+      text-align: center; }
+    .project-tile2__info-description {
+      padding: 0rem; }
+    .project-tile2__info-buttons {
+      display: flex;
+      justify-content: center;
+      min-width: 160px; }
 
 .projects__title {
   margin-bottom: 3rem; }
