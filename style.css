@@ -316,14 +316,14 @@ input[type="submit"]:active {
   background-repeat: no-repeat;
   background-position: center; }
   .background-fixed--header {
-    background-image: url(/images/vendors/jesus-kiteque-224069-min.jpg); }
+    background-image: url(images/vendors/jesus-kiteque-224069-min.jpg); }
   .background-fixed--skills, .background-fixed--projects, .background-fixed--credits {
-    background-image: url(/images/vendors/rawpixel-558599-unsplash-min.jpg); }
+    background-image: url(images/vendors/rawpixel-558599-unsplash-min.jpg); }
     @media only screen and (max-width: 56.25em) {
       .background-fixed--skills, .background-fixed--projects, .background-fixed--credits {
         background-position: right; } }
   .background-fixed--contact {
-    background-image: url(/images/vendors/jeff-kepler-1085049-unsplash-min.jpg);
+    background-image: url(images/vendors/jeff-kepler-1085049-unsplash-min.jpg);
     background-blend-mode: overlay;
     background-color: rgba(32, 89, 36, 0.2);
     justify-content: center;
@@ -772,7 +772,7 @@ input[type="submit"]:active {
         margin-bottom: 2rem; } }
     @media only screen and (max-width: 37.5em) {
       .footer__links-navigation {
-        font-size: 1.6rem; } }
+        display: none; } }
   .footer__link {
     margin: 0rem 1rem; }
     @media only screen and (max-width: 37.5em) {
