@@ -280,7 +280,7 @@ input[type="submit"]:active {
       }
       &.projects{
         background-color: rgba(255, 255, 255, 0.9);
-        margin: 5rem 0rem 5rem 8rem;
+        margin: 5rem 0rem 20rem 8rem;
         width: 100%;
         @include respond(tab-land) { 
           margin: 5rem 0rem 5rem 5rem;
@@ -458,14 +458,6 @@ input[type="submit"]:active {
     //   background-position: right;
     // }
     background-color: #e3e6eb;
-  }
-  &--contact{
-    // Photo by Jeff Kepler on Unsplash
-    background-image: url(images/vendors/jeff-kepler-1085049-unsplash-min.jpg);
-    background-blend-mode: overlay;
-    background-color: rgba(rgb(32, 89, 36),0.2);
-    justify-content: center;
-    align-items: center;
   }
 }
 .background-plain {
@@ -1088,35 +1080,6 @@ input[type="submit"]:active {
     &--contact{
       height: .3rem;
     }
-  }
-}
-.contact-form{
-  width: 70%;
-  margin-bottom: 3rem;
-  @include respond(phone) {
-    width: 90%;
-  }
-  &__group{
-    display: flex;
-    margin: 1rem 0rem;
-    @include respond(phone) {
-      flex-direction: column;
-    }
-  }
-  &__label{
-    flex: 0 0 35%;
-  }
-  &__input,
-  &__textarea {
-    flex: 1 1 65%;
-    line-height: 1.15;
-    padding: 7px;
-    border-radius: 3px;
-    border: 1px solid #9EACBF;
-    width: 100%;
-  }
-  &__textarea{
-    height: 10rem;
   }
 }
 

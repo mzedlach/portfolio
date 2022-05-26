@@ -204,7 +204,7 @@ input[type="submit"]:active {
             margin: 7rem 0rem; } }
       .section__container--right.projects {
         background-color: rgba(255, 255, 255, 0.9);
-        margin: 5rem 0rem 5rem 8rem;
+        margin: 5rem 0rem 20rem 8rem;
         width: 100%; }
         @media only screen and (max-width: 75em) {
           .section__container--right.projects {
@@ -339,12 +339,6 @@ input[type="submit"]:active {
     background-image: url(images/vendors/jesus-kiteque-224069-min.jpg); }
   .background-fixed--skills, .background-fixed--projects, .background-fixed--credits {
     background-color: #e3e6eb; }
-  .background-fixed--contact {
-    background-image: url(images/vendors/jeff-kepler-1085049-unsplash-min.jpg);
-    background-blend-mode: overlay;
-    background-color: rgba(32, 89, 36, 0.2);
-    justify-content: center;
-    align-items: center; }
 
 .background-plain--about {
   background-color: #7f94b4; }
@@ -838,30 +832,6 @@ input[type="submit"]:active {
         width: 100%; } }
     .section__contact-title-underline--contact {
       height: .3rem; }
-
-.contact-form {
-  width: 70%;
-  margin-bottom: 3rem; }
-  @media only screen and (max-width: 37.5em) {
-    .contact-form {
-      width: 90%; } }
-  .contact-form__group {
-    display: flex;
-    margin: 1rem 0rem; }
-    @media only screen and (max-width: 37.5em) {
-      .contact-form__group {
-        flex-direction: column; } }
-  .contact-form__label {
-    flex: 0 0 35%; }
-  .contact-form__input, .contact-form__textarea {
-    flex: 1 1 65%;
-    line-height: 1.15;
-    padding: 7px;
-    border-radius: 3px;
-    border: 1px solid #9EACBF;
-    width: 100%; }
-  .contact-form__textarea {
-    height: 10rem; }
 
 .footer {
   background-color: #1B1F25;
