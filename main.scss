@@ -318,6 +318,33 @@ input[type="submit"]:active {
     }
   }
   //Titles and underlines for h1 elements of each section
+
+  // New Title used in Projects
+  &-title__container {
+    position:relative;
+    background-color: #e3e6eb;
+    display:flex;
+    justify-content: center;
+  }
+  &-title__text{
+    background-color: #e3e6eb;
+    font-weight: 400;
+    z-index:500;
+    padding: 0 2rem;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    font-size: 6rem;
+  }
+  &-title__bar{
+    background-color: black;
+    height: 4px;
+    width:100%;
+    position:absolute;
+    top:50%;
+    z-index:499;
+  }
+
+// Old left/right alternating titles
   &__title{
     text-transform: uppercase;
     position: absolute;

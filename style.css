@@ -235,6 +235,26 @@ input[type="submit"]:active {
         .section__container.contact {
           width: 100%;
           border-radius: 0rem; } }
+  .section-title__container {
+    position: relative;
+    background-color: #e3e6eb;
+    display: flex;
+    justify-content: center; }
+  .section-title__text {
+    background-color: #e3e6eb;
+    font-weight: 400;
+    z-index: 500;
+    padding: 0 2rem;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    font-size: 6rem; }
+  .section-title__bar {
+    background-color: black;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: 499; }
   .section__title {
     text-transform: uppercase;
     position: absolute;
