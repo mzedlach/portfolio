@@ -254,7 +254,7 @@ input[type="submit"]:active {
         border-radius: 0rem;
       }
       &.skills{
-        margin: 30rem 8rem 20rem 0rem;
+        margin: 10rem 8rem 20rem 0rem;
         background-color: rgba(255, 255, 255, 0.9);
         @include respond(tab-port) {
           margin: 20rem 4rem 10rem 0rem;
@@ -520,11 +520,14 @@ input[type="submit"]:active {
     &--name{
       word-spacing: 1rem;
       letter-spacing: .5rem;
+      font-weight: 400;
+      text-align: center;
     }
     &--position,
     &--phrase {
       text-transform: uppercase;
       margin-left: .5rem;
+      text-align: center;
     }
   }
   &__links{

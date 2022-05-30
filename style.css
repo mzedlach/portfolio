@@ -181,7 +181,7 @@ input[type="submit"]:active {
         .section__container--left {
           border-radius: 0rem; } }
       .section__container--left.skills {
-        margin: 30rem 8rem 20rem 0rem;
+        margin: 10rem 8rem 20rem 0rem;
         background-color: rgba(255, 255, 255, 0.9); }
         @media only screen and (max-width: 56.25em) {
           .section__container--left.skills {
@@ -384,10 +384,13 @@ input[type="submit"]:active {
         margin-top: 0rem; } }
     .header__text--name {
       word-spacing: 1rem;
-      letter-spacing: .5rem; }
+      letter-spacing: .5rem;
+      font-weight: 400;
+      text-align: center; }
     .header__text--position, .header__text--phrase {
       text-transform: uppercase;
-      margin-left: .5rem; }
+      margin-left: .5rem;
+      text-align: center; }
   .header__links {
     display: flex;
     align-self: center; }
