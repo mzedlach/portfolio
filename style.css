@@ -181,7 +181,7 @@ input[type="submit"]:active {
         .section__container--left {
           border-radius: 0rem; } }
       .section__container--left.skills {
-        margin: 10rem 8rem 20rem 0rem;
+        margin: 10rem 8rem 15rem 0rem;
         background-color: rgba(255, 255, 255, 0.9); }
         @media only screen and (max-width: 56.25em) {
           .section__container--left.skills {
@@ -195,7 +195,7 @@ input[type="submit"]:active {
         .section__container--right {
           border-radius: 0rem; } }
       .section__container--right.about {
-        margin: 5rem 0rem 5rem 8rem; }
+        margin: 10rem 0rem 10rem 8rem; }
         @media only screen and (max-width: 56.25em) {
           .section__container--right.about {
             margin: 2.5rem 0rem 2.5rem 4rem; } }
@@ -327,6 +327,12 @@ input[type="submit"]:active {
       @media only screen and (max-width: 56.25em) {
         .section__content.about {
           flex-direction: column; } }
+
+.section-title__spacer#projects,
+.section-title__spacer#contact {
+  height: 10rem;
+  width: 100%;
+  background-color: #e3e6eb; }
 
 /* ---------- BACKGROUNDS - IMAGES + COLOURS ----------*/
 .background-fixed {
@@ -835,9 +841,6 @@ input[type="submit"]:active {
         width: 100%; } }
     .section__contact-title-underline--contact {
       height: .3rem; }
-
-.btn-icon svg.envelope {
-  height: 200px; }
 
 .footer {
   background-color: #1B1F25;

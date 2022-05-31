@@ -254,7 +254,7 @@ input[type="submit"]:active {
         border-radius: 0rem;
       }
       &.skills{
-        margin: 10rem 8rem 20rem 0rem;
+        margin: 10rem 8rem 15rem 0rem;
         background-color: rgba(255, 255, 255, 0.9);
         @include respond(tab-port) {
           margin: 20rem 4rem 10rem 0rem;
@@ -270,7 +270,7 @@ input[type="submit"]:active {
         border-radius: 0rem;
       }
       &.about{
-        margin: 5rem 0rem 5rem 8rem; 
+        margin: 10rem 0rem 10rem 8rem; 
         @include respond(tab-port) {
           margin: 2.5rem 0rem 2.5rem 4rem;
         }
@@ -435,6 +435,13 @@ input[type="submit"]:active {
       }
     }
   }
+}
+// Additional upper spacing for desktop navigation to sections with links in nav bar. 
+.section-title__spacer#projects,
+.section-title__spacer#contact{
+  height: 10rem;
+  width: 100%;
+  background-color: #e3e6eb;
 }
 
 /* ---------- BACKGROUNDS - IMAGES + COLOURS ----------*/
@@ -1085,9 +1092,7 @@ input[type="submit"]:active {
     }
   }
 }
-.btn-icon svg.envelope{
-  height:200px;
-}
+
 // .btn-icon--envelope {
 //   height: 100px;
 // }
