@@ -836,6 +836,9 @@ input[type="submit"]:active {
     .section__contact-title-underline--contact {
       height: .3rem; }
 
+.btn-icon svg.envelope {
+  height: 200px; }
+
 .footer {
   background-color: #1B1F25;
   padding: 3rem;
