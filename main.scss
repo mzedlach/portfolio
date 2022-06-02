@@ -687,6 +687,8 @@ input[type="submit"]:active {
   }
 }
 
+
+
 // Mobile Sticky navigation
 .header__navigation.sticky{
   @include respond(tab-port) {
