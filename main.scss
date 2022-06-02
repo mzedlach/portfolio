@@ -444,6 +444,35 @@ input[type="submit"]:active {
   background-color: #e3e6eb;
 }
 
+// For project pages:
+ // New Title used in Projects
+// .section{
+//   &-title__container--pages {
+//     position:relative;
+//     background-color: #fff;
+//     display:flex;
+//     justify-content: center;
+//     margin-top: 2rem;
+//   }
+//   &-title__text--pages{
+//     background-color: #fff;
+//     font-weight: 400;
+//     z-index:500;
+//     padding: 0 2rem;
+//     // border-bottom: 4px solid black;
+//     // border-top: 4px solid black;
+//     font-size: 6rem;
+//   }
+//   &-title__bar--pages{
+//     background-color: black;
+//     height: 4px;
+//     width:100%;
+//     position:absolute;
+//     top:50%;
+//     z-index:499;
+//   }
+// }
+ 
 /* ---------- BACKGROUNDS - IMAGES + COLOURS ----------*/
 //Only for setup and alignment of background images, or colour, for each section
 .background-fixed {
