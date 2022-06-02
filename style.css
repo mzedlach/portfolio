@@ -548,9 +548,21 @@ input[type="submit"]:active {
     .header__navigation--sidepage {
       padding: .5rem 3rem; } }
   .header__navigation--sidepage .header__navigation-logo--sidepage {
-    height: 5rem; }
+    display: flex; }
   .header__navigation--sidepage .header__navigation-links-link--sidepage {
     color: #9EACBF; }
+
+.header__navigation-links--sidepage-large-screens {
+  display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .header__navigation-links--sidepage-large-screens {
+      display: none; } }
+
+.header__navigation-links--sidepage-small-screens {
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .header__navigation-links--sidepage-small-screens {
+      display: flex; } }
 
 .about-me__image {
   height: 30rem;

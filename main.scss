@@ -726,11 +726,24 @@ input[type="submit"]:active {
     padding: .5rem 3rem;
   }
   & .header__navigation-logo--sidepage{
-    height: 5rem;
+    // height: 5rem;
+    display:flex;
   }
   & .header__navigation-links-link--sidepage{
     color: $color-light-grey;
   }
+}
+.header__navigation-links--sidepage-large-screens{
+  display:flex;
+  @include respond(tab-port){
+    display: none;
+   }
+}
+.header__navigation-links--sidepage-small-screens{
+  display:none;
+  @include respond(tab-port){
+    display: flex;
+   }
 }
 
 // ------------------------------------- //
