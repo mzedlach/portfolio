@@ -245,8 +245,7 @@ input[type="submit"]:active {
     font-weight: 400;
     z-index: 500;
     padding: 0 2rem;
-    border-bottom: 4px solid black;
-    border-top: 4px solid black;
+    border: 4px solid black;
     font-size: 6rem; }
   .section-title__bar {
     background-color: black;
@@ -255,6 +254,17 @@ input[type="submit"]:active {
     position: absolute;
     top: 50%;
     z-index: 499; }
+  .section__title--left-new {
+    text-transform: uppercase;
+    position: absolute;
+    left: 13rem;
+    margin-top: 2rem;
+    background-color: #fff;
+    font-weight: 400;
+    z-index: 999;
+    padding: 0 2rem;
+    border: 4px solid black;
+    font-size: 6rem; }
   .section__title {
     text-transform: uppercase;
     position: absolute;

@@ -156,11 +156,39 @@
       </div>
     </div>
   </header>
+<style>
 
-  <section class="section background-plain background-plain--about" id="about">
-    <div class="section__container section__container--right about">
-      <h2 class="section__title section__title--left">About Me</h2>
-      <div class="section__title-underline section__title-underline--left"></div>
+
+/* .new-tester-title{ */
+    /* border: 2px solid black; */
+  /* } */
+  /* .more { */
+    /* background-color:none; */
+  /* } */
+
+
+  .section__title-underline--full{
+    position: absolute;
+    height: .6rem;
+    width: 100%;
+    background-color: black;
+    transform: translateY(6rem);
+    left: 0;
+  }
+</style>
+  <section class="section background-plain background-plain--about" id="about" style="position:relative;">
+    <!-- <h1 class="new-tester-title">About Me</h1> -->
+    <div class="section__container section__container--right about" style="overflow:hidden;">
+
+      <!-- <h1 class="section-title__container more">
+        <div class="section-title__text">About Me</div>
+        <div class="section-title__bar"></div>
+      </h1> -->
+
+
+      <h2 class="section__title section__title--left-new">About Me</h2>
+      <div class="section__title-underline section__title-underline--full"></div>
+      <!-- <div class="section__title-underline section__title-underline--left"></div> -->
       <div class="section__content large-content-padding about">
         <img class="about-me__image" src="images/vendors/portrait2.png" alt="Maria Lach photo">
         <div class="about-me__description">
@@ -175,7 +203,7 @@
             and work with people effectively. Life is learning; I am
             continually expanding my coding knowledge through courses, books,
             and personal projects. Keep scrolling to have a peak at some of my
-            projects and let's get in touch!
+            projects and let's get in touch!  
           </div>
         </div>
       </div>
