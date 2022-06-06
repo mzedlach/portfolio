@@ -230,7 +230,8 @@ input[type="submit"]:active {
       background-color: rgba(255, 255, 255, 0.85);
       justify-content: center;
       width: 80%;
-      border-radius: 2rem; }
+      border-radius: 2rem;
+      padding: 5rem; }
       @media only screen and (max-width: 37.5em) {
         .section__container.contact {
           width: 100%;
