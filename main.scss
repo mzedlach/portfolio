@@ -473,6 +473,11 @@ input[type="submit"]:active {
     }
   }
 }
+.contact-adjustments{
+  background-color: #e3e6eb;
+  min-height: 50vh;
+  justify-content: center;
+}
 // Additional upper spacing for desktop navigation to sections with links in nav bar. 
 .section-title__spacer#projects,
 .section-title__spacer#contact{

@@ -355,6 +355,11 @@ input[type="submit"]:active {
         .section__content.about {
           flex-direction: column; } }
 
+.contact-adjustments {
+  background-color: #e3e6eb;
+  min-height: 50vh;
+  justify-content: center; }
+
 .section-title__spacer#projects,
 .section-title__spacer#contact {
   height: 10rem;
