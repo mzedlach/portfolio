@@ -886,6 +886,14 @@ input[type="submit"]:active {
     .section__contact-title-underline--contact {
       height: .3rem; }
 
+a.email-link {
+  color: #000;
+  text-decoration: none; }
+  a.email-link:link, a.email-link:visited {
+    color: #000; }
+  a.email-link:hover, a.email-link:active {
+    text-decoration: underline; }
+
 .footer {
   background-color: #1B1F25;
   padding: 3rem;

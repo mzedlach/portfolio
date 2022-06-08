@@ -988,12 +988,6 @@ input[type="submit"]:active {
     background-color: black;
   }
 }
-
-
-
-
-
-
 .monitor {
   max-width: 400px;
   border: 10px solid black;
@@ -1024,9 +1018,6 @@ input[type="submit"]:active {
     left: calc(50% - 20px);
   }
 }  
-
-
-
 .project-tile2 {
   width:90%;
   padding: 5rem;
@@ -1178,11 +1169,18 @@ input[type="submit"]:active {
     }
   }
 }
-
-// .btn-icon--envelope {
-//   height: 100px;
-// }
-
+a.email-link{
+  color:#000;
+  text-decoration: none;
+  &:link, 
+  &:visited{
+    color:#000;
+  }
+  &:hover, 
+  &:active {
+    text-decoration: underline;
+  }
+}
 // -------------------------------------- //
 // ---------- SECTION - FOOTER ---------- //
 // -------------------------------------- //
