@@ -1,15 +1,14 @@
-
 @mixin respond($breakpoint) { 
-  @if $breakpoint == phone {
+  @if $breakpoint == phone { //600px
     @media only screen and (max-width: 37.5em) { @content }; 
   }
-  @if $breakpoint == tab-port {
+  @if $breakpoint == tab-port { //900px
     @media only screen and (max-width: 56.25em) { @content }; 
   }
-  @if $breakpoint == tab-land {
+  @if $breakpoint == tab-land { //1200px
     @media only screen and (max-width: 75em) { @content }; 
   }
-  @if $breakpoint == large {
+  @if $breakpoint == large { //1800px
     @media only screen and (min-width: 112.5em) { @content }; 
   }
 }
@@ -225,6 +224,14 @@ input[type="submit"]:active {
   background-color: $color-light-grey;
   border: 1px solid $color-light-grey;
   cursor: auto;
+}
+.btn-project-text{
+  display:block;
+  font-size: 2rem;
+  white-space: nowrap;
+  @include respond(tab-port){
+    font-size: 1.6rem;
+  }
 }
 
 // ----------------------------------------- //
@@ -977,21 +984,25 @@ input[type="submit"]:active {
   width: 100%;
   height: 194px;
   text-align: center;
-  .monitor{
-    width: 275px;
-    height: 181px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px 10px 0px 0px;
-    padding: 9px;
-    border: solid 1px #e0e2e2;
-    background-color: black;
-  }
+  // .monitor{
+  //   width: 275px;
+  //   height: 181px;
+  //   display: block;
+  //   margin: 0 auto;
+  //   border-radius: 10px 10px 0px 0px;
+  //   padding: 9px;
+  //   border: solid 1px #e0e2e2;
+  //   background-color: black;
+  // }
 }
 .monitor {
   max-width: 400px;
   border: 10px solid black;
   border-radius: 4px 4px 0 0 ;
+  @include respond(phone){
+    max-width:250px;
+    border: 6px solid black;
+  }
 }
 .base {
   width: 450px;
@@ -1001,6 +1012,10 @@ input[type="submit"]:active {
   border-radius: 0px 0px 6px 6px;
   overflow: hidden;
   position:relative;
+  @include respond(phone){
+    max-width:300px;
+  }
+
   &-shadow{
     height: 4px;
     width: 450px;
@@ -1026,6 +1041,15 @@ input[type="submit"]:active {
   display:flex;
   justify-content: space-around;
   position:relative;
+  @include respond(tab-port){
+    padding: 2rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @include respond(phone){
+    width: 98%;
+  }
   &__images{
     position: relative;
     z-index: 401;
@@ -1043,6 +1067,9 @@ input[type="submit"]:active {
     border: 5px solid black;
     border-radius: 7px;
     z-index: 402;
+    @include respond(phone){
+      display:none;
+    }
   }
   &__background {
     border: 2px solid #9EACBF;
@@ -1054,6 +1081,10 @@ input[type="submit"]:active {
     width: 80%;
     border-radius: 20px;
     z-index: 400;
+    @include respond(tab-port){
+      padding: 0;
+      width: 100%;
+    }
   }
   &__info {
     width: 50%;
@@ -1061,11 +1092,34 @@ input[type="submit"]:active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include respond(tab-port){
+      width: 450px;
+    }
+    @include respond(phone){
+      width: auto;
+    }
     &-title{
       text-align: center;
+      padding-bottom: 1rem;
+      @include respond(tab-port){
+        display:none;
+      }
+    }
+    &-title--mobile {
+      display:none;
+      @include respond(tab-port){
+        display:block;
+        margin-bottom: 2rem;
+      }
     }
     &-description{
       padding: 0rem;
+      padding-left: 2rem;
+      padding-bottom: 1rem;
+      @include respond(tab-port){
+        padding-top: 1rem;
+        padding-left: 0;
+      }
     }
     &-buttons{
       display: flex;
