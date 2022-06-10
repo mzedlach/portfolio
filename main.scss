@@ -293,7 +293,8 @@ input[type="submit"]:active {
           margin: 5rem 0rem 5rem 5rem;
         }
         @include respond(phone) {
-          margin: 5rem 0rem 5rem 0rem;
+          margin: 0;
+          background-color: #e3e6eb;
         }
       }
       &.credits{
@@ -1085,6 +1086,9 @@ input[type="submit"]:active {
       padding: 0;
       width: 100%;
     }
+    @include respond(phone){
+      background-color: rgba(255, 255, 255, 0.9);
+    }
   }
   &__info {
     width: 50%;
@@ -1110,6 +1114,7 @@ input[type="submit"]:active {
       @include respond(tab-port){
         display:block;
         margin-bottom: 2rem;
+        z-index: 401;
       }
     }
     &-description{

@@ -219,7 +219,8 @@ input[type="submit"]:active {
             margin: 5rem 0rem 5rem 5rem; } }
         @media only screen and (max-width: 37.5em) {
           .section__container--right.projects {
-            margin: 5rem 0rem 5rem 0rem; } }
+            margin: 0;
+            background-color: #e3e6eb; } }
       .section__container--right.credits {
         width: 100%;
         margin: 13rem 0rem 5rem 8rem; }
@@ -817,6 +818,9 @@ input[type="submit"]:active {
       .project-tile2__background {
         padding: 0;
         width: 100%; } }
+    @media only screen and (max-width: 37.5em) {
+      .project-tile2__background {
+        background-color: rgba(255, 255, 255, 0.9); } }
   .project-tile2__info {
     width: 50%;
     z-index: 401;
@@ -840,7 +844,8 @@ input[type="submit"]:active {
       @media only screen and (max-width: 56.25em) {
         .project-tile2__info-title--mobile {
           display: block;
-          margin-bottom: 2rem; } }
+          margin-bottom: 2rem;
+          z-index: 401; } }
     .project-tile2__info-description {
       padding: 0rem;
       padding-left: 2rem;
