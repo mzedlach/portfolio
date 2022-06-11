@@ -257,6 +257,9 @@ input[type="submit"]:active {
     padding: 0 2rem;
     border: 4px solid black;
     font-size: 6rem; }
+    @media only screen and (max-width: 56.25em) {
+      .section-title__text {
+        font-size: 4rem; } }
   .section-title__bar {
     background-color: black;
     height: 4px;
@@ -274,6 +277,9 @@ input[type="submit"]:active {
     z-index: 999;
     padding: 0 2rem;
     border: 4px solid black; }
+    @media only screen and (max-width: 37.5em) {
+      .section__title--left-new {
+        left: auto; } }
   .section__title--right-new {
     text-transform: uppercase;
     position: absolute;
@@ -284,6 +290,9 @@ input[type="submit"]:active {
     z-index: 999;
     padding: 0 2rem;
     border: 4px solid black; }
+    @media only screen and (max-width: 37.5em) {
+      .section__title--right-new {
+        right: auto; } }
   .section__title-underline--full {
     position: absolute;
     height: .6rem;
@@ -295,9 +304,6 @@ input[type="submit"]:active {
     text-transform: uppercase;
     position: absolute;
     margin-top: 3rem; }
-    @media only screen and (max-width: 56.25em) {
-      .section__title {
-        margin-top: 1rem; } }
     .section__title--left {
       margin-left: 8rem; }
       @media only screen and (max-width: 37.5em) {
