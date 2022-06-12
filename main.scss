@@ -267,7 +267,7 @@ input[type="submit"]:active {
           margin: 20rem 4rem 10rem 0rem;
         }
         @include respond(phone) {
-          margin: 20rem 0rem 10rem 0rem;
+          margin: 0rem 0rem 10rem 0rem;
         }
       }
     }
@@ -473,9 +473,8 @@ input[type="submit"]:active {
     &.projects {
       justify-content: center;  
       margin: 10rem 0rem;
-      @include respond(tab-land) { 
-        // margin: 0rem;
-        // padding 10rem 2rem;
+      @include respond(phone) { 
+        margin: 10rem 0rem 0rem 0rem;
       }
     }
     &.about {
@@ -490,6 +489,10 @@ input[type="submit"]:active {
   background-color: #e3e6eb;
   min-height: 50vh;
   justify-content: center;
+  padding: 1rem;
+  @include respond(phone) { 
+    text-align: center;
+  }
 }
 // Additional upper spacing for desktop navigation to sections with links in nav bar. 
 .section-title__spacer#projects,

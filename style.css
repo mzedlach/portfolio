@@ -196,7 +196,7 @@ input[type="submit"]:active {
             margin: 20rem 4rem 10rem 0rem; } }
         @media only screen and (max-width: 37.5em) {
           .section__container--left.skills {
-            margin: 20rem 0rem 10rem 0rem; } }
+            margin: 0rem 0rem 10rem 0rem; } }
     .section__container--right {
       border-radius: 6.5rem 0rem 0rem 4rem; }
       @media only screen and (max-width: 37.5em) {
@@ -364,6 +364,9 @@ input[type="submit"]:active {
     .section__content.projects {
       justify-content: center;
       margin: 10rem 0rem; }
+      @media only screen and (max-width: 37.5em) {
+        .section__content.projects {
+          margin: 10rem 0rem 0rem 0rem; } }
     .section__content.about {
       align-items: center; }
       @media only screen and (max-width: 56.25em) {
@@ -373,7 +376,11 @@ input[type="submit"]:active {
 .contact-adjustments {
   background-color: #e3e6eb;
   min-height: 50vh;
-  justify-content: center; }
+  justify-content: center;
+  padding: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .contact-adjustments {
+      text-align: center; } }
 
 .section-title__spacer#projects,
 .section-title__spacer#contact {
