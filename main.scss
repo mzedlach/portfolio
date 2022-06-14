@@ -880,6 +880,9 @@ input[type="submit"]:active {
     margin: 3.5rem 0rem 6.5rem 0rem;
     flex-wrap: wrap;
     justify-content: center;
+    @include respond(tab-port) {
+      width: 400px;
+    }
     &-tile{
       padding: 1.5rem;
       display: flex;
@@ -926,38 +929,6 @@ input[type="submit"]:active {
             height: 3rem;
           }
         }
-        &.trello{
-          color: #0084D1;
-          height: 8rem;
-          width: 8rem;
-          @include respond(tab-land) { 
-            height: 7rem;
-            width: 7rem;
-          }
-          @include respond(phone) {
-            height: 6rem;
-            width: 6rem;
-          }
-        }
-        &.zeplin{
-          @include respond(tab-land) { 
-            height: 7rem;
-          }
-          @include respond(phone) {
-            height: 6rem;
-          }
-        }
-        &.slack{
-          @include respond(tab-land) { 
-            height: 7rem;
-            @include respond(tab-port) {
-              height: 6rem;
-            }
-            @include respond(phone) {
-              height: 5rem;
-            }
-          }
-        }
         &.rails{
           height: 6rem;
           @include respond(tab-land) { 
@@ -980,11 +951,49 @@ input[type="submit"]:active {
     }
   }
 }
-.trello {
-  width: 11rem;
-  height: 11rem;
+.skills-container {
+  border-radius: 8rem;
 }
+.skills-text{
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  @include respond(phone) {
+    text-align:center;
+  }
+}
+.skills-tiles{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  @include respond(tab-port) {
+    max-width: 280px;
+  }
+  @include respond(phone) {
+    justify-content: center;
+  }
 
+}
+.skills-tiles__tile{
+  border: 1px solid red;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 8px rgb(134, 151, 168);
+  width: 80px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills-tiles__tile img{
+  width: 35px;
+  height: 35px;
+}
+.skills-tiles__tile-text {
+  font-size: 1.4rem;
+  margin-top: 2px;
+}
 // ---------------------------------------- //
 // ---------- SECTION - PROJECTS ---------- //
 // ---------------------------------------- //

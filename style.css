@@ -654,6 +654,9 @@ input[type="submit"]:active {
   margin: 3.5rem 0rem 6.5rem 0rem;
   flex-wrap: wrap;
   justify-content: center; }
+  @media only screen and (max-width: 56.25em) {
+    .skills__tiles {
+      width: 400px; } }
   .skills__tiles-tile {
     padding: 1.5rem;
     display: flex;
@@ -694,33 +697,6 @@ input[type="submit"]:active {
         @media only screen and (max-width: 56.25em) {
           .skills__tiles-tile-logo.npm {
             height: 3rem; } }
-      .skills__tiles-tile-logo.trello {
-        color: #0084D1;
-        height: 8rem;
-        width: 8rem; }
-        @media only screen and (max-width: 75em) {
-          .skills__tiles-tile-logo.trello {
-            height: 7rem;
-            width: 7rem; } }
-        @media only screen and (max-width: 37.5em) {
-          .skills__tiles-tile-logo.trello {
-            height: 6rem;
-            width: 6rem; } }
-      @media only screen and (max-width: 75em) {
-        .skills__tiles-tile-logo.zeplin {
-          height: 7rem; } }
-      @media only screen and (max-width: 37.5em) {
-        .skills__tiles-tile-logo.zeplin {
-          height: 6rem; } }
-      @media only screen and (max-width: 75em) {
-        .skills__tiles-tile-logo.slack {
-          height: 7rem; } }
-  @media only screen and (max-width: 75em) and (max-width: 56.25em) {
-    .skills__tiles-tile-logo.slack {
-      height: 6rem; } }
-  @media only screen and (max-width: 75em) and (max-width: 37.5em) {
-    .skills__tiles-tile-logo.slack {
-      height: 5rem; } }
       .skills__tiles-tile-logo.rails {
         height: 6rem; }
         @media only screen and (max-width: 75em) {
@@ -738,9 +714,47 @@ input[type="submit"]:active {
           .skills__tiles-tile-logo.angular {
             height: 5rem; } }
 
-.trello {
-  width: 11rem;
-  height: 11rem; }
+.skills-container {
+  border-radius: 8rem; }
+
+.skills-text {
+  margin-top: 4rem;
+  margin-bottom: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .skills-text {
+      text-align: center; } }
+
+.skills-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .skills-tiles {
+      max-width: 280px; } }
+  @media only screen and (max-width: 37.5em) {
+    .skills-tiles {
+      justify-content: center; } }
+
+.skills-tiles__tile {
+  border: 1px solid red;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 8px #8697a8;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.skills-tiles__tile img {
+  width: 35px;
+  height: 35px; }
+
+.skills-tiles__tile-text {
+  font-size: 1.4rem;
+  margin-top: 2px; }
 
 .comp {
   width: 100%;
