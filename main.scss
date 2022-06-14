@@ -1066,7 +1066,7 @@ input[type="submit"]:active {
     align-items: center;
   }
   @include respond(phone){
-    width: 98%;
+    width: 95%;
   }
   &__images{
     position: relative;

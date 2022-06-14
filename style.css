@@ -812,7 +812,7 @@ input[type="submit"]:active {
       align-items: center; } }
   @media only screen and (max-width: 37.5em) {
     .project-tile2 {
-      width: 98%; } }
+      width: 95%; } }
   .project-tile2__images {
     position: relative;
     z-index: 401; }
