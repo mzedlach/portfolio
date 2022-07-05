@@ -21,8 +21,8 @@ var sticky = about.offsetTop - 10;
 // Go through html check list
 // Go through all the green notes
 
-var projectTilseSet1Location =
-  document.getElementsByClassName('js-tile-set-1').offsetTop;
+// var projectTilseSet1Location =
+//   document.getElementsByClassName('js-tile-set-1').offsetTop;
 
 // var projectTile1Location = document.getElementById('projectTrigger1').offsetTop;
 // var projectTile2Location = document.getElementById('projectTrigger2').offsetTop;
@@ -46,18 +46,18 @@ function navAndAnimations() {
     document.documentElement.clientHeight ||
     document.body.clientHeight;
 
-  //Skills list 1 animation - Work
-  var skillsList1Trigger = skillsList1Location - height * 0.6;
-  if (window.pageYOffset > skillsList1Trigger) {
-    skills1.classList.add('animated', 'fadeInUp');
-    skills1.classList.remove('animation-preset');
-  }
-  //Skills list 2 animation - FCC Certifications
-  var skillsList2Trigger = skillsList2Location - height * 0.6;
-  if (window.pageYOffset > skillsList2Trigger) {
-    skills2.classList.add('animated', 'fadeInUp');
-    skills2.classList.remove('animation-preset');
-  }
+  // //Skills list 1 animation - Work
+  // var skillsList1Trigger = skillsList1Location - height * 0.6;
+  // if (window.pageYOffset > skillsList1Trigger) {
+  //   skills1.classList.add('animated', 'fadeInUp');
+  //   skills1.classList.remove('animation-preset');
+  // }
+  // //Skills list 2 animation - FCC Certifications
+  // var skillsList2Trigger = skillsList2Location - height * 0.6;
+  // if (window.pageYOffset > skillsList2Trigger) {
+  //   skills2.classList.add('animated', 'fadeInUp');
+  //   skills2.classList.remove('animation-preset');
+  // }
 
   // // PROJECT - All tiles in "Work" - CodeWars, Udemy
   // var projectTile1Trigger = projectTile1Location - height*0.8;
@@ -86,14 +86,14 @@ function navAndAnimations() {
   //   projectTileC.classList.remove('animation-preset');
   // }
 
-  // CONTACT
-  var contactTrigger = contactLocation - height * 0.8;
-  if (window.pageYOffset > contactTrigger) {
-    contactTriggerTitle.classList.add('animated', 'flipInY');
-    contactTriggerTitle.classList.remove('animation-preset');
-  } else {
-    contactTriggerTitle.classList.remove('animated', 'flipInY');
-  }
+  // // CONTACT
+  // var contactTrigger = contactLocation - height * 0.8;
+  // if (window.pageYOffset > contactTrigger) {
+  //   contactTriggerTitle.classList.add('animated', 'flipInY');
+  //   contactTriggerTitle.classList.remove('animation-preset');
+  // } else {
+  //   contactTriggerTitle.classList.remove('animated', 'flipInY');
+  // }
 }
 
 // ----- CLICK EVENT LISTENER ----- //
