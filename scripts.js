@@ -10,8 +10,8 @@ var about = document.getElementById('about');
 var sticky = about.offsetTop - 10;
 
 //variables of div containing elements with animation.
-var skillsList1Location = document.getElementById('skills1').offsetTop;
-var skillsList2Location = document.getElementById('skills2').offsetTop;
+// var skillsList1Location = document.getElementById('skills1').offsetTop;
+// var skillsList2Location = document.getElementById('skills2').offsetTop;
 
 // YOU ARE HERE: you were changes id's to classes. Can this bemore compact?
 // To do: put github link to index page
@@ -27,7 +27,7 @@ var projectTilseSet1Location =
 // var projectTile1Location = document.getElementById('projectTrigger1').offsetTop;
 // var projectTile2Location = document.getElementById('projectTrigger2').offsetTop;
 // var projectTile3Location = document.getElementById('projectTrigger3').offsetTop;
-var contactLocation = document.getElementById('contactTriggerTitle').offsetTop;
+// var contactLocation = document.getElementById('contactTriggerTitle').offsetTop;
 
 function navAndAnimations() {
   // ----- STICKY NAVIGATION ----- //
